@@ -1,0 +1,503 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "themeFolder",
+      "ItemCaptionText": "Dossier de thèmes",
+      "ItemHoverTipText": "Vous pouvez sélectionner un dossier contenant les fichiers suivants : (mp4 webm png jpg mp3 wav webp gif apng). Si non spécifié, les fichiers de thème par défaut dans le dossier \"themes\" de ce projet seront lus. Si les fichiers dans le dossier actuellement utilisé ont changé, vous devez actualiser le projet Forepaper actuel.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "folder",
+      "Title": "Sélectionner le dossier contenant les fichiers de thème",
+      "FolderPath": "themes",
+      "ItemInputMaxNum": "255",
+      "ItemInputMinNum": "",
+      "ItemStep": "",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeOpacity",
+      "ItemCaptionText": "Opacité du thème en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit l'opacité du thème en mode économiseur d'écran",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "screenSaverModeVideoVolume",
+      "ItemCaptionText": "Volume vidéo en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit le volume du fichier vidéo lui-même en mode économiseur d'écran",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "playAudioWithTheme",
+      "ItemCaptionText": "Lire le fichier audio simultanément",
+      "ItemHoverTipText": "S'il faut lire le fichier audio (s'il existe dans le dossier du thème) simultanément (Ce paramètre peut être ignoré s'il n'y a pas de fichier audio dans le dossier du thème)",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "screenSaverModeAudioVolume",
+      "ItemCaptionText": "Volume audio en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit le volume du fichier audio lu simultanément en mode économiseur d'écran (Ce paramètre peut être ignoré s'il n'y a pas de fichier audio dans le dossier du thème)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Opacité de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit l'opacité de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Police de la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit la police pour la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Taille de police de la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit la taille de police pour la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Épaisseur de police de la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit l'épaisseur de police pour la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Couleur de police de la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit la couleur de police pour la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Police de la partie date de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit la police pour la partie date de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Taille de police de la partie date de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit la taille de police pour la partie date de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Épaisseur de police de la partie date de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit l'épaisseur de police pour la partie date de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Couleur de police de la partie date de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définit la couleur de police pour la partie date de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "Format horaire de 12 heures",
+      "ItemHoverTipText": "Si cette option n'est pas cochée, le format horaire de 24 heures sera utilisé",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "operatingModeOpacity",
+      "ItemCaptionText": "Opacité du thème en mode de fonctionnement",
+      "ItemHoverTipText": "Définit l'opacité du thème en mode de fonctionnement",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "0.9",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.1"
+    },
+    {
+      "ItemKeyName": "operatingModeVideoVolume",
+      "ItemCaptionText": "Volume vidéo en mode de fonctionnement",
+      "ItemHoverTipText": "Définit le volume du fichier vidéo en mode de fonctionnement",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModeAudioVolume",
+      "ItemCaptionText": "Volume audio en mode de fonctionnement",
+      "ItemHoverTipText": "Définit le volume du fichier audio en mode de fonctionnement",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModePause",
+      "ItemCaptionText": "Pause en mode de fonctionnement",
+      "ItemHoverTipText": "S'il faut mettre en pause la lecture du thème en mode de fonctionnement",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "playMode",
+      "ItemCaptionText": "Méthode de changement de thème",
+      "ItemHoverTipText": "Spécifie la méthode pour changer entre tous les thèmes dans le dossier de thème",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Changement séquentiel",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Changement aléatoire",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "audioPlayMode",
+      "ItemCaptionText": "Méthode de changement de fichier audio",
+      "ItemHoverTipText": "Spécifie la méthode pour changer entre tous les fichiers audio dans le dossier de thème",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Changement séquentiel",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Changement aléatoire",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "staticThemeSwitchInterval",
+      "ItemCaptionText": "Intervalle de changement pour les thèmes de type image",
+      "ItemHoverTipText": "Cette valeur spécifie combien de secondes pour changer au thème suivant lors de la lecture des thèmes de type image",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "3",
+      "ItemStep": "1",
+      "ItemCurrentValue": "3"
+    },
+    {
+      "ItemKeyName": "videoThemeSwitchInterval",
+      "ItemCaptionText": "Intervalle de changement pour les thèmes de type vidéo",
+      "ItemHoverTipText": "Cette valeur spécifie combien de secondes pour changer au thème suivant lors de la lecture des thèmes de type vidéo. Si défini sur 0, le changement se produira uniquement après la fin de la lecture vidéo.",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "0",
+      "ItemStep": "1",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "objectFit",
+      "ItemCaptionText": "Méthode de remplissage du thème",
+      "ItemHoverTipText": "Spécifie comment le thème doit remplir l'écran",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "cover",
+          "OptionText": "Recadrer",
+          "ItemHoverTipText": "Recadre les parties au-delà de la fenêtre, assurant un rapport d'aspect normal"
+        },
+        {
+          "OptionValue": "fill",
+          "OptionText": "Étirer",
+          "ItemHoverTipText": "Étire le thème en plein écran, ne garantit pas un rapport d'aspect normal"
+        },
+        {
+          "OptionValue": "contain",
+          "OptionText": "Laisser des marges",
+          "ItemHoverTipText": "Laisse des zones blanches où le thème ne remplit pas tout l'écran, assurant un rapport d'aspect normal"
+        },
+        {
+          "OptionValue": "none",
+          "OptionText": "Taille d'origine",
+          "ItemHoverTipText": "Utilise la taille d'origine du thème, peut entraîner des zones blanches ou un débordement"
+        }
+      ],
+      "ItemCurrentValue": "cover"
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Texte d'indication de la zone de saisie de mot de passe",
+      "ItemHoverTipText": "Le texte d'indication dans la zone de saisie de mot de passe",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Veuillez saisir le mot de passe de déverrouillage"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Largeur de la zone de saisie de mot de passe",
+      "ItemHoverTipText": "Définit la largeur de la zone de saisie pour le mot de passe de connexion personnalisé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Hauteur de la zone de saisie de mot de passe",
+      "ItemHoverTipText": "Définit la hauteur de la zone de saisie pour le mot de passe de connexion personnalisé (Remarque : cela affecte également la hauteur du bouton de connexion)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Icône du bouton de connexion",
+      "ItemHoverTipText": "Sélectionnez un fichier d'icône personnalisé pour le bouton de connexion. Si laissé vide, l'icône par défaut sera utilisée.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Veuillez sélectionner un fichier",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Icône du bouton de connexion (état survol souris)",
+      "ItemHoverTipText": "Sélectionnez un fichier d'icône personnalisé pour le bouton de connexion dans l'état survol souris. Si laissé vide, l'icône par défaut sera utilisée.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Veuillez sélectionner un fichier",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Espacement entre l'horloge et la zone de saisie",
+      "ItemHoverTipText": "Définit l'espacement entre l'horloge et la zone de saisie de mot de passe",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    },
+    {
+      "ItemKeyName": "lockScreenModeOpacity",
+      "ItemCaptionText": "Opacité du thème en mode écran verrouillé",
+      "ItemHoverTipText": "Définit l'opacité du thème en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Opacité de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit l'opacité de l'horloge en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Police de la partie heure de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit la police pour la partie heure de l'horloge en mode écran verrouillé",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Taille de police de la partie heure de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit la taille de police pour la partie heure de l'horloge en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Épaisseur de police de la partie heure de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit l'épaisseur de police pour la partie heure de l'horloge en mode écran verrouillé",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Couleur de police de la partie heure de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit la couleur de police pour la partie heure de l'horloge en mode écran verrouillé",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Police de la partie date de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit la police pour la partie date de l'horloge en mode écran verrouillé",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Taille de police de la partie date de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit la taille de police pour la partie date de l'horloge en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Épaisseur de police de la partie date de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit l'épaisseur de police pour la partie date de l'horloge en mode écran verrouillé",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Couleur de police de la partie date de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définit la couleur de police pour la partie date de l'horloge en mode écran verrouillé",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Opacité de la zone de saisie de mot de passe et du bouton en mode écran verrouillé",
+      "ItemHoverTipText": "Définit l'opacité de la zone de saisie de mot de passe et du bouton en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Masquer toute l'interface utilisateur par défaut en mode écran verrouillé",
+      "ItemHoverTipText": "En entrant en mode écran verrouillé, tous les éléments de l'interface utilisateur tels que l'horloge, le bouton de connexion ou les zones de texte sont masqués par défaut. Vous pouvez déclencher leur affichage en cliquant sur une zone vide.",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Basculer l'état d'affichage de l'interface utilisateur par clic de souris en mode écran verrouillé",
+      "ItemHoverTipText": "En mode écran verrouillé, cliquer sur une zone vide bascule l'état d'affichage des éléments de l'interface utilisateur (afficher/masquer).",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeVideoVolume",
+      "ItemCaptionText": "Volume vidéo en mode écran verrouillé",
+      "ItemHoverTipText": "Définit le volume du fichier vidéo en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "lockScreenModeChangeVolumeWithMouseWheel",
+      "ItemCaptionText": "Ajuster le volume avec la molette de la souris en mode écran verrouillé",
+      "ItemHoverTipText": "En mode écran verrouillé, la molette de la souris est utilisée pour ajuster le volume",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeAudioVolume",
+      "ItemCaptionText": "Volume audio en mode écran verrouillé",
+      "ItemHoverTipText": "Définit le volume du fichier audio en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "switchThemeHotKey",
+      "ItemCaptionText": "Raccourci clavier pour changer de thème",
+      "ItemHoverTipText": "Valide uniquement en mode écran verrouillé et si le dossier de thème contient plusieurs vidéos ou images. Peut spécifier 1 lettre ou chiffre. Lors de l'utilisation, il doit être combiné avec les touches de modification Ctrl+Alt. S'il ne fonctionne pas, il peut être occupé par un autre programme ; essayez une autre touche.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "x"
+    },
+    {
+      "ItemKeyName": "muteHotKey",
+      "ItemCaptionText": "Raccourci clavier pour couper le son",
+      "ItemHoverTipText": "Valide uniquement en mode écran verrouillé. Peut spécifier 1 lettre ou chiffre. Lors de l'utilisation, il doit être combiné avec les touches de modification Ctrl+Alt. S'il ne fonctionne pas, il peut être occupé par un autre programme ; essayez une autre touche.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "m"
+    },
+    {
+      "ItemKeyName": "note",
+      "ItemCaptionText": "Remarque : Si vous souhaitez créer des œuvres similaires, recherchez et téléchargez ScreenSaverDevTool depuis l'Atelier. En utilisant cet outil, vous pouvez rapidement créer vos propres thèmes d'économiseur d'écran ou d'écran verrouillé.",
+      "ItemHoverTipText": "",
+      "ItemInputType": "label",
+      "ItemCurrentValue": ""
+    }
+  ]
+}

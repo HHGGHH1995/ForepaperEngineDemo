@@ -1,0 +1,503 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "themeFolder",
+      "ItemCaptionText": "Folder motywów",
+      "ItemHoverTipText": "Możesz wybrać folder zawierający następujące pliki: (mp4 webm png jpg mp3 wav webp gif apng). Jeśli nie określono, zostaną odtworzone domyślne pliki motywów w folderze \"themes\" tego projektu. Jeśli pliki w aktualnie używanym folderze uległy zmianie, musisz odświeżyć bieżący projekt Forepaper.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "folder",
+      "Title": "Wybierz folder zawierający pliki motywów",
+      "FolderPath": "themes",
+      "ItemInputMaxNum": "255",
+      "ItemInputMinNum": "",
+      "ItemStep": "",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeOpacity",
+      "ItemCaptionText": "Przezroczystość motywu w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia przezroczystość motywu w trybie wygaszacza ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "screenSaverModeVideoVolume",
+      "ItemCaptionText": "Głośność wideo w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia własną głośność pliku wideo w trybie wygaszacza ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "playAudioWithTheme",
+      "ItemCaptionText": "Odtwarzaj plik audio jednocześnie",
+      "ItemHoverTipText": "Czy odtwarzać plik audio (jeśli istnieje w folderze motywu) jednocześnie (To ustawienie można zignorować, jeśli w folderze motywu nie ma pliku audio)",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "screenSaverModeAudioVolume",
+      "ItemCaptionText": "Głośność audio w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia głośność jednocześnie odtwarzanego pliku audio w trybie wygaszacza ekranu (To ustawienie można zignorować, jeśli w folderze motywu nie ma pliku audio)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Przezroczystość zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia przezroczystość zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Czcionka części czasu zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia czcionkę dla części czasu zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Rozmiar czcionki części czasu zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia rozmiar czcionki dla części czasu zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Grubość czcionki części czasu zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia grubość czcionki dla części czasu zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Kolor czcionki części czasu zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia kolor czcionki dla części czasu zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Czcionka części daty zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia czcionkę dla części daty zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Rozmiar czcionki części daty zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia rozmiar czcionki dla części daty zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Grubość czcionki części daty zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia grubość czcionki dla części daty zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Kolor czcionki części daty zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustawia kolor czcionki dla części daty zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12-godzinny format czasu",
+      "ItemHoverTipText": "Jeśli ta opcja nie jest zaznaczona, zostanie użyty 24-godzinny format czasu",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "operatingModeOpacity",
+      "ItemCaptionText": "Przezroczystość motywu w trybie pracy",
+      "ItemHoverTipText": "Ustawia przezroczystość motywu w trybie pracy",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "0.9",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.1"
+    },
+    {
+      "ItemKeyName": "operatingModeVideoVolume",
+      "ItemCaptionText": "Głośność wideo w trybie pracy",
+      "ItemHoverTipText": "Ustawia głośność pliku wideo w trybie pracy",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModeAudioVolume",
+      "ItemCaptionText": "Głośność audio w trybie pracy",
+      "ItemHoverTipText": "Ustawia głośność pliku audio w trybie pracy",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModePause",
+      "ItemCaptionText": "Wstrzymaj w trybie pracy",
+      "ItemHoverTipText": "Czy wstrzymać odtwarzanie motywu w trybie pracy",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "playMode",
+      "ItemCaptionText": "Sposób przełączania motywów",
+      "ItemHoverTipText": "Określa metodę przełączania między wszystkimi motywami w folderze motywów",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Przełączanie sekwencyjne",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Przełączanie losowe",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "audioPlayMode",
+      "ItemCaptionText": "Sposób przełączania plików audio",
+      "ItemHoverTipText": "Określa metodę przełączania między wszystkimi plikami audio w folderze motywów",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Przełączanie sekwencyjne",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Przełączanie losowe",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "staticThemeSwitchInterval",
+      "ItemCaptionText": "Interwał przełączania motywów typu obraz",
+      "ItemHoverTipText": "Ta wartość określa, po ilu sekundach przełączyć na następny motyw podczas odtwarzania motywów typu obraz",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "3",
+      "ItemStep": "1",
+      "ItemCurrentValue": "3"
+    },
+    {
+      "ItemKeyName": "videoThemeSwitchInterval",
+      "ItemCaptionText": "Interwał przełączania motywów typu wideo",
+      "ItemHoverTipText": "Ta wartość określa, po ilu sekundach przełączyć na następny motyw podczas odtwarzania motywów typu wideo. Jeśli ustawione na 0, przełączenie nastąpi dopiero po zakończeniu odtwarzania wideo.",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "0",
+      "ItemStep": "1",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "objectFit",
+      "ItemCaptionText": "Sposób wypełniania motywu",
+      "ItemHoverTipText": "Określa, w jaki sposób motyw ma wypełniać ekran",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "cover",
+          "OptionText": "Przytnij",
+          "ItemHoverTipText": "Przycina części poza oknem, zapewniając normalny współczynnik proporcji"
+        },
+        {
+          "OptionValue": "fill",
+          "OptionText": "Rozciągnij",
+          "ItemHoverTipText": "Rozciąga motyw na pełny ekran, nie gwarantuje normalnego współczynnika proporcji"
+        },
+        {
+          "OptionValue": "contain",
+          "OptionText": "Pozostaw marginesy",
+          "ItemHoverTipText": "Pozostawia puste obszary tam, gdzie motyw nie wypełnia całego ekranu, zapewniając normalny współczynnik proporcji"
+        },
+        {
+          "OptionValue": "none",
+          "OptionText": "Oryginalny rozmiar",
+          "ItemHoverTipText": "Używa oryginalnego rozmiaru motywu, może powodować puste obszary lub przepełnienie"
+        }
+      ],
+      "ItemCurrentValue": "cover"
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Tekst podpowiedzi pola wprowadzania hasła",
+      "ItemHoverTipText": "Tekst podpowiedzi w polu wprowadzania hasła",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Wprowadź hasło odblokowania"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Szerokość pola wprowadzania hasła",
+      "ItemHoverTipText": "Ustawia szerokość pola wprowadzania dla niestandardowego hasła logowania",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Wysokość pola wprowadzania hasła",
+      "ItemHoverTipText": "Ustawia wysokość pola wprowadzania dla niestandardowego hasła logowania (Uwaga: wpływa to również na wysokość przycisku logowania)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Ikona przycisku logowania",
+      "ItemHoverTipText": "Wybierz niestandardowy plik ikony dla przycisku logowania. Jeśli pozostawione puste, zostanie użyta domyślna ikona.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Wybierz plik",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Ikona przycisku logowania (stan najechania myszą)",
+      "ItemHoverTipText": "Wybierz niestandardowy plik ikony dla przycisku logowania w stanie najechania myszą. Jeśli pozostawione puste, zostanie użyta domyślna ikona.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Wybierz plik",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Odstęp między zegarem a polem wprowadzania",
+      "ItemHoverTipText": "Ustawia odstęp między zegarem a polem wprowadzania hasła",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    },
+    {
+      "ItemKeyName": "lockScreenModeOpacity",
+      "ItemCaptionText": "Przezroczystość motywu w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia przezroczystość motywu w trybie ekranu blokady",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Przezroczystość zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia przezroczystość zegara w trybie ekranu blokady",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Czcionka części czasu zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia czcionkę dla części czasu zegara w trybie ekranu blokady",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Rozmiar czcionki części czasu zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia rozmiar czcionki dla części czasu zegara w trybie ekranu blokady",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Grubość czcionki części czasu zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia grubość czcionki dla części czasu zegara w trybie ekranu blokady",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Kolor czcionki części czasu zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia kolor czcionki dla części czasu zegara w trybie ekranu blokady",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Czcionka części daty zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia czcionkę dla części daty zegara w trybie ekranu blokady",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Rozmiar czcionki części daty zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia rozmiar czcionki dla części daty zegara w trybie ekranu blokady",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Grubość czcionki części daty zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia grubość czcionki dla części daty zegara w trybie ekranu blokady",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Kolor czcionki części daty zegara w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia kolor czcionki dla części daty zegara w trybie ekranu blokady",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Przezroczystość pola wprowadzania hasła i przycisku w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia przezroczystość pola wprowadzania hasła i przycisku w trybie ekranu blokady",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Domyślnie ukryj cały interfejs użytkownika w trybie ekranu blokady",
+      "ItemHoverTipText": "Po wejściu w tryb ekranu blokady wszystkie elementy interfejsu użytkownika, takie jak zegar, przycisk logowania lub pola tekstowe, są domyślnie ukryte. Możesz wywołać ich wyświetlenie, klikając w pusty obszar.",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Przełącz stan wyświetlania interfejsu użytkownika kliknięciem myszy w trybie ekranu blokady",
+      "ItemHoverTipText": "W trybie ekranu blokady kliknięcie w pusty obszar przełącza stan wyświetlania elementów interfejsu użytkownika (pokazuj/ukryj).",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeVideoVolume",
+      "ItemCaptionText": "Głośność wideo w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia głośność pliku wideo w trybie ekranu blokady",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "lockScreenModeChangeVolumeWithMouseWheel",
+      "ItemCaptionText": "Reguluj głośność kółkiem myszy w trybie ekranu blokady",
+      "ItemHoverTipText": "W trybie ekranu blokady kółko myszy służy do regulacji głośności",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeAudioVolume",
+      "ItemCaptionText": "Głośność audio w trybie ekranu blokady",
+      "ItemHoverTipText": "Ustawia głośność pliku audio w trybie ekranu blokady",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "switchThemeHotKey",
+      "ItemCaptionText": "Skrót klawiaturowy przełączania motywu",
+      "ItemHoverTipText": "Ważny tylko w trybie ekranu blokady i gdy folder motywów zawiera wiele filmów wideo lub obrazów. Można określić 1 literę lub cyfrę. Podczas użycia musi być połączony z klawiszami modyfikującymi Ctrl+Alt. Jeśli nie działa, może być zajęty przez inny program; spróbuj innego klawisza.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "x"
+    },
+    {
+      "ItemKeyName": "muteHotKey",
+      "ItemCaptionText": "Skrót klawiaturowy wyciszenia",
+      "ItemHoverTipText": "Ważny tylko w trybie ekranu blokady. Można określić 1 literę lub cyfrę. Podczas użycia musi być połączony z klawiszami modyfikującymi Ctrl+Alt. Jeśli nie działa, może być zajęty przez inny program; spróbuj innego klawisza.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "m"
+    },
+    {
+      "ItemKeyName": "note",
+      "ItemCaptionText": "Uwaga: Jeśli chcesz tworzyć podobne prace, wyszukaj i pobierz ScreenSaverDevTool z Warsztatu. Korzystając z tego narzędzia, możesz szybko tworzyć własne motywy wygaszacza ekranu lub ekranu blokady.",
+      "ItemHoverTipText": "",
+      "ItemInputType": "label",
+      "ItemCurrentValue": ""
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "themeFolder",
+      "ItemCaptionText": "Pasta de temas",
+      "ItemHoverTipText": "Você pode selecionar uma pasta contendo os seguintes arquivos: (mp4 webm png jpg mp3 wav webp gif apng). Se não especificado, os arquivos de tema padrão na pasta \"themes\" deste projeto serão reproduzidos. Se os arquivos na pasta atualmente utilizada tiverem mudado, você precisa atualizar o projeto Forepaper atual.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "folder",
+      "Title": "Selecionar pasta contendo arquivos de tema",
+      "FolderPath": "themes",
+      "ItemInputMaxNum": "255",
+      "ItemInputMinNum": "",
+      "ItemStep": "",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeOpacity",
+      "ItemCaptionText": "Opacidade do tema no modo protetor de tela",
+      "ItemHoverTipText": "Define a opacidade do tema quando no modo protetor de tela",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "screenSaverModeVideoVolume",
+      "ItemCaptionText": "Volume de vídeo no modo protetor de tela",
+      "ItemHoverTipText": "Define o volume do arquivo de vídeo em si quando no modo protetor de tela",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "playAudioWithTheme",
+      "ItemCaptionText": "Reproduzir arquivo de áudio simultaneamente",
+      "ItemHoverTipText": "Se deve reproduzir o arquivo de áudio (se existir na pasta do tema) simultaneamente (Esta configuração pode ser ignorada se não houver arquivo de áudio na pasta do tema)",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "screenSaverModeAudioVolume",
+      "ItemCaptionText": "Volume de áudio no modo protetor de tela",
+      "ItemHoverTipText": "Define o volume do arquivo de áudio reproduzido simultaneamente quando no modo protetor de tela (Esta configuração pode ser ignorada se não houver arquivo de áudio na pasta do tema)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Opacidade do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define a opacidade do relógio quando no modo protetor de tela",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Fonte da parte de hora do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define a fonte para a parte de hora do relógio quando no modo protetor de tela",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Tamanho da fonte da parte de hora do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define o tamanho da fonte para a parte de hora do relógio quando no modo protetor de tela",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Espessura da fonte da parte de hora do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define a espessura da fonte para a parte de hora do relógio quando no modo protetor de tela",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Cor da fonte da parte de hora do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define a cor da fonte para a parte de hora do relógio quando no modo protetor de tela",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Fonte da parte de data do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define a fonte para a parte de data do relógio quando no modo protetor de tela",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Tamanho da fonte da parte de data do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define o tamanho da fonte para a parte de data do relógio quando no modo protetor de tela",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Espessura da fonte da parte de data do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define a espessura da fonte para a parte de data do relógio quando no modo protetor de tela",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Cor da fonte da parte de data do relógio no modo protetor de tela",
+      "ItemHoverTipText": "Define a cor da fonte para a parte de data do relógio quando no modo protetor de tela",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "Formato de hora de 12 horas",
+      "ItemHoverTipText": "Se esta opção não estiver marcada, será utilizado o formato de hora de 24 horas",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "operatingModeOpacity",
+      "ItemCaptionText": "Opacidade do tema no modo de operação",
+      "ItemHoverTipText": "Define a opacidade do tema quando no modo de operação",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "0.9",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.1"
+    },
+    {
+      "ItemKeyName": "operatingModeVideoVolume",
+      "ItemCaptionText": "Volume de vídeo no modo de operação",
+      "ItemHoverTipText": "Define o volume do arquivo de vídeo quando no modo de operação",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModeAudioVolume",
+      "ItemCaptionText": "Volume de áudio no modo de operação",
+      "ItemHoverTipText": "Define o volume do arquivo de áudio quando no modo de operação",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModePause",
+      "ItemCaptionText": "Pausar no modo de operação",
+      "ItemHoverTipText": "Se deve pausar a reprodução do tema quando no modo de operação",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "playMode",
+      "ItemCaptionText": "Método de alternância de tema",
+      "ItemHoverTipText": "Especifica o método para alternar entre todos os temas na pasta do tema",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Alternar sequencialmente",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Alternar aleatoriamente",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "audioPlayMode",
+      "ItemCaptionText": "Método de alternância de arquivo de áudio",
+      "ItemHoverTipText": "Especifica o método para alternar entre todos os arquivos de áudio na pasta do tema",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Alternar sequencialmente",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Alternar aleatoriamente",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "staticThemeSwitchInterval",
+      "ItemCaptionText": "Intervalo de alternância para temas tipo imagem",
+      "ItemHoverTipText": "Este valor especifica quantos segundos para alternar para o próximo tema ao reproduzir temas tipo imagem",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "3",
+      "ItemStep": "1",
+      "ItemCurrentValue": "3"
+    },
+    {
+      "ItemKeyName": "videoThemeSwitchInterval",
+      "ItemCaptionText": "Intervalo de alternância para temas tipo vídeo",
+      "ItemHoverTipText": "Este valor especifica quantos segundos para alternar para o próximo tema ao reproduzir temas tipo vídeo. Se definido como 0, a alternância ocorrerá apenas após a conclusão da reprodução do vídeo.",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "0",
+      "ItemStep": "1",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "objectFit",
+      "ItemCaptionText": "Método de preenchimento do tema",
+      "ItemHoverTipText": "Especifica como o tema deve preencher a tela",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "cover",
+          "OptionText": "Cortar",
+          "ItemHoverTipText": "Corta partes além da janela, garantindo uma proporção normal"
+        },
+        {
+          "OptionValue": "fill",
+          "OptionText": "Esticar",
+          "ItemHoverTipText": "Estica o tema para tela cheia, não garante uma proporção normal"
+        },
+        {
+          "OptionValue": "contain",
+          "OptionText": "Deixar margens",
+          "ItemHoverTipText": "Deixa áreas em branco onde o tema não preenche toda a tela, garantindo uma proporção normal"
+        },
+        {
+          "OptionValue": "none",
+          "OptionText": "Tamanho original",
+          "ItemHoverTipText": "Usa o tamanho original do tema, pode resultar em áreas em branco ou transbordamento"
+        }
+      ],
+      "ItemCurrentValue": "cover"
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Texto de dica da caixa de entrada de senha",
+      "ItemHoverTipText": "O texto de dica na caixa de entrada de senha",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Por favor, digite a senha de desbloqueio"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Largura da caixa de entrada de senha",
+      "ItemHoverTipText": "Define a largura da caixa de entrada para a senha de login personalizada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Altura da caixa de entrada de senha",
+      "ItemHoverTipText": "Define a altura da caixa de entrada para a senha de login personalizada (Nota: isso também afeta a altura do botão de login)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Ícone do botão de login",
+      "ItemHoverTipText": "Selecione um arquivo de ícone personalizado para o botão de login. Se deixado vazio, o ícone padrão será usado.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Por favor, selecione um arquivo",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Ícone do botão de login (estado ao passar o mouse)",
+      "ItemHoverTipText": "Selecione um arquivo de ícone personalizado para o botão de login no estado ao passar o mouse. Se deixado vazio, o ícone padrão será usado.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Por favor, selecione um arquivo",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Espaço entre o relógio e a caixa de entrada",
+      "ItemHoverTipText": "Define o espaço entre o relógio e a caixa de entrada de senha",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    },
+    {
+      "ItemKeyName": "lockScreenModeOpacity",
+      "ItemCaptionText": "Opacidade do tema no modo tela bloqueada",
+      "ItemHoverTipText": "Define a opacidade do tema quando no modo tela bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Opacidade do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define a opacidade do relógio quando no modo tela bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Fonte da parte de hora do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define a fonte para a parte de hora do relógio quando no modo tela bloqueada",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Tamanho da fonte da parte de hora do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define o tamanho da fonte para a parte de hora do relógio quando no modo tela bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Espessura da fonte da parte de hora do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define a espessura da fonte para a parte de hora do relógio quando no modo tela bloqueada",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Cor da fonte da parte de hora do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define a cor da fonte para a parte de hora do relógio quando no modo tela bloqueada",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Fonte da parte de data do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define a fonte para a parte de data do relógio quando no modo tela bloqueada",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Tamanho da fonte da parte de data do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define o tamanho da fonte para a parte de data do relógio quando no modo tela bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Espessura da fonte da parte de data do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define a espessura da fonte para a parte de data do relógio quando no modo tela bloqueada",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Cor da fonte da parte de data do relógio no modo tela bloqueada",
+      "ItemHoverTipText": "Define a cor da fonte para a parte de data do relógio quando no modo tela bloqueada",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Opacidade da caixa de entrada de senha e botão no modo tela bloqueada",
+      "ItemHoverTipText": "Define a opacidade da caixa de entrada de senha e do botão quando no modo tela bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Ocultar toda a interface do usuário por padrão no modo tela bloqueada",
+      "ItemHoverTipText": "Ao entrar no modo tela bloqueada, todos os elementos da interface do usuário, como relógio, botão de login ou caixas de texto, estão ocultos por padrão. Você pode ativar sua exibição clicando em uma área em branco.",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Alternar estado de exibição da interface do usuário com clique do mouse no modo tela bloqueada",
+      "ItemHoverTipText": "Quando no modo tela bloqueada, clicar em uma área em branco alterna o estado de exibição dos elementos da interface do usuário (mostrar/ocultar).",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeVideoVolume",
+      "ItemCaptionText": "Volume de vídeo no modo tela bloqueada",
+      "ItemHoverTipText": "Define o volume do arquivo de vídeo quando no modo tela bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "lockScreenModeChangeVolumeWithMouseWheel",
+      "ItemCaptionText": "Ajustar volume com a roda do mouse no modo tela bloqueada",
+      "ItemHoverTipText": "Quando no modo tela bloqueada, a roda do mouse é usada para ajustar o volume",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeAudioVolume",
+      "ItemCaptionText": "Volume de áudio no modo tela bloqueada",
+      "ItemHoverTipText": "Define o volume do arquivo de áudio quando no modo tela bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "switchThemeHotKey",
+      "ItemCaptionText": "Atalho de teclado para alternar tema",
+      "ItemHoverTipText": "Válido apenas quando no modo tela bloqueada e a pasta de temas contém vários vídeos ou imagens. Pode especificar 1 letra ou número. Ao usar, deve ser combinado com as teclas modificadoras Ctrl+Alt. Se não funcionar, pode estar ocupado por outro programa; tente outra tecla.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "x"
+    },
+    {
+      "ItemKeyName": "muteHotKey",
+      "ItemCaptionText": "Atalho de teclado para silenciar",
+      "ItemHoverTipText": "Válido apenas quando no modo tela bloqueada. Pode especificar 1 letra ou número. Ao usar, deve ser combinado com as teclas modificadoras Ctrl+Alt. Se não funcionar, pode estar ocupado por outro programa; tente outra tecla.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "m"
+    },
+    {
+      "ItemKeyName": "note",
+      "ItemCaptionText": "Nota: Se você deseja criar trabalhos semelhantes, procure e baixe o ScreenSaverDevTool na Oficina. Usando esta ferramenta, você pode criar rapidamente seus próprios temas de protetor de tela ou tela bloqueada.",
+      "ItemHoverTipText": "",
+      "ItemInputType": "label",
+      "ItemCurrentValue": ""
+    }
+  ]
+}

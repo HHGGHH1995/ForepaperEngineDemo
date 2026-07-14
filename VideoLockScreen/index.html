@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Saver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+        
+        #static-theme {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }
+        
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }
+        
+        /* 隐藏所有视频控件 */
+        #video-background::-webkit-media-controls {
+            display: none !important;
+        }
+        
+        #video-background::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+        
+        #video-background::-webkit-media-controls-panel {
+            display: none !important;
+        }
+        
+        #video-background::-webkit-media-controls-play-button {
+            display: none !important;
+        }
+        
+        #video-background::-webkit-media-controls-start-playback-button {
+            display: none !important;
+        }
+
+
+        #ui-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            flex-flow: column;
+            z-index: 1;
+            position: relative;
+            gap: 100px;
+        }
+
+        #clock-time {
+            margin: auto;
+            cursor: default;
+        }
+
+        #clock-date {
+            margin: auto;
+            cursor: default;
+        }
+
+        #clock-container {
+            display: flex;
+            flex-flow: column;
+        }
+
+        #login-container {
+            display: flex;
+        }
+
+        #password-input {
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+            background-color: transparent;
+        }
+        
+        #password-input:focus {
+            border-color: #667eea;
+        }
+        
+        #password-input:hover {
+            border-color: #a5b4fc;
+        }
+
+        #login-btn {
+            background-size: contain;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script src="ForepaperEngine.js"></script>
+    <script src="DeclareResourceRequirements.js"></script>
+    <script src="ConfigManager.js"></script>
+    <script src="ConfigManagerInit.js"></script>
+    
+    <video id="video-background">
+        <source id="video-background-source" src="" type="video/mp4">
+    </video>
+
+    <img id="static-theme" src="">
+
+    <audio id="audio-background">
+        <source id="audio-background-source" src="" type="audio/mpeg">
+    </audio>
+
+    <div id="ui-container">
+        <div id="clock-container">
+            <div id="clock-time">
+                10:10
+            </div>
+            <div id="clock-date">
+                2022-01-01
+            </div>
+        </div>
+        <div id="login-container">
+            <input type="password" id="password-input" placeholder="Enter your password">
+            <img id="login-btn" src="loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.png" alt="login" />
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentForepaperEngineMode = new URLSearchParams(window.location.search).get('current_mode');
+            let audioFiles = [];
+            let vidoeAndPictureFiles = [];
+
+            const currentWorkshopItemInstallPath = ForepaperEngineGetCurrentWorkshopItemInstallPath();
+
+            function loadFiles(){
+                //clear old files
+                audioFiles = [];
+                vidoeAndPictureFiles = [];
+
+                const defualtThemePath = `${currentWorkshopItemInstallPath}/themes`;
+                const currentUsedThemePath = ConfigManager.get('themeFolder') || defualtThemePath;
+                const option = {
+                    FolderPath: currentUsedThemePath,
+                    SearchPattern: '*',
+                    OnlyTopDirectory: false
+                }
+                const themeFiles = ForepaperEngineGetFilesByPath(option);
+                themeFiles.forEach(file => {
+                    if (
+                        file.endsWith('.mp4') 
+                        || file.endsWith('.webm') 
+                        || file.endsWith('.png') 
+                        || file.endsWith('.jpg')
+                        || file.endsWith('.webp')
+                        || file.endsWith('.gif')
+                        || file.endsWith('.jpeg')
+                        || file.endsWith('.apng')
+                    ) {
+                        vidoeAndPictureFiles.push(file);
+                    }
+                    else if (
+                        file.endsWith('.mp3')
+                        || file.endsWith('.wav')
+                    ) {
+                        audioFiles.push(file);
+                    }
+                });
+            }
+
+            loadFiles();
+            
+
+            let isVideoTheme = false;
+            let currentThemeIndex = -1;
+            let currentAudioIndex = -1;
+            let currentThemeDurationSeconds = 0;
+
+            const video = document.getElementById('video-background');
+            const videoSourceElement = document.getElementById('video-background-source');
+            const imgElement = document.getElementById('static-theme');
+            const audio = document.getElementById('audio-background');
+            const audioSourceElement = document.getElementById('audio-background-source');
+            const uiContainer = document.getElementById('ui-container');
+            const clockContainerElement = document.getElementById('clock-container');
+            const clockTimeElement = document.getElementById('clock-time');
+            const clockDateElement = document.getElementById('clock-date');
+            const loginContainerElement = document.getElementById('login-container');
+            const passwordInput = document.getElementById('password-input');
+            const loginBtn = document.getElementById('login-btn');
+
+            passwordInput.style.width = `${ConfigManager.get('passwordInputBoxWidth')}px`;
+            passwordInput.style.height = `${ConfigManager.get('passwordInputBoxHeight')}px`;
+            passwordInput.style.marginLeft = passwordInput.style.height;
+            passwordInput.placeholder = ConfigManager.get('customLockScreenPasswordTip');
+            loginBtn.style.width = `${ConfigManager.get('passwordInputBoxHeight')}px`;
+            loginBtn.style.height = `${ConfigManager.get('passwordInputBoxHeight')}px`;
+            if(ConfigManager.get('loginBtnImagePath')){
+                loginBtn.src = `https://forepaperenginelocalfile/${ConfigManager.get('loginBtnImagePath')}`;
+            }
+            else{
+                loginBtn.src = 'loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.png';
+            }
+
+            uiContainer.style.gap = `${ConfigManager.get('gapOfClockAndInputBox')}px`;
+
+            video.style.objectFit = ConfigManager.get('objectFit');
+            imgElement.style.objectFit = ConfigManager.get('objectFit');
+
+            uiContainer.style.display = 'none';
+
+            function changeAudio(play){
+                if(audioFiles.length === 0){
+                    return;
+                }
+                if(audioFiles.length > 1){
+                    if(ConfigManager.get('audioPlayMode') === 'sequence'){
+                        currentAudioIndex++;
+                        if(currentAudioIndex >= audioFiles.length){
+                            currentAudioIndex = 0;
+                        }
+                    }
+                    else{
+                        const oldAudioIndex = currentAudioIndex;
+                        currentAudioIndex = Math.floor(Math.random() * audioFiles.length);
+                        if(currentAudioIndex === oldAudioIndex){
+                            currentAudioIndex++;
+                            if(currentAudioIndex >= audioFiles.length){
+                                currentAudioIndex = 0;
+                            }
+                        }
+                    }
+                }
+                else{
+                    if(currentAudioIndex === -1){
+                        currentAudioIndex = 0;
+                    }
+                    else{
+                        // restart audio
+                        audio.currentTime = 0;
+                        if(play){
+                            audio.play();
+                        }
+                        return;
+                    }
+                }
+
+                audioSourceElement.src = `https://forepaperenginelocalfile/${audioFiles[currentAudioIndex]}`;
+                let fileType = audioFiles[currentAudioIndex].split('.').pop();
+                audioSourceElement.type = `audio/${fileType}`;
+                audio.load();
+                if(play){
+                    audio.play();
+                }
+            }
+
+            if (audioFiles.length > 0 && !ConfigManager.get('operatingModePause')) {
+                changeAudio(ConfigManager.get('playAudioWithTheme'));
+                audio.volume = ConfigManager.get('operatingModeAudioVolume');
+            }
+            
+
+            if (vidoeAndPictureFiles.length > 0){
+                changeTheme(!ConfigManager.get('operatingModePause'));
+            }
+
+            window.addEventListener('wheel', (e) => {
+                if(currentForepaperEngineMode === '3' && !ConfigManager.IsSettingPanelVisible()){
+                    if(ConfigManager.get('lockScreenModeChangeVolumeWithMouseWheel')){
+                        if(e.deltaY < 0){
+                            if(audio.volume < 0.95){
+                                audio.volume += 0.05;
+                            }
+                            else{
+                                audio.volume = 1;
+                            }
+                            if(video.volume < 0.95){
+                                video.volume += 0.05;
+                            }
+                            else{
+                                video.volume = 1;
+                            }
+                        }
+                        else{
+                            if(audio.volume > 0.05){
+                                audio.volume -= 0.05;
+                            }
+                            else{
+                                audio.volume = 0;
+                            }
+                            if(video.volume > 0.05){
+                                video.volume -= 0.05;
+                            }
+                            else{
+                                video.volume = 0;
+                            }
+                        }
+                    }
+                }
+            });
+
+            window.addEventListener('mousedown', () => {
+                if(currentForepaperEngineMode === '3'){
+                    if(uiContainer.style.display === 'none'){
+                        uiContainer.style.display = '';
+                        setTimeout(() => {
+                            passwordInput.focus();
+                        }, 100);
+                    }
+                    else{
+                        if(ConfigManager.get('lockScreenModeHideAllUIWhenMouseClick')) {
+                            uiContainer.style.display = 'none';
+                        }
+                    }
+                }
+            });
+
+            window.addEventListener('keydown', (e) => {
+                if(e.ctrlKey || e.altKey){
+                    if(e.ctrlKey && e.altKey){
+                        if(e.key.toLowerCase() === ConfigManager.get('switchThemeHotKey').toLowerCase()){
+                            changeTheme(true);
+                        }
+                        else if(e.key.toLowerCase() === ConfigManager.get('muteHotKey').toLowerCase()){
+                            if(audio.muted || video.muted){
+                                audio.muted = false;
+                                video.muted = false;
+                            }
+                            else{
+                                audio.muted = true;
+                                video.muted = true;
+                            }
+                        }
+                    }
+                }
+                else if(currentForepaperEngineMode === '3'){
+                    if(uiContainer.style.display === 'none'){
+                        uiContainer.style.display = '';
+                    }
+
+                    // check passwordInput has focus
+                    if(document.activeElement !== passwordInput
+                        && !ConfigManager.IsSettingPanelVisible()
+                    ){
+                        setTimeout(() => {
+                            passwordInput.focus();
+                        }, 100);
+                    }
+                }
+            });
+
+            passwordInput.addEventListener('mousedown', (e) => {
+                e.stopPropagation();
+            });
+
+            passwordInput.addEventListener('keydown', (e) => {
+                if(e.keyCode === 13){
+                    login();
+                }
+            });
+
+            passwordInput.addEventListener('blur', (e) => {
+                e.stopPropagation();
+                if(!ConfigManager.IsSettingPanelVisible())
+                    passwordInput.focus();
+            });
+
+            loginBtn.addEventListener('mousedown', (e) => {
+                e.stopPropagation();
+                login();
+            });
+
+            loginBtn.addEventListener('mouseenter', (e) => {
+                e.stopPropagation();
+                if(ConfigManager.get('loginBtnHoverImagePath')){
+                    loginBtn.src = `https://forepaperenginelocalfile/${ConfigManager.get('loginBtnHoverImagePath')}`;
+                }
+                else{
+                    loginBtn.src = 'loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.apng';
+                }
+            });
+
+            loginBtn.addEventListener('mouseleave', (e) => {
+                e.stopPropagation();
+                if(ConfigManager.get('loginBtnImagePath')){
+                    loginBtn.src = `https://forepaperenginelocalfile/${ConfigManager.get('loginBtnImagePath')}`;
+                }
+                else{
+                    loginBtn.src = 'loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.png';
+                }
+            });
+
+            function login(){
+                if(ForepaperEngineGetUnlockScreenType() != 0){
+                    let result = ForepaperEngineTryUnlockScreen(passwordInput.value);
+                    if(!result){
+                        passwordInput.style.borderColor = '#ff0000';
+                        setTimeout(() => {
+                            passwordInput.focus();
+                        }, 100);
+                        setTimeout(() => {
+                            passwordInput.style.borderColor = '';
+                        }, 1000);
+                    }
+                    else{
+                        uiContainer.style.display = 'none';
+                    }
+                    passwordInput.value = '';
+                }
+            }
+
+            function stopScreenSaverMode(){
+                if (isVideoTheme) {
+                    video.style.opacity = ConfigManager.get('operatingModeOpacity');
+                }
+                else {
+                    imgElement.style.opacity = ConfigManager.get('operatingModeOpacity');
+                }
+
+                video.volume = ConfigManager.get('operatingModeVideoVolume');
+                audio.volume = ConfigManager.get('operatingModeAudioVolume');
+                if (ConfigManager.get('operatingModePause')) {
+                    if(!video.paused){
+                        video.pause();
+                    }
+                    if(!audio.paused){
+                        audio.pause();
+                    }
+                }
+
+                uiContainer.style.display = 'none';
+            }
+
+            function stopLockScreenMode(){
+                if (isVideoTheme) {
+                    video.style.opacity = ConfigManager.get('operatingModeOpacity');
+                }
+                else {
+                    imgElement.style.opacity = ConfigManager.get('operatingModeOpacity');
+                }
+
+                video.volume = ConfigManager.get('operatingModeVideoVolume');
+                audio.volume = ConfigManager.get('operatingModeAudioVolume');
+                if (ConfigManager.get('operatingModePause')) {
+                    if(!video.paused){
+                        video.pause();
+                    }
+                    if(!audio.paused){
+                        audio.pause();
+                    }
+                }
+
+                uiContainer.style.display = 'none';
+            }
+
+            function changeTheme(play) {
+                currentThemeDurationSeconds = 0;
+                if(vidoeAndPictureFiles.length <= 1 && currentThemeIndex !== -1){
+                    return;
+                }
+                let oldThemeIndex = currentThemeIndex;
+                if (ConfigManager.get('playMode') === 'sequence'){
+                    currentThemeIndex++;
+                    if(currentThemeIndex >= vidoeAndPictureFiles.length){
+                        currentThemeIndex = 0;
+                    }
+                }
+                else {
+                    currentThemeIndex = Math.floor(Math.random() * vidoeAndPictureFiles.length);
+                    if(currentThemeIndex === oldThemeIndex){
+                        currentThemeIndex++;
+                        if(currentThemeIndex >= vidoeAndPictureFiles.length){
+                            currentThemeIndex = 0;
+                        }
+                    }
+                }
+
+                let fileType = vidoeAndPictureFiles[currentThemeIndex].split('.').pop();
+                if (fileType === 'mp4' || fileType === 'webm') {
+                    videoSourceElement.src = `https://forepaperenginelocalfile/${vidoeAndPictureFiles[currentThemeIndex]}`;
+                    videoSourceElement.type = `video/${fileType}`;
+                    video.load();
+                    if(play){
+                        video.play();
+                    }
+                    if (video.muted) {
+                        video.muted = false;
+                    }
+                    isVideoTheme = true;
+                    if(currentForepaperEngineMode === '2'){
+                        video.style.opacity = ConfigManager.get('screenSaverModeOpacity');
+                        video.volume = ConfigManager.get('screenSaverModeVideoVolume');
+                    }
+                    else if(currentForepaperEngineMode === '3'){
+                        video.style.opacity = ConfigManager.get('lockScreenModeOpacity');
+                        video.volume = ConfigManager.get('lockScreenModeVideoVolume');
+                    }
+                    else{
+                        video.style.opacity = ConfigManager.get('operatingModeOpacity');
+                        video.volume = ConfigManager.get('operatingModeVideoVolume');
+                    }
+                    imgElement.style.opacity = 0;
+                }
+                else {
+                    imgElement.src = `https://forepaperenginelocalfile/${vidoeAndPictureFiles[currentThemeIndex]}`;
+                    imgElement.type = `image/${fileType}`;
+
+                    isVideoTheme = false;
+                    if(currentForepaperEngineMode === '2'){
+                        imgElement.style.opacity = ConfigManager.get('screenSaverModeOpacity');
+                    }
+                    else if(currentForepaperEngineMode === '3'){
+                        imgElement.style.opacity = ConfigManager.get('lockScreenModeOpacity');
+                    }
+                    else{
+                        imgElement.style.opacity = ConfigManager.get('operatingModeOpacity');
+                    }
+                    video.style.opacity = 0;
+                    video.pause();
+                }
+            }
+
+            video.addEventListener('ended', () => {
+                if(vidoeAndPictureFiles.length > 1 && ConfigManager.get('videoThemeSwitchInterval') == 0){
+                    changeTheme(true);
+                }
+                else{
+                    // restart video
+                    video.currentTime = 0;
+                    video.play();
+                }
+            });
+
+            audio.addEventListener('ended', () => {
+                changeAudio(true);
+            });
+
+            function enterScreenSaverMode(){
+                if(isVideoTheme){
+                    video.style.opacity = ConfigManager.get('screenSaverModeOpacity');
+                    video.volume = ConfigManager.get('screenSaverModeVideoVolume');
+                    if (ConfigManager.get('operatingModePause')) {
+                        if(video.paused){
+                            video.play();
+                        }
+                    }
+                }
+                else{
+                    imgElement.style.opacity = ConfigManager.get('screenSaverModeOpacity');
+                }
+
+                if (audioFiles.length > 0 && currentAudioIndex === -1) {
+                    changeAudio(ConfigManager.get('playAudioWithTheme'));
+                }
+
+                audio.volume = ConfigManager.get('screenSaverModeAudioVolume');
+                if (ConfigManager.get('operatingModePause')) {
+                    if(audioFiles.length > 0 
+                        && audio.paused
+                        && ConfigManager.get('playAudioWithTheme')){
+                        audio.play();
+                    }
+                }
+
+                uiContainer.style.display = '';
+                if(ConfigManager.get('screenSaverModeClockOpacity') > 0){
+                    clockContainerElement.style.display = '';
+                    clockContainerElement.style.opacity = ConfigManager.get('screenSaverModeClockOpacity');
+
+                    if(ConfigManager.get('screenSaverModeClockTimeFont')){
+                        let font = JSON.parse(ConfigManager.get('screenSaverModeClockTimeFont'));
+                        clockTimeElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                    }
+                    else{
+                        clockTimeElement.style.fontFamily = 'Arial, sans-serif';
+                    }
+                    clockTimeElement.style.fontSize = `${ConfigManager.get('screenSaverModeClockTimeFontSize')}px`;
+                    clockTimeElement.style.fontWeight = ConfigManager.get('screenSaverModeClockTimeFontBold');
+                    clockTimeElement.style.color = ConfigManager.get('screenSaverModeClockTimeFontColor');
+
+                    if(ConfigManager.get('screenSaverModeClockDateFont')){
+                        let font = JSON.parse(ConfigManager.get('screenSaverModeClockDateFont'));
+                        clockDateElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                    }
+                    else{
+                        clockDateElement.style.fontFamily = 'Arial, sans-serif';
+                    }
+                    clockDateElement.style.fontSize = `${ConfigManager.get('screenSaverModeClockDateFontSize')}px`;
+                    clockDateElement.style.fontWeight = ConfigManager.get('screenSaverModeClockDateFontBold');
+                    clockDateElement.style.color = ConfigManager.get('screenSaverModeClockDateFontColor');
+                }
+                else{
+                    clockContainerElement.style.display = 'none';
+                }
+                loginContainerElement.style.display = 'none';
+            }
+
+            function enterLockScreenMode(){
+                if(isVideoTheme){
+                    video.style.opacity = ConfigManager.get('lockScreenModeOpacity');
+                    video.volume = ConfigManager.get('lockScreenModeVideoVolume');
+                    if (ConfigManager.get('operatingModePause')) {
+                        if(video.paused){
+                            video.play();
+                        }
+                    }
+                }
+                else{
+                    imgElement.style.opacity = ConfigManager.get('lockScreenModeOpacity');
+                }
+
+                if (audioFiles.length > 0 && currentAudioIndex === -1) {
+                    changeAudio(ConfigManager.get('playAudioWithTheme'));
+                }
+
+                audio.volume = ConfigManager.get('lockScreenModeAudioVolume');
+                if (ConfigManager.get('operatingModePause')) {
+                    if(audioFiles.length > 0 
+                        && audio.paused
+                        && ConfigManager.get('playAudioWithTheme')){
+                        audio.play();
+                    }
+                }
+
+                if(ConfigManager.get('lockScreenModeHideAllUI')){
+                    uiContainer.style.display = 'none';
+                }
+                else{
+                    uiContainer.style.display = '';
+                }
+                
+                if(ConfigManager.get('lockScreenModeClockOpacity') > 0){
+                    clockContainerElement.style.display = '';
+                    clockContainerElement.style.opacity = ConfigManager.get('lockScreenModeClockOpacity');
+
+                    if(ConfigManager.get('lockScreenModeClockTimeFont')){
+                        let font = JSON.parse(ConfigManager.get('lockScreenModeClockTimeFont'));
+                        clockTimeElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                    }
+                    else{
+                        clockTimeElement.style.fontFamily = 'Arial, sans-serif';
+                    }
+                    clockTimeElement.style.fontSize = `${ConfigManager.get('lockScreenModeClockTimeFontSize')}px`;
+                    clockTimeElement.style.fontWeight = ConfigManager.get('lockScreenModeClockTimeFontBold');
+                    clockTimeElement.style.color = ConfigManager.get('lockScreenModeClockTimeFontColor');
+
+                    if(ConfigManager.get('lockScreenModeClockDateFont')){
+                        let font = JSON.parse(ConfigManager.get('lockScreenModeClockDateFont'));
+                        clockDateElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                    }
+                    else{
+                        clockDateElement.style.fontFamily = 'Arial, sans-serif';
+                    }
+                    clockDateElement.style.fontSize = `${ConfigManager.get('lockScreenModeClockDateFontSize')}px`;
+                    clockDateElement.style.fontWeight = ConfigManager.get('lockScreenModeClockDateFontBold');
+                    clockDateElement.style.color = ConfigManager.get('lockScreenModeClockDateFontColor');
+                }
+                else{
+                    clockContainerElement.style.display = 'none';
+                }
+
+                if(ForepaperEngineGetUnlockScreenType() == 0){
+                    loginContainerElement.style.display = 'none';
+                }
+                else{
+                    loginContainerElement.style.display = '';
+                    loginContainerElement.style.opacity = ConfigManager.get('lockScreenModeUIOpacity');
+                    passwordInput.style.display = '';
+                        setTimeout(() => {
+                            passwordInput.focus();
+                        }, 100);
+                }
+            }
+
+            function ChangeMode(oldMode){
+                if(currentForepaperEngineMode === '1') {
+                    if(oldMode === '2'){
+                        stopScreenSaverMode();
+                    }
+                    else if(oldMode === '3'){
+                        stopLockScreenMode();
+                    }
+                    uiContainer.style.display = 'none';
+                }
+                else if(currentForepaperEngineMode === '2'){
+                    enterScreenSaverMode();
+                }
+                else if(currentForepaperEngineMode === '3'){
+                    enterLockScreenMode();
+                }
+            }
+
+            ChangeMode('1');
+            
+            setInterval(() => {
+                clockTimeElement.innerText = new Date().toLocaleTimeString(undefined, { hour12: ConfigManager.get('clockTimeUse12HourFormat') });
+                clockDateElement.innerText = new Date().toLocaleDateString();
+
+                
+                if(currentForepaperEngineMode === '2'){
+                    currentThemeDurationSeconds++;
+                }
+                else if(currentForepaperEngineMode === '3'){
+                    currentThemeDurationSeconds++;
+                    if(!ConfigManager.IsSettingPanelVisible){
+                        passwordInput.focus();
+                    }
+                }
+                else{
+                    if(!ConfigManager.get('operatingModePause')){
+                        currentThemeDurationSeconds++;
+                    }
+                }
+                
+                if(isVideoTheme){
+                    if(ConfigManager.get('videoThemeSwitchInterval') > 0){
+                        if(currentThemeDurationSeconds > ConfigManager.get('videoThemeSwitchInterval')){
+                            changeTheme(true);
+                        }
+                    }
+                }
+                else{
+                    if(currentThemeDurationSeconds > ConfigManager.get('staticThemeSwitchInterval')){
+                        changeTheme(true);
+                    }
+                }
+            }, 1000);
+
+            function changeScreenSaverConfig(key, value){
+                switch(key){
+                    case 'screenSaverModeClockOpacity':
+                        if(currentForepaperEngineMode === '2') {
+                            clockContainerElement.style.opacity = value;
+                            if(value > 0){
+                                clockContainerElement.style.display = '';
+                            }
+                            else{
+                                clockContainerElement.style.display = 'none';
+                            }
+                        }
+                        break;
+                    case 'screenSaverModeClockTimeFont':
+                        if(currentForepaperEngineMode === '2') {
+                            if(value){
+                                let font = JSON.parse(value);
+                                clockTimeElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                            }
+                            else{
+                                clockTimeElement.style.fontFamily = 'Arial, sans-serif';
+                            }
+                        }
+                        break;
+                    case 'screenSaverModeClockTimeFontSize':
+                        if(currentForepaperEngineMode === '2') {
+                            clockTimeElement.style.fontSize = `${value}px`;
+                        }
+                        break;
+                    case 'screenSaverModeClockTimeFontBold':
+                        if(currentForepaperEngineMode === '2') {
+                            clockTimeElement.style.fontWeight = value;
+                        }
+                        break;
+                    case 'screenSaverModeClockTimeFontColor':
+                        if(currentForepaperEngineMode === '2') {
+                            clockTimeElement.style.color = value;
+                        }
+                        break;
+                    case 'screenSaverModeClockDateFont':
+                        if(currentForepaperEngineMode === '2') {
+                            if(value){
+                                let font = JSON.parse(value);
+                                clockDateElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                            }
+                            else{
+                                clockDateElement.style.fontFamily = 'Arial, sans-serif';
+                            }
+                        }
+                        break;
+                    case 'screenSaverModeClockDateFontSize':
+                        if(currentForepaperEngineMode === '2') {
+                            clockDateElement.style.fontSize = `${value}px`;
+                        }
+                        break;
+                    case 'screenSaverModeClockDateFontBold':
+                        if(currentForepaperEngineMode === '2') {
+                            clockDateElement.style.fontWeight = value;
+                        }
+                        break;
+                    case 'screenSaverModeClockDateFontColor':
+                        if(currentForepaperEngineMode === '2') {
+                            clockDateElement.style.color = value;
+                        }
+                        break;
+                    case 'lockScreenModeClockOpacity':
+                        if(currentForepaperEngineMode === '3') {
+                            clockContainerElement.style.opacity = value;
+                            if(value > 0){
+                                clockContainerElement.style.display = '';
+                            }
+                            else{
+                                clockContainerElement.style.display = 'none';
+                            }
+                        }
+                        break;
+                    case 'lockScreenModeClockTimeFont':
+                        if(currentForepaperEngineMode === '3') {
+                            if(value){
+                                let font = JSON.parse(value);
+                                clockTimeElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                            }
+                            else{
+                                clockTimeElement.style.fontFamily = 'Arial, sans-serif';
+                            }
+                        }
+                        break;
+                    case 'lockScreenModeClockTimeFontSize':
+                        if(currentForepaperEngineMode === '3') {
+                            clockTimeElement.style.fontSize = `${value}px`;
+                        }
+                        break;
+                    case 'lockScreenModeClockTimeFontBold':
+                        if(currentForepaperEngineMode === '3') {
+                            clockTimeElement.style.fontWeight = value;
+                        }
+                        break;
+                    case 'lockScreenModeClockTimeFontColor':
+                        if(currentForepaperEngineMode === '3') {
+                            clockTimeElement.style.color = value;
+                        }
+                        break;
+                    case 'lockScreenModeClockDateFont':
+                        if(currentForepaperEngineMode === '3') {
+                            if(value){
+                                let font = JSON.parse(value);
+                                clockDateElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                            }
+                            else{
+                                clockDateElement.style.fontFamily = 'Arial, sans-serif';
+                            }
+                        }
+                        break;
+                    case 'lockScreenModeClockDateFontSize':
+                        if(currentForepaperEngineMode === '3') {
+                            clockDateElement.style.fontSize = `${value}px`;
+                        }
+                        break;
+                    case 'lockScreenModeClockDateFontBold':
+                        if(currentForepaperEngineMode === '3') {
+                            clockDateElement.style.fontWeight = value;
+                        }
+                        break;
+                    case 'lockScreenModeClockDateFontColor':
+                        if(currentForepaperEngineMode === '3') {
+                            clockDateElement.style.color = value;
+                        }
+                        break;
+                    case 'lockScreenModeUIOpacity':
+                        if(currentForepaperEngineMode === '3') {
+                            loginContainerElement.style.opacity = value;
+                        }
+                        break;
+                    case 'screenSaverModeOpacity':
+                        if(currentForepaperEngineMode === '2'){
+                            if(isVideoTheme){
+                                video.style.opacity = value;
+                            }
+                            else{
+                                imgElement.style.opacity = value;
+                            }
+                        }
+                        break;
+                    case 'lockScreenModeOpacity':
+                        if(currentForepaperEngineMode === '3'){
+                            if(isVideoTheme){
+                                video.style.opacity = value;
+                            }
+                            else{
+                                imgElement.style.opacity = value;
+                            }
+                        }
+                        break;
+                    case 'screenSaverModeVideoVolume':
+                        if(currentForepaperEngineMode === '2'){
+                            if(isVideoTheme){
+                                video.volume = value;
+                            }
+                        }
+                        break;
+                    case 'lockScreenModeVideoVolume':
+                        if(currentForepaperEngineMode === '3'){
+                            if(isVideoTheme){
+                                video.volume = value;
+                            }
+                        }
+                        break;
+                    case 'screenSaverModeAudioVolume':
+                        if(currentForepaperEngineMode === '2'){
+                            audio.volume = value;
+                        }
+                        break;
+                    case 'lockScreenModeAudioVolume':
+                        if(currentForepaperEngineMode === '3'){
+                            audio.volume = value;
+                        }
+                        break;
+                    case 'operatingModePause':
+                        if(currentForepaperEngineMode === '1'){
+                            if(isVideoTheme){
+                                if(value){
+                                    video.pause();
+                                }
+                                else{
+                                    video.play();
+                                }
+                            }
+                            
+                            if(value){
+                                if(audioFiles.length > 0 
+                                    && ConfigManager.get('playAudioWithTheme')){
+                                    audio.pause();
+                                }
+                            }
+                            else{
+                                if(audioFiles.length > 0 
+                                    && audio.paused
+                                    && ConfigManager.get('playAudioWithTheme')){
+                                    audio.play();
+                                }
+                            }
+                        }
+                        break;
+                    case 'operatingModeOpacity':
+                        if(currentForepaperEngineMode === '1'){
+                            if(isVideoTheme){
+                                video.style.opacity = value;
+                            }
+                            else{
+                                imgElement.style.opacity = value;
+                            }
+                        }
+                        break;
+                    case 'operatingModeVideoVolume':
+                        if(currentForepaperEngineMode === '1'){
+                            if(isVideoTheme){
+                                video.volume = value;
+                            }
+                        }
+                        break;
+                    case 'operatingModeAudioVolume':
+                        if(currentForepaperEngineMode === '1'){
+                            audio.volume = value;
+                        }
+                        break;
+                    case 'themeFolder':
+                        loadFiles();
+                        
+                        isVideoTheme = false;
+                        currentThemeIndex = -1;
+                        currentAudioIndex = -1;
+                        currentThemeDurationSeconds = 0;
+
+                        changeAudio(ConfigManager.get('playAudioWithTheme'));
+                        changeTheme(!ConfigManager.get('operatingModePause'));
+                        break;
+                    case 'playAudioWithTheme':
+                        if(currentForepaperEngineMode === '2' || currentForepaperEngineMode === '3' || !ConfigManager.get('operatingModePause')){
+                            if(audioFiles.length > 0 ){
+                                if(value){
+                                    if(audio.paused){
+                                        audio.play();
+                                    }
+                                }
+                                else{
+                                    audio.pause();
+                                }
+                            }
+                        }
+                        break;
+                    case 'objectFit':
+                        video.style.objectFit = value;
+                        imgElement.style.objectFit = value;
+                        break;
+                    case 'loginBtnImagePath':
+                        if(ConfigManager.get('loginBtnImagePath')){
+                            loginBtn.src = `https://forepaperenginelocalfile/${ConfigManager.get('loginBtnImagePath')}`;
+                        }
+                        else{
+                            loginBtn.src = 'loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.png';
+                        }
+                        break;
+                    case 'passwordInputBoxWidth':
+                        passwordInput.style.width = `${value}px`;
+                        break;
+                    case 'passwordInputBoxHeight':
+                        passwordInput.style.height = `${value}px`;
+                        passwordInput.style.marginLeft = passwordInput.style.height;
+                        break;
+                    case 'customLockScreenPasswordTip':
+                        passwordInput.placeholder = value;
+                        break;
+                    case 'gapOfClockAndInputBox':
+                        if(currentForepaperEngineMode === '3') {
+                            uiContainer.style.gap = `${value}px`;
+                        }
+                        break;
+                }
+            }
+
+            window.changeScreenSaverConfig = changeScreenSaverConfig;
+
+            function ForepaperEngineChangeMode(mode) {
+                if(currentForepaperEngineMode !== mode){
+                    oldMode = currentForepaperEngineMode;
+                    currentForepaperEngineMode = mode;
+                    ChangeMode(oldMode);
+                }
+            }
+
+            window.ForepaperEngineChangeMode = ForepaperEngineChangeMode;
+
+            function CheckIfCurrentForepaperSupportEnteringUnlockPassword(){
+                return true;
+            }
+
+            window.CheckIfCurrentForepaperSupportEnteringUnlockPassword = CheckIfCurrentForepaperSupportEnteringUnlockPassword;
+        });
+    </script>
+</body>
+</html>

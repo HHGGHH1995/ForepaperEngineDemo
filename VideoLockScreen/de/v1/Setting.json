@@ -1,0 +1,503 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "themeFolder",
+      "ItemCaptionText": "Themenordner",
+      "ItemHoverTipText": "Sie können einen Ordner mit den folgenden Dateien auswählen: (mp4 webm png jpg mp3 wav webp gif apng). Falls nicht angegeben, werden die Standardthemen-Dateien im Ordner „themes“ dieses Projekts abgespielt. Wenn sich die Dateien im aktuell verwendeten Ordner ändern, müssen Sie das aktuelle Forepaper-Projekt aktualisieren.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "folder",
+      "Title": "Ordner mit Themendateien auswählen",
+      "FolderPath": "themes",
+      "ItemInputMaxNum": "255",
+      "ItemInputMinNum": "",
+      "ItemStep": "",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeOpacity",
+      "ItemCaptionText": "Deckkraft des Themas im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Deckkraft des Themas im Bildschirmschoner-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "screenSaverModeVideoVolume",
+      "ItemCaptionText": "Videolautstärke im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die eigene Lautstärke der Videodatei im Bildschirmschoner-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "playAudioWithTheme",
+      "ItemCaptionText": "Audiodatei gleichzeitig abspielen",
+      "ItemHoverTipText": "Ob die im Themenordner vorhandene Audiodatei gleichzeitig abgespielt werden soll (kann ignoriert werden, wenn sich keine Audiodatei im Themenordner befindet)",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "screenSaverModeAudioVolume",
+      "ItemCaptionText": "Audiolautstärke im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Lautstärke der gleichzeitig abgespielten Audiodatei im Bildschirmschoner-Modus fest (kann ignoriert werden, wenn sich keine Audiodatei im Themenordner befindet)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Deckkraft der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Deckkraft der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Schriftart des Uhrzeit-Teils der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftart des Uhrzeit-Teils der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Schriftgröße des Uhrzeit-Teils der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftgröße des Uhrzeit-Teils der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Schriftstärke des Uhrzeit-Teils der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftstärke des Uhrzeit-Teils der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Schriftfarbe des Uhrzeit-Teils der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftfarbe des Uhrzeit-Teils der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Schriftart des Datums-Teils der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftart des Datums-Teils der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Schriftgröße des Datums-Teils der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftgröße des Datums-Teils der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Schriftstärke des Datums-Teils der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftstärke des Datums-Teils der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Schriftfarbe des Datums-Teils der Uhr im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftfarbe des Datums-Teils der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12-Stunden-Zeitformat",
+      "ItemHoverTipText": "Wenn diese Option nicht aktiviert ist, wird das 24-Stunden-Format verwendet",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "operatingModeOpacity",
+      "ItemCaptionText": "Deckkraft des Themas im Betriebsmodus",
+      "ItemHoverTipText": "Legt die Deckkraft des Themas im Betriebsmodus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "0.9",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.1"
+    },
+    {
+      "ItemKeyName": "operatingModeVideoVolume",
+      "ItemCaptionText": "Videolautstärke im Betriebsmodus",
+      "ItemHoverTipText": "Legt die Lautstärke der Videodatei im Betriebsmodus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModeAudioVolume",
+      "ItemCaptionText": "Audiolautstärke im Betriebsmodus",
+      "ItemHoverTipText": "Legt die Lautstärke der Audiodatei im Betriebsmodus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModePause",
+      "ItemCaptionText": "Pausieren im Betriebsmodus",
+      "ItemHoverTipText": "Ob die Wiedergabe des Themas im Betriebsmodus pausiert werden soll",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "playMode",
+      "ItemCaptionText": "Themenwechselmethode",
+      "ItemHoverTipText": "Gibt an, auf welche Weise zwischen allen Themen im Themenordner gewechselt werden soll",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Sequentiell wechseln",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Zufällig wechseln",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "audioPlayMode",
+      "ItemCaptionText": "Audiodatei-Wechselmethode",
+      "ItemHoverTipText": "Gibt an, auf welche Weise zwischen allen Audiodateien im Themenordner gewechselt werden soll",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Sequentiell wechseln",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Zufällig wechseln",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "staticThemeSwitchInterval",
+      "ItemCaptionText": "Wechselintervall für Bild-Themen",
+      "ItemHoverTipText": "Dieser Wert legt fest, nach wie vielen Sekunden beim Abspielen eines Bild-Themas zum nächsten Thema gewechselt wird",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "3",
+      "ItemStep": "1",
+      "ItemCurrentValue": "3"
+    },
+    {
+      "ItemKeyName": "videoThemeSwitchInterval",
+      "ItemCaptionText": "Wechselintervall für Video-Themen",
+      "ItemHoverTipText": "Dieser Wert legt fest, nach wie vielen Sekunden beim Abspielen eines Video-Themas zum nächsten Thema gewechselt wird. Bei 0 erfolgt der Wechsel erst nach Beendigung der Videowiedergabe.",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "0",
+      "ItemStep": "1",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "objectFit",
+      "ItemCaptionText": "Themen-Füllmethode",
+      "ItemHoverTipText": "Gibt an, wie das Thema den Bildschirm füllen soll",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "cover",
+          "OptionText": "Zuschneiden",
+          "ItemHoverTipText": "Schneidet überstehende Teile ab und gewährleistet das normale Seitenverhältnis"
+        },
+        {
+          "OptionValue": "fill",
+          "OptionText": "Strecken",
+          "ItemHoverTipText": "Streckt das Thema auf Vollbild, gewährleistet nicht das normale Seitenverhältnis"
+        },
+        {
+          "OptionValue": "contain",
+          "OptionText": "Ränder frei lassen",
+          "ItemHoverTipText": "Lässt Bereiche, die nicht den gesamten Bildschirm ausfüllen, frei und gewährleistet das normale Seitenverhältnis"
+        },
+        {
+          "OptionValue": "none",
+          "OptionText": "Originalgröße",
+          "ItemHoverTipText": "Verwendet die Originalgröße des Themas, kann zu freien Bereichen oder Überlappungen führen"
+        }
+      ],
+      "ItemCurrentValue": "cover"
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Hinweistext für das Passworteingabefeld",
+      "ItemHoverTipText": "Der Hinweistext im Passworteingabefeld",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Bitte geben Sie das Entsperrpasswort ein"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Breite des Passworteingabefelds",
+      "ItemHoverTipText": "Legt die Breite des Eingabefelds für das benutzerdefinierte Anmeldepasswort fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Höhe des Passworteingabefelds",
+      "ItemHoverTipText": "Legt die Höhe des Eingabefelds für das benutzerdefinierte Anmeldepasswort fest (beachten Sie, dass dies auch die Höhe der Anmeldeschaltfläche beeinflusst)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Symbol für die Anmeldeschaltfläche",
+      "ItemHoverTipText": "Wählen Sie eine benutzerdefinierte Symbol-Datei für die Anmeldeschaltfläche aus. Wenn leer, wird das Standardsymbol verwendet.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Datei auswählen",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Symbol für die Anmeldeschaltfläche (Mouseover-Status)",
+      "ItemHoverTipText": "Wählen Sie eine benutzerdefinierte Symbol-Datei für die Anmeldeschaltfläche im Mouseover-Status aus. Wenn leer, wird das Standardsymbol verwendet.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Datei auswählen",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Abstand zwischen Uhr und Eingabefeld",
+      "ItemHoverTipText": "Legt den Abstand zwischen der Uhr und dem Passworteingabefeld fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    },
+    {
+      "ItemKeyName": "lockScreenModeOpacity",
+      "ItemCaptionText": "Deckkraft des Themas im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Deckkraft des Themas im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Deckkraft der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Deckkraft der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Schriftart des Uhrzeit-Teils der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftart des Uhrzeit-Teils der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Schriftgröße des Uhrzeit-Teils der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftgröße des Uhrzeit-Teils der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Schriftstärke des Uhrzeit-Teils der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftstärke des Uhrzeit-Teils der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Schriftfarbe des Uhrzeit-Teils der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftfarbe des Uhrzeit-Teils der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Schriftart des Datums-Teils der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftart des Datums-Teils der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Schriftgröße des Datums-Teils der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftgröße des Datums-Teils der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Schriftstärke des Datums-Teils der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftstärke des Datums-Teils der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Schriftfarbe des Datums-Teils der Uhr im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftfarbe des Datums-Teils der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Deckkraft des Passworteingabefelds und der Schaltfläche im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Deckkraft des Passworteingabefelds und der Schaltfläche im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Standardmäßig alle UI-Elemente im Sperrbildschirm-Modus ausblenden",
+      "ItemHoverTipText": "Beim Wechsel in den Sperrbildschirm-Modus werden standardmäßig alle UI-Elemente wie Uhr und Anmeldeschaltfläche oder Textfelder ausgeblendet. Sie können sie durch Klicken auf einen leeren Bereich einblenden.",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "UI-Anzeigestatus im Sperrbildschirm-Modus durch Mausklick umschalten",
+      "ItemHoverTipText": "Im Sperrbildschirm-Modus kann durch Klicken auf einen leeren Bereich der Anzeigestatus der UI-Elemente (Ein-/Ausblenden) umgeschaltet werden.",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeVideoVolume",
+      "ItemCaptionText": "Videolautstärke im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Lautstärke der Videodatei im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "lockScreenModeChangeVolumeWithMouseWheel",
+      "ItemCaptionText": "Lautstärke im Sperrbildschirm-Modus mit dem Mausrad einstellen",
+      "ItemHoverTipText": "Im Sperrbildschirm-Modus wird das Mausrad zum Einstellen der Lautstärke verwendet",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeAudioVolume",
+      "ItemCaptionText": "Audiolautstärke im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Lautstärke der Audiodatei im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "switchThemeHotKey",
+      "ItemCaptionText": "Tastenkombination zum Thema wechseln",
+      "ItemHoverTipText": "Nur im Sperrbildschirm-Modus und wenn der Themenordner mehrere Videos oder Bilder enthält, gültig. Kann 1 Buchstabe oder Zahl angeben. Bei Verwendung muss sie mit den Modifizierertasten Strg+Alt kombiniert werden. Falls sie nicht funktioniert, wird sie möglicherweise von einem anderen Programm belegt; versuchen Sie es mit einer anderen.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "x"
+    },
+    {
+      "ItemKeyName": "muteHotKey",
+      "ItemCaptionText": "Tastenkombination zum Stummschalten",
+      "ItemHoverTipText": "Nur im Sperrbildschirm-Modus gültig. Kann 1 Buchstabe oder Zahl angeben. Bei Verwendung muss sie mit den Modifizierertasten Strg+Alt kombiniert werden. Falls sie nicht funktioniert, wird sie möglicherweise von einem anderen Programm belegt; versuchen Sie es mit einer anderen.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "m"
+    },
+    {
+      "ItemKeyName": "note",
+      "ItemCaptionText": "Hinweis: Wenn Sie ähnliche Werke erstellen möchten, suchen und laden Sie das ScreenSaverDevTool aus dem Workshop herunter. Mit diesem Tool können Sie schnell Ihre eigenen Bildschirmschoner- oder Sperrbildschirm-Themen erstellen.",
+      "ItemHoverTipText": "",
+      "ItemInputType": "label",
+      "ItemCurrentValue": ""
+    }
+  ]
+}

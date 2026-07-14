@@ -1,0 +1,503 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "themeFolder",
+      "ItemCaptionText": "Theme Folder",
+      "ItemHoverTipText": "You can select a folder containing the following files: (mp4 webm png jpg mp3 wav webp gif apng). If not specified, the default theme files in the \"themes\" folder of this project will be played. If the files in the currently used folder have changed, you need to refresh the current Forepaper project.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "folder",
+      "Title": "Select folder containing theme files",
+      "FolderPath": "themes",
+      "ItemInputMaxNum": "255",
+      "ItemInputMinNum": "",
+      "ItemStep": "",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeOpacity",
+      "ItemCaptionText": "Screen Saver Mode Theme Opacity",
+      "ItemHoverTipText": "Sets the opacity of the theme when in screen saver mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "screenSaverModeVideoVolume",
+      "ItemCaptionText": "Screen Saver Mode Video Volume",
+      "ItemHoverTipText": "Sets the volume of the video file itself when in screen saver mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "playAudioWithTheme",
+      "ItemCaptionText": "Play Audio File Simultaneously",
+      "ItemHoverTipText": "Whether to play the audio file (if it exists in the theme folder) simultaneously (This setting can be ignored if there is no audio file in the theme folder)",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "screenSaverModeAudioVolume",
+      "ItemCaptionText": "Screen Saver Mode Audio Volume",
+      "ItemHoverTipText": "Sets the volume of the simultaneously played audio file when in screen saver mode (This setting can be ignored if there is no audio file in the theme folder)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Screen Saver Mode Clock Opacity",
+      "ItemHoverTipText": "Sets the opacity of the clock when in screen saver mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Screen Saver Mode Clock Time Part Font",
+      "ItemHoverTipText": "Sets the font for the time part of the clock when in screen saver mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Screen Saver Mode Clock Time Part Font Size",
+      "ItemHoverTipText": "Sets the font size for the time part of the clock when in screen saver mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Screen Saver Mode Clock Time Part Font Weight",
+      "ItemHoverTipText": "Sets the font weight for the time part of the clock when in screen saver mode",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Screen Saver Mode Clock Time Part Font Color",
+      "ItemHoverTipText": "Sets the font color for the time part of the clock when in screen saver mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Screen Saver Mode Clock Date Part Font",
+      "ItemHoverTipText": "Sets the font for the date part of the clock when in screen saver mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Screen Saver Mode Clock Date Part Font Size",
+      "ItemHoverTipText": "Sets the font size for the date part of the clock when in screen saver mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Screen Saver Mode Clock Date Part Font Weight",
+      "ItemHoverTipText": "Sets the font weight for the date part of the clock when in screen saver mode",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Screen Saver Mode Clock Date Part Font Color",
+      "ItemHoverTipText": "Sets the font color for the date part of the clock when in screen saver mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12-Hour Time Format",
+      "ItemHoverTipText": "If this option is not checked, the 24-hour time format will be used",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "operatingModeOpacity",
+      "ItemCaptionText": "Operating Mode Theme Opacity",
+      "ItemHoverTipText": "Sets the opacity of the theme when in operating mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "0.9",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.1"
+    },
+    {
+      "ItemKeyName": "operatingModeVideoVolume",
+      "ItemCaptionText": "Operating Mode Video Volume",
+      "ItemHoverTipText": "Sets the volume of the video file when in operating mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModeAudioVolume",
+      "ItemCaptionText": "Operating Mode Audio Volume",
+      "ItemHoverTipText": "Sets the volume of the audio file when in operating mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModePause",
+      "ItemCaptionText": "Pause in Operating Mode",
+      "ItemHoverTipText": "Whether to pause the playback of the theme when in operating mode",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "playMode",
+      "ItemCaptionText": "Theme Switching Method",
+      "ItemHoverTipText": "Specifies the method to switch between all themes in the theme folder",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Sequential Switch",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Random Switch",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "audioPlayMode",
+      "ItemCaptionText": "Audio File Switching Method",
+      "ItemHoverTipText": "Specifies the method to switch between all audio files in the theme folder",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Sequential Switch",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Random Switch",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "staticThemeSwitchInterval",
+      "ItemCaptionText": "Image Type Theme Switch Interval",
+      "ItemHoverTipText": "This value specifies how many seconds to switch to the next theme when playing image type themes",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "3",
+      "ItemStep": "1",
+      "ItemCurrentValue": "3"
+    },
+    {
+      "ItemKeyName": "videoThemeSwitchInterval",
+      "ItemCaptionText": "Video Type Theme Switch Interval",
+      "ItemHoverTipText": "This value specifies how many seconds to switch to the next theme when playing video type themes. If set to 0, the switch will occur only after the video playback finishes.",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "0",
+      "ItemStep": "1",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "objectFit",
+      "ItemCaptionText": "Theme Fill Method",
+      "ItemHoverTipText": "Specifies how the theme should fill the screen",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "cover",
+          "OptionText": "Crop",
+          "ItemHoverTipText": "Crops parts beyond the window, ensuring a normal aspect ratio"
+        },
+        {
+          "OptionValue": "fill",
+          "OptionText": "Stretch",
+          "ItemHoverTipText": "Stretches the theme to full screen, does not guarantee a normal aspect ratio"
+        },
+        {
+          "OptionValue": "contain",
+          "OptionText": "Leave Margins",
+          "ItemHoverTipText": "Leaves blank areas where the theme does not fill the entire screen, ensuring a normal aspect ratio"
+        },
+        {
+          "OptionValue": "none",
+          "OptionText": "Original Size",
+          "ItemHoverTipText": "Uses the original size of the theme, may result in blank areas or overflow"
+        }
+      ],
+      "ItemCurrentValue": "cover"
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Password Input Box Hint Text",
+      "ItemHoverTipText": "The hint text in the password input box",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Please enter the unlock password"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Password Input Box Width",
+      "ItemHoverTipText": "Sets the width of the input box for the custom login password",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Password Input Box Height",
+      "ItemHoverTipText": "Sets the height of the input box for the custom login password (Note: this also affects the height of the login button)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Login Button Icon",
+      "ItemHoverTipText": "Select a custom icon file for the login button. If left empty, the default icon will be used.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Please select a file",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Login Button Icon (Mouse Hover State)",
+      "ItemHoverTipText": "Select a custom icon file for the login button in the mouse hover state. If left empty, the default icon will be used.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Please select a file",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Clock and Input Box Gap",
+      "ItemHoverTipText": "Sets the gap between the clock and the password input box",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    },
+    {
+      "ItemKeyName": "lockScreenModeOpacity",
+      "ItemCaptionText": "Lock Screen Mode Theme Opacity",
+      "ItemHoverTipText": "Sets the opacity of the theme when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Lock Screen Mode Clock Opacity",
+      "ItemHoverTipText": "Sets the opacity of the clock when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Lock Screen Mode Clock Time Part Font",
+      "ItemHoverTipText": "Sets the font for the time part of the clock when in lock screen mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Lock Screen Mode Clock Time Part Font Size",
+      "ItemHoverTipText": "Sets the font size for the time part of the clock when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Lock Screen Mode Clock Time Part Font Weight",
+      "ItemHoverTipText": "Sets the font weight for the time part of the clock when in lock screen mode",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Lock Screen Mode Clock Time Part Font Color",
+      "ItemHoverTipText": "Sets the font color for the time part of the clock when in lock screen mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Lock Screen Mode Clock Date Part Font",
+      "ItemHoverTipText": "Sets the font for the date part of the clock when in lock screen mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Lock Screen Mode Clock Date Part Font Size",
+      "ItemHoverTipText": "Sets the font size for the date part of the clock when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Lock Screen Mode Clock Date Part Font Weight",
+      "ItemHoverTipText": "Sets the font weight for the date part of the clock when in lock screen mode",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Lock Screen Mode Clock Date Part Font Color",
+      "ItemHoverTipText": "Sets the font color for the date part of the clock when in lock screen mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Lock Screen Mode Password Input Box and Button Opacity",
+      "ItemHoverTipText": "Sets the opacity of the password input box and button when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Hide All UI by Default in Lock Screen Mode",
+      "ItemHoverTipText": "When entering lock screen mode, all UI elements such as the clock and login button or text boxes are hidden by default. You can trigger their display by clicking on a blank area.",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Toggle UI Display State with Mouse Click in Lock Screen Mode",
+      "ItemHoverTipText": "When in lock screen mode, clicking on a blank area toggles the UI elements' display state (show/hide).",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeVideoVolume",
+      "ItemCaptionText": "Lock Screen Mode Video Volume",
+      "ItemHoverTipText": "Sets the volume of the video file when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "lockScreenModeChangeVolumeWithMouseWheel",
+      "ItemCaptionText": "Adjust Volume with Mouse Wheel in Lock Screen Mode",
+      "ItemHoverTipText": "When in lock screen mode, the mouse wheel is used to adjust the volume",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeAudioVolume",
+      "ItemCaptionText": "Lock Screen Mode Audio Volume",
+      "ItemHoverTipText": "Sets the volume of the audio file when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "switchThemeHotKey",
+      "ItemCaptionText": "Switch Theme Hotkey",
+      "ItemHoverTipText": "Valid only when in lock screen mode and the theme folder contains multiple videos or images. Can specify 1 letter or number. When using, it must be combined with the modifier keys Ctrl+Alt. If it doesn't work, it may be occupied by another program; try another key.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "x"
+    },
+    {
+      "ItemKeyName": "muteHotKey",
+      "ItemCaptionText": "Mute Hotkey",
+      "ItemHoverTipText": "Valid only when in lock screen mode. Can specify 1 letter or number. When using, it must be combined with the modifier keys Ctrl+Alt. If it doesn't work, it may be occupied by another program; try another key.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "m"
+    },
+    {
+      "ItemKeyName": "note",
+      "ItemCaptionText": "Note: If you want to create similar works, please search for and download ScreenSaverDevTool from the Workshop. Using this tool, you can quickly create your own screen saver or lock screen themes.",
+      "ItemHoverTipText": "",
+      "ItemInputType": "label",
+      "ItemCurrentValue": ""
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "themeFolder",
+      "ItemCaptionText": "主题文件夹",
+      "ItemHoverTipText": "你可以选择包含以下文件的文件夹：（mp4 webm png jpg mp3 wav webp gif apng），如果不指定，则播放本项目的themes文件夹中的默认主题文件，如果当前正在使用的文件夹中的文件发生了变化，你需要刷新当前Forepaper作品。",
+      "ItemInputType": "text",
+      "ItemSubInputType": "folder",
+      "Title": "选择包含主题文件的文件夹",
+      "FolderPath": "themes",
+      "ItemInputMaxNum": "255",
+      "ItemInputMinNum": "",
+      "ItemStep": "",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeOpacity",
+      "ItemCaptionText": "屏保状态主题透明度",
+      "ItemHoverTipText": "设置处于屏保状态时主题的透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "screenSaverModeVideoVolume",
+      "ItemCaptionText": "屏保状态视频音量",
+      "ItemHoverTipText": "设置处于屏保状态时视频文件自身的音量",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "playAudioWithTheme",
+      "ItemCaptionText": "同时播放音频文件",
+      "ItemHoverTipText": "是否同时播放主题文件夹中存在的音频文件（如果主题文件夹中没有音频文件，则可以忽略该设置）",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "screenSaverModeAudioVolume",
+      "ItemCaptionText": "屏保状态音频音量",
+      "ItemHoverTipText": "设置处于屏保状态时同步播放的音频文件的音量（如果主题文件夹中没有音频文件，则可以忽略该设置）",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "屏保状态时钟透明度",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "屏保状态时钟时间部分字体",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的时间部分字体",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "屏保状态时钟时间部分字体大小",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的时间部分字体大小",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "屏保状态时钟时间部分字体粗细",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的时间部分字体粗细",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "屏保状态时钟时间部分字体颜色",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的时间部分字体颜色",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "屏保状态时钟日期部分字体",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的日期部分字体",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "屏保状态时钟日期部分字体大小",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的日期部分字体大小",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "屏保状态时钟日期部分字体粗细",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的日期部分字体粗细",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "屏保状态时钟日期部分字体颜色",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的日期部分字体颜色",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12小时制时间格式",
+      "ItemHoverTipText": "不勾选此选项则使用24小时制时间格式",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "operatingModeOpacity",
+      "ItemCaptionText": "操作状态主题透明度",
+      "ItemHoverTipText": "设置处于操作状态时的主题透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "0.9",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.1"
+    },
+    {
+      "ItemKeyName": "operatingModeVideoVolume",
+      "ItemCaptionText": "操作状态视频音量",
+      "ItemHoverTipText": "设置处于操作状态时视频文件的音量",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModeAudioVolume",
+      "ItemCaptionText": "操作状态音频音量",
+      "ItemHoverTipText": "设置处于操作状态时音频文件的音量",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModePause",
+      "ItemCaptionText": "操作状态时暂停",
+      "ItemHoverTipText": "操作状态时是否暂停主题的播放",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "playMode",
+      "ItemCaptionText": "主题切换方式",
+      "ItemHoverTipText": "指定使用什么方式切换播放主题文件夹中的所有主题",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "顺序切换",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "随机切换",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "audioPlayMode",
+      "ItemCaptionText": "音频文件切换方式",
+      "ItemHoverTipText": "指定使用什么方式切换播放主题文件夹中的所有音频文件",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "顺序切换",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "随机切换",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "staticThemeSwitchInterval",
+      "ItemCaptionText": "图片类型主题切换间隔",
+      "ItemHoverTipText": "该数值指定了在播放图片类型主题时，多少秒钟切换下一个主题",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "3",
+      "ItemStep": "1",
+      "ItemCurrentValue": "3"
+    },
+    {
+      "ItemKeyName": "videoThemeSwitchInterval",
+      "ItemCaptionText": "视频类型主题切换间隔",
+      "ItemHoverTipText": "该数值指定了在播放视频类型主题时，多少秒钟切换下一个主题，指定为0则为在视频播放完毕时才切换",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "0",
+      "ItemStep": "1",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "objectFit",
+      "ItemCaptionText": "主题填充方式",
+      "ItemHoverTipText": "指定主题用什么样的形式去填充屏幕",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "cover",
+          "OptionText": "裁剪",
+          "ItemHoverTipText": "裁剪超出窗口的部分，能够保证正常长宽比例"
+        },
+        {
+          "OptionValue": "fill",
+          "OptionText": "拉伸",
+          "ItemHoverTipText": "将主题拉伸到全屏，不能保证正常长宽比例"
+        },
+        {
+          "OptionValue": "contain",
+          "OptionText": "边缘空白",
+          "ItemHoverTipText": "将主题不足以铺满全屏的部分留出空白，保证正常长宽比例"
+        },
+        {
+          "OptionValue": "none",
+          "OptionText": "原始尺寸",
+          "ItemHoverTipText": "使用主题的原始尺寸，可能会有空白或者超出窗口"
+        }
+      ],
+      "ItemCurrentValue": "cover"
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "口令输入框提示文本",
+      "ItemHoverTipText": "口令输入框中的提示文本",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "请输入解锁口令"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "口令输入框宽度",
+      "ItemHoverTipText": "设置自定义登录口令的输入框的宽度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "口令输入框高度",
+      "ItemHoverTipText": "设置自定义登录口令的输入框的高度（注意，同时会影响登录按钮的高度）",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "登录按钮图标",
+      "ItemHoverTipText": "选取自定义登录按钮的图标文件，若为空则使用默认图标",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "请选择文件",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "登录按钮图标(鼠标悬浮状态)",
+      "ItemHoverTipText": "选取自定义登录按钮在鼠标悬浮状态下的图标文件，若为空则使用默认图标",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "请选择文件",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "时钟与输入框间隔",
+      "ItemHoverTipText": "设置时钟与口令输入框之间的间隔",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    },
+    {
+      "ItemKeyName": "lockScreenModeOpacity",
+      "ItemCaptionText": "锁屏状态主题透明度",
+      "ItemHoverTipText": "设置处于锁屏状态时主题的透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "锁屏状态时钟透明度",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "锁屏状态时钟时间部分字体",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的时间部分字体",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "锁屏状态时钟时间部分字体大小",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的时间部分字体大小",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "锁屏状态时钟时间部分字体粗细",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的时间部分字体粗细",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "锁屏状态时钟时间部分字体颜色",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的时间部分字体颜色",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "锁屏状态时钟日期部分字体",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的日期部分字体",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "锁屏状态时钟日期部分字体大小",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的日期部分字体大小",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "锁屏状态时钟日期部分字体粗细",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的日期部分字体粗细",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "锁屏状态时钟日期部分字体颜色",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的日期部分字体颜色",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "锁屏状态口令输入框与按钮透明度",
+      "ItemHoverTipText": "设置处于锁屏状态时口令输入框与按钮的透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "锁屏状态时默认隐藏所有UI",
+      "ItemHoverTipText": "进入锁屏状态时默认隐藏时钟与登录按钮或文本框等UI，你可以通过点击空白区触发显示",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "锁屏状态时点击鼠标切换UI显示状态",
+      "ItemHoverTipText": "处于锁屏状态时鼠标点击空白区可切换UI的显示与隐藏",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeVideoVolume",
+      "ItemCaptionText": "锁屏状态视频音量",
+      "ItemHoverTipText": "设置处于锁屏状态时视频文件的音量",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "lockScreenModeChangeVolumeWithMouseWheel",
+      "ItemCaptionText": "锁屏状态时鼠标滚轮调整音量",
+      "ItemHoverTipText": "锁屏状态时鼠标滚轮用于调整音量",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeAudioVolume",
+      "ItemCaptionText": "锁屏状态音频音量",
+      "ItemHoverTipText": "设置处于锁屏状态时音频文件的音量",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "switchThemeHotKey",
+      "ItemCaptionText": "切换主题快捷键",
+      "ItemHoverTipText": "仅在处于锁屏状态并且主题文件夹中包含多个视频或图片时有效，可以指定1个字母或数字，使用时需配合修饰键ctrl+alt，如果发现无效，可能是其他程序占用了该快捷键，可以尝试换一个。",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "x"
+    },
+    {
+      "ItemKeyName": "muteHotKey",
+      "ItemCaptionText": "静音快捷键",
+      "ItemHoverTipText": "仅在处于锁屏状态时有效，可以指定1个字母或数字，使用时需配合修饰键ctrl+alt，如果发现无效，可能是其他程序占用了该快捷键，可以尝试换一个。",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "m"
+    },
+    {
+      "ItemKeyName": "note",
+      "ItemCaptionText": "备注：若想制作同类作品，请从创意工坊Workshop中搜索并下载ScreenSaverDevTool，使用该工具可快速制作您自己的屏保或锁屏主题。",
+      "ItemHoverTipText": "",
+      "ItemInputType": "label",
+      "ItemCurrentValue": ""
+    }
+  ]
+}

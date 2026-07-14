@@ -1,0 +1,503 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "themeFolder",
+      "ItemCaptionText": "テーマフォルダ",
+      "ItemHoverTipText": "以下のファイルを含むフォルダを選択できます：(mp4 webm png jpg mp3 wav webp gif apng)。指定しない場合、このプロジェクトの「themes」フォルダ内のデフォルトテーマファイルが再生されます。現在使用中のフォルダのファイルが変更された場合は、現在のForepaperプロジェクトを更新する必要があります。",
+      "ItemInputType": "text",
+      "ItemSubInputType": "folder",
+      "Title": "テーマファイルを含むフォルダを選択",
+      "FolderPath": "themes",
+      "ItemInputMaxNum": "255",
+      "ItemInputMinNum": "",
+      "ItemStep": "",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeOpacity",
+      "ItemCaptionText": "スクリーンセーバーモードのテーマ不透明度",
+      "ItemHoverTipText": "スクリーンセーバーモード時のテーマの不透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "screenSaverModeVideoVolume",
+      "ItemCaptionText": "スクリーンセーバーモードの動画音量",
+      "ItemHoverTipText": "スクリーンセーバーモード時の動画ファイル自体の音量を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "playAudioWithTheme",
+      "ItemCaptionText": "オーディオファイルを同時再生",
+      "ItemHoverTipText": "テーマフォルダ内に存在するオーディオファイル（ある場合）を同時に再生するかどうか（テーマフォルダ内にオーディオファイルがない場合はこの設定を無視できます）",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "screenSaverModeAudioVolume",
+      "ItemCaptionText": "スクリーンセーバーモードのオーディオ音量",
+      "ItemHoverTipText": "スクリーンセーバーモード時に同時再生されるオーディオファイルの音量を設定します（テーマフォルダ内にオーディオファイルがない場合はこの設定を無視できます）",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "スクリーンセーバーモードの時計不透明度",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の不透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "スクリーンセーバーモードの時計時刻部分フォント",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の時刻部分のフォントを設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "スクリーンセーバーモードの時計時刻部分フォントサイズ",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の時刻部分のフォントサイズを設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "スクリーンセーバーモードの時計時刻部分フォントの太さ",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の時刻部分のフォントの太さを設定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "スクリーンセーバーモードの時計時刻部分フォント色",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の時刻部分のフォント色を設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "スクリーンセーバーモードの時計日付部分フォント",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の日付部分のフォントを設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "スクリーンセーバーモードの時計日付部分フォントサイズ",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の日付部分のフォントサイズを設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "スクリーンセーバーモードの時計日付部分フォントの太さ",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の日付部分のフォントの太さを設定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "スクリーンセーバーモードの時計日付部分フォント色",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の日付部分のフォント色を設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12時間制時刻フォーマット",
+      "ItemHoverTipText": "このオプションをチェックしない場合、24時間制時刻フォーマットが使用されます",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "operatingModeOpacity",
+      "ItemCaptionText": "操作モードのテーマ不透明度",
+      "ItemHoverTipText": "操作モード時のテーマの不透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "0.9",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.1"
+    },
+    {
+      "ItemKeyName": "operatingModeVideoVolume",
+      "ItemCaptionText": "操作モードの動画音量",
+      "ItemHoverTipText": "操作モード時の動画ファイルの音量を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModeAudioVolume",
+      "ItemCaptionText": "操作モードのオーディオ音量",
+      "ItemHoverTipText": "操作モード時のオーディオファイルの音量を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModePause",
+      "ItemCaptionText": "操作モード時に一時停止",
+      "ItemHoverTipText": "操作モード時にテーマの再生を一時停止するかどうか",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "playMode",
+      "ItemCaptionText": "テーマ切り替え方法",
+      "ItemHoverTipText": "テーマフォルダ内のすべてのテーマを切り替える方法を指定します",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "順次切り替え",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "ランダム切り替え",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "audioPlayMode",
+      "ItemCaptionText": "オーディオファイル切り替え方法",
+      "ItemHoverTipText": "テーマフォルダ内のすべてのオーディオファイルを切り替える方法を指定します",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "順次切り替え",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "ランダム切り替え",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "staticThemeSwitchInterval",
+      "ItemCaptionText": "画像タイプのテーマ切り替え間隔",
+      "ItemHoverTipText": "この値は、画像タイプのテーマを再生する際に、何秒後に次のテーマに切り替えるかを指定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "3",
+      "ItemStep": "1",
+      "ItemCurrentValue": "3"
+    },
+    {
+      "ItemKeyName": "videoThemeSwitchInterval",
+      "ItemCaptionText": "動画タイプのテーマ切り替え間隔",
+      "ItemHoverTipText": "この値は、動画タイプのテーマを再生する際に、何秒後に次のテーマに切り替えるかを指定します。0に設定すると、動画再生が完了した時点でのみ切り替わります。",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "0",
+      "ItemStep": "1",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "objectFit",
+      "ItemCaptionText": "テーマのフィル方法",
+      "ItemHoverTipText": "テーマが画面をどのようにフィルするかを指定します",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "cover",
+          "OptionText": "切り抜き",
+          "ItemHoverTipText": "ウィンドウを超える部分を切り抜き、正常なアスペクト比を保証します"
+        },
+        {
+          "OptionValue": "fill",
+          "OptionText": "引き伸ばし",
+          "ItemHoverTipText": "テーマを全画面に引き伸ばし、正常なアスペクト比を保証しません"
+        },
+        {
+          "OptionValue": "contain",
+          "OptionText": "余白を残す",
+          "ItemHoverTipText": "テーマが全画面を埋めない部分に余白を残し、正常なアスペクト比を保証します"
+        },
+        {
+          "OptionValue": "none",
+          "OptionText": "オリジナルサイズ",
+          "ItemHoverTipText": "テーマのオリジナルサイズを使用し、余白やウィンドウオーバーフローが発生する可能性があります"
+        }
+      ],
+      "ItemCurrentValue": "cover"
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "パスワード入力ボックスのヒントテキスト",
+      "ItemHoverTipText": "パスワード入力ボックス内のヒントテキスト",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "ロック解除パスワードを入力してください"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "パスワード入力ボックスの幅",
+      "ItemHoverTipText": "カスタムログインパスワードの入力ボックスの幅を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "パスワード入力ボックスの高さ",
+      "ItemHoverTipText": "カスタムログインパスワードの入力ボックスの高さを設定します（注：ログインボタンの高さにも影響します）",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "ログインボタンアイコン",
+      "ItemHoverTipText": "ログインボタンのカスタムアイコンファイルを選択します。空の場合はデフォルトアイコンが使用されます。",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "ファイルを選択してください",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "ログインボタンアイコン（マウスホバー状態）",
+      "ItemHoverTipText": "マウスホバー状態のログインボタンのカスタムアイコンファイルを選択します。空の場合はデフォルトアイコンが使用されます。",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "ファイルを選択してください",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "時計と入力ボックスの間隔",
+      "ItemHoverTipText": "時計とパスワード入力ボックスの間隔を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    },
+    {
+      "ItemKeyName": "lockScreenModeOpacity",
+      "ItemCaptionText": "ロック画面モードのテーマ不透明度",
+      "ItemHoverTipText": "ロック画面モード時のテーマの不透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "ロック画面モードの時計不透明度",
+      "ItemHoverTipText": "ロック画面モード時の時計の不透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "ロック画面モードの時計時刻部分フォント",
+      "ItemHoverTipText": "ロック画面モード時の時計の時刻部分のフォントを設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "ロック画面モードの時計時刻部分フォントサイズ",
+      "ItemHoverTipText": "ロック画面モード時の時計の時刻部分のフォントサイズを設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "ロック画面モードの時計時刻部分フォントの太さ",
+      "ItemHoverTipText": "ロック画面モード時の時計の時刻部分のフォントの太さを設定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "ロック画面モードの時計時刻部分フォント色",
+      "ItemHoverTipText": "ロック画面モード時の時計の時刻部分のフォント色を設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "ロック画面モードの時計日付部分フォント",
+      "ItemHoverTipText": "ロック画面モード時の時計の日付部分のフォントを設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "ロック画面モードの時計日付部分フォントサイズ",
+      "ItemHoverTipText": "ロック画面モード時の時計の日付部分のフォントサイズを設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "ロック画面モードの時計日付部分フォントの太さ",
+      "ItemHoverTipText": "ロック画面モード時の時計の日付部分のフォントの太さを設定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "ロック画面モードの時計日付部分フォント色",
+      "ItemHoverTipText": "ロック画面モード時の時計の日付部分のフォント色を設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "ロック画面モードのパスワード入力ボックスとボタンの不透明度",
+      "ItemHoverTipText": "ロック画面モード時のパスワード入力ボックスとボタンの不透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "ロック画面モードでデフォルトですべてのUIを非表示",
+      "ItemHoverTipText": "ロック画面モードに入ると、時計、ログインボタン、テキストボックスなどのすべてのUI要素がデフォルトで非表示になります。空白エリアをクリックすることで表示をトリガーできます。",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "ロック画面モードでマウスクリックでUI表示状態を切り替え",
+      "ItemHoverTipText": "ロック画面モードでは、空白エリアをクリックすることでUI要素の表示状態（表示/非表示）を切り替えることができます。",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeVideoVolume",
+      "ItemCaptionText": "ロック画面モードの動画音量",
+      "ItemHoverTipText": "ロック画面モード時の動画ファイルの音量を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "lockScreenModeChangeVolumeWithMouseWheel",
+      "ItemCaptionText": "ロック画面モードでマウスホイールで音量調整",
+      "ItemHoverTipText": "ロック画面モードでは、マウスホイールを使用して音量を調整します",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeAudioVolume",
+      "ItemCaptionText": "ロック画面モードのオーディオ音量",
+      "ItemHoverTipText": "ロック画面モード時のオーディオファイルの音量を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "switchThemeHotKey",
+      "ItemCaptionText": "テーマ切り替えホットキー",
+      "ItemHoverTipText": "ロック画面モード時かつテーマフォルダ内に複数の動画または画像が含まれている場合にのみ有効です。1文字または数字を指定できます。使用時には修飾キーCtrl+Altと組み合わせる必要があります。無効な場合、他のプログラムによって占有されている可能性があります。別のキーを試してください。",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "x"
+    },
+    {
+      "ItemKeyName": "muteHotKey",
+      "ItemCaptionText": "ミュートホットキー",
+      "ItemHoverTipText": "ロック画面モード時のみ有効です。1文字または数字を指定できます。使用時には修飾キーCtrl+Altと組み合わせる必要があります。無効な場合、他のプログラムによって占有されている可能性があります。別のキーを試してください。",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "m"
+    },
+    {
+      "ItemKeyName": "note",
+      "ItemCaptionText": "注意：同様の作品を作成したい場合は、ワークショップからScreenSaverDevToolを検索してダウンロードしてください。このツールを使用すると、独自のスクリーンセーバーやロック画面テーマをすばやく作成できます。",
+      "ItemHoverTipText": "",
+      "ItemInputType": "label",
+      "ItemCurrentValue": ""
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "themeFolder",
+      "ItemCaptionText": "Папка тем",
+      "ItemHoverTipText": "Вы можете выбрать папку, содержащую следующие файлы: (mp4 webm png jpg mp3 wav webp gif apng). Если не указано, будут воспроизводиться файлы тем по умолчанию в папке \"themes\" этого проекта. Если файлы в текущей используемой папке изменились, вам необходимо обновить текущий проект Forepaper.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "folder",
+      "Title": "Выберите папку, содержащую файлы тем",
+      "FolderPath": "themes",
+      "ItemInputMaxNum": "255",
+      "ItemInputMinNum": "",
+      "ItemStep": "",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeOpacity",
+      "ItemCaptionText": "Непрозрачность темы в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает непрозрачность темы в режиме хранителя экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "screenSaverModeVideoVolume",
+      "ItemCaptionText": "Громкость видео в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает собственную громкость видеофайла в режиме хранителя экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "playAudioWithTheme",
+      "ItemCaptionText": "Воспроизводить аудиофайл одновременно",
+      "ItemHoverTipText": "Следует ли воспроизводить аудиофайл (если он существует в папке темы) одновременно (Эту настройку можно игнорировать, если в папке темы нет аудиофайла)",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "screenSaverModeAudioVolume",
+      "ItemCaptionText": "Громкость аудио в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает громкость одновременно воспроизводимого аудиофайла в режиме хранителя экрана (Эту настройку можно игнорировать, если в папке темы нет аудиофайла)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Непрозрачность часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает непрозрачность часов в режиме хранителя экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Шрифт часовой части часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает шрифт для часовой части часов в режиме хранителя экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Размер шрифта часовой части часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает размер шрифта для часовой части часов в режиме хранителя экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Насыщенность шрифта часовой части часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает насыщенность шрифта для часовой части часов в режиме хранителя экрана",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Цвет шрифта часовой части часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает цвет шрифта для часовой части часов в режиме хранителя экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Шрифт даты часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает шрифт для даты часов в режиме хранителя экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Размер шрифта даты часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает размер шрифта для даты часов в режиме хранителя экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Насыщенность шрифта даты часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает насыщенность шрифта для даты часов в режиме хранителя экрана",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Цвет шрифта даты часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Задает цвет шрифта для даты часов в режиме хранителя экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12-часовой формат времени",
+      "ItemHoverTipText": "Если эта опция не отмечена, будет использоваться 24-часовой формат времени",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "operatingModeOpacity",
+      "ItemCaptionText": "Непрозрачность темы в рабочем режиме",
+      "ItemHoverTipText": "Задает непрозрачность темы в рабочем режиме",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "0.9",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.1"
+    },
+    {
+      "ItemKeyName": "operatingModeVideoVolume",
+      "ItemCaptionText": "Громкость видео в рабочем режиме",
+      "ItemHoverTipText": "Задает громкость видеофайла в рабочем режиме",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModeAudioVolume",
+      "ItemCaptionText": "Громкость аудио в рабочем режиме",
+      "ItemHoverTipText": "Задает громкость аудиофайла в рабочем режиме",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "operatingModePause",
+      "ItemCaptionText": "Пауза в рабочем режиме",
+      "ItemHoverTipText": "Следует ли приостанавливать воспроизведение темы в рабочем режиме",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "playMode",
+      "ItemCaptionText": "Способ переключения тем",
+      "ItemHoverTipText": "Указывает метод переключения между всеми темами в папке тем",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Последовательное переключение",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Случайное переключение",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "audioPlayMode",
+      "ItemCaptionText": "Способ переключения аудиофайлов",
+      "ItemHoverTipText": "Указывает метод переключения между всеми аудиофайлами в папке тем",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "sequence",
+          "OptionText": "Последовательное переключение",
+          "ItemHoverTipText": ""
+        },
+        {
+          "OptionValue": "random",
+          "OptionText": "Случайное переключение",
+          "ItemHoverTipText": ""
+        }
+      ],
+      "ItemCurrentValue": "sequence"
+    },
+    {
+      "ItemKeyName": "staticThemeSwitchInterval",
+      "ItemCaptionText": "Интервал переключения для тем типа изображения",
+      "ItemHoverTipText": "Это значение указывает, через сколько секунд переключаться на следующую тему при воспроизведении тем типа изображения",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "3",
+      "ItemStep": "1",
+      "ItemCurrentValue": "3"
+    },
+    {
+      "ItemKeyName": "videoThemeSwitchInterval",
+      "ItemCaptionText": "Интервал переключения для тем типа видео",
+      "ItemHoverTipText": "Это значение указывает, через сколько секунд переключаться на следующую тему при воспроизведении тем типа видео. Если установлено 0, переключение произойдет только после завершения воспроизведения видео.",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "600",
+      "ItemInputMinNum": "0",
+      "ItemStep": "1",
+      "ItemCurrentValue": "0"
+    },
+    {
+      "ItemKeyName": "objectFit",
+      "ItemCaptionText": "Способ заполнения темы",
+      "ItemHoverTipText": "Указывает, как тема должна заполнять экран",
+      "ItemInputType": "radio",
+      "ItemOptions": [
+        {
+          "OptionValue": "cover",
+          "OptionText": "Обрезать",
+          "ItemHoverTipText": "Обрезает части за пределами окна, обеспечивая нормальное соотношение сторон"
+        },
+        {
+          "OptionValue": "fill",
+          "OptionText": "Растянуть",
+          "ItemHoverTipText": "Растягивает тему на весь экран, не гарантирует нормальное соотношение сторон"
+        },
+        {
+          "OptionValue": "contain",
+          "OptionText": "Оставить поля",
+          "ItemHoverTipText": "Оставляет пустые области там, где тема не заполняет весь экран, обеспечивая нормальное соотношение сторон"
+        },
+        {
+          "OptionValue": "none",
+          "OptionText": "Оригинальный размер",
+          "ItemHoverTipText": "Использует оригинальный размер темы, может привести к пустым областям или переполнению"
+        }
+      ],
+      "ItemCurrentValue": "cover"
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Текст подсказки поля ввода пароля",
+      "ItemHoverTipText": "Текст подсказки в поле ввода пароля",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Пожалуйста, введите пароль разблокировки"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Ширина поля ввода пароля",
+      "ItemHoverTipText": "Задает ширину поля ввода для пользовательского пароля входа",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Высота поля ввода пароля",
+      "ItemHoverTipText": "Задает высоту поля ввода для пользовательского пароля входа (Примечание: это также влияет на высоту кнопки входа)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Значок кнопки входа",
+      "ItemHoverTipText": "Выберите пользовательский файл значка для кнопки входа. Если оставить пустым, будет использоваться значок по умолчанию.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Пожалуйста, выберите файл",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Значок кнопки входа (состояние при наведении мыши)",
+      "ItemHoverTipText": "Выберите пользовательский файл значка для кнопки входа в состоянии при наведении мыши. Если оставить пустым, будет использоваться значок по умолчанию.",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Пожалуйста, выберите файл",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Промежуток между часами и полем ввода",
+      "ItemHoverTipText": "Задает промежуток между часами и полем ввода пароля",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    },
+    {
+      "ItemKeyName": "lockScreenModeOpacity",
+      "ItemCaptionText": "Непрозрачность темы в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает непрозрачность темы в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "1"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Непрозрачность часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает непрозрачность часов в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Шрифт часовой части часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает шрифт для часовой части часов в режиме блокировки экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Размер шрифта часовой части часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает размер шрифта для часовой части часов в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Насыщенность шрифта часовой части часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает насыщенность шрифта для часовой части часов в режиме блокировки экрана",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Цвет шрифта часовой части часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает цвет шрифта для часовой части часов в режиме блокировки экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Шрифт даты часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает шрифт для даты часов в режиме блокировки экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Размер шрифта даты часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает размер шрифта для даты часов в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Насыщенность шрифта даты часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает насыщенность шрифта для даты часов в режиме блокировки экрана",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Цвет шрифта даты часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает цвет шрифта для даты часов в режиме блокировки экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Непрозрачность поля ввода пароля и кнопки в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает непрозрачность поля ввода пароля и кнопки в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "По умолчанию скрывать весь интерфейс в режиме блокировки экрана",
+      "ItemHoverTipText": "При входе в режим блокировки экрана все элементы интерфейса, такие как часы, кнопка входа или текстовые поля, скрыты по умолчанию. Вы можете вызвать их отображение, щелкнув на пустой области.",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Переключать состояние отображения интерфейса щелчком мыши в режиме блокировки экрана",
+      "ItemHoverTipText": "В режиме блокировки экрана щелчок на пустой области переключает состояние отображения элементов интерфейса (показать/скрыть).",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeVideoVolume",
+      "ItemCaptionText": "Громкость видео в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает громкость видеофайла в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "lockScreenModeChangeVolumeWithMouseWheel",
+      "ItemCaptionText": "Регулировать громкость колесиком мыши в режиме блокировки экрана",
+      "ItemHoverTipText": "В режиме блокировки экрана колесико мыши используется для регулировки громкости",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": true
+    },
+    {
+      "ItemKeyName": "lockScreenModeAudioVolume",
+      "ItemCaptionText": "Громкость аудио в режиме блокировки экрана",
+      "ItemHoverTipText": "Задает громкость аудиофайла в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.3"
+    },
+    {
+      "ItemKeyName": "switchThemeHotKey",
+      "ItemCaptionText": "Горячая клавиша переключения темы",
+      "ItemHoverTipText": "Действительно только в режиме блокировки экрана и когда папка тем содержит несколько видео или изображений. Можно указать 1 букву или цифру. При использовании должно быть объединено с модификаторами Ctrl+Alt. Если не работает, может быть занято другой программой; попробуйте другую клавишу.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "x"
+    },
+    {
+      "ItemKeyName": "muteHotKey",
+      "ItemCaptionText": "Горячая клавиша отключения звука",
+      "ItemHoverTipText": "Действительно только в режиме блокировки экрана. Можно указать 1 букву или цифру. При использовании должно быть объединено с модификаторами Ctrl+Alt. Если не работает, может быть занято другой программой; попробуйте другую клавишу.",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "1",
+      "ItemCurrentValue": "m"
+    },
+    {
+      "ItemKeyName": "note",
+      "ItemCaptionText": "Примечание: Если вы хотите создать похожие работы, найдите и загрузите ScreenSaverDevTool из Мастерской. Используя этот инструмент, вы можете быстро создавать свои собственные темы хранителя экрана или экрана блокировки.",
+      "ItemHoverTipText": "",
+      "ItemInputType": "label",
+      "ItemCurrentValue": ""
+    }
+  ]
+}
