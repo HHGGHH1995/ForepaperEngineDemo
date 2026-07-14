@@ -1,0 +1,67 @@
+{
+	"SettingItems":
+		[
+			{
+				"ItemKeyName":"imgPath",
+				"ItemCaptionText":"自定义准星图片",
+				"ItemInputType":"text",
+				"ItemSubInputType":"file",
+				"Title":"please select a picture",
+				"FolderPath":"styles",
+				"Filter":"Image Files|*.png;*.webp;*.gif;*.apng;*.jpg;*.jpeg;*.svg;*.bmp;*.ico",
+				"ItemInputMaxNum":"255",
+				"ItemInputMinNum":"",
+				"ItemStep": "",
+				"ItemCurrentValue":""
+			},{
+				"ItemKeyName":"width",
+				"ItemCaptionText":"宽度",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"10000",
+				"ItemInputMinNum":"1",
+				"ItemStep": "1",
+				"ItemCurrentValue":"30"
+			},{
+				"ItemKeyName":"height",
+				"ItemCaptionText":"高度",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"10000",
+				"ItemInputMinNum":"1",
+				"ItemStep": "1",
+				"ItemCurrentValue":"30"
+			},{
+				"ItemKeyName":"offsetX",
+				"ItemCaptionText":"横向偏移",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"1000",
+				"ItemInputMinNum":"-1000",
+				"ItemStep": "1",
+				"ItemCurrentValue":"0"
+			},{
+				"ItemKeyName":"offsetY",
+				"ItemCaptionText":"纵向偏移",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"1000",
+				"ItemInputMinNum":"-1000",
+				"ItemStep": "1",
+				"ItemCurrentValue":"0"
+			},{
+				"ItemKeyName":"rotate",
+				"ItemCaptionText":"旋转角度",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"360",
+				"ItemInputMinNum":"0",
+				"ItemStep": "1",
+				"ItemCurrentValue":"0"
+			},
+			{
+				"ItemKeyName":"opacity",
+				"ItemCaptionText":"不透明度",
+				"ItemInputType":"range",
+				"ItemInputMaxNum":"1",
+				"ItemInputMinNum":"0",
+				"ItemStep": "0.01",
+				"ItemCurrentValue":"1"
+			}
+		]
+}

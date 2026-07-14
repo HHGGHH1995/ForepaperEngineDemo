@@ -1,0 +1,67 @@
+{
+	"SettingItems":
+		[
+			{
+				"ItemKeyName":"imgPath",
+				"ItemCaptionText":"Benutzerdefiniertes Fadenkreuz",
+				"ItemInputType":"text",
+				"ItemSubInputType":"file",
+				"Title":"please select a picture",
+				"FolderPath":"styles",
+				"Filter":"Image Files|*.png;*.webp;*.gif;*.apng;*.jpg;*.jpeg;*.svg;*.bmp;*.ico",
+				"ItemInputMaxNum":"100",
+				"ItemInputMinNum":"",
+				"ItemStep": "",
+				"ItemCurrentValue":""
+			},{
+				"ItemKeyName":"width",
+				"ItemCaptionText":"Breite",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"10000",
+				"ItemInputMinNum":"1",
+				"ItemStep": "1",
+				"ItemCurrentValue":"30"
+			},{
+				"ItemKeyName":"height",
+				"ItemCaptionText":"Höhe",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"10000",
+				"ItemInputMinNum":"1",
+				"ItemStep": "1",
+				"ItemCurrentValue":"30"
+			},{
+				"ItemKeyName":"offsetX",
+				"ItemCaptionText":"Horizontaler Versatz",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"1000",
+				"ItemInputMinNum":"-1000",
+				"ItemStep": "1",
+				"ItemCurrentValue":"0"
+			},{
+				"ItemKeyName":"offsetY",
+				"ItemCaptionText":"Vertikaler Versatz",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"1000",
+				"ItemInputMinNum":"-1000",
+				"ItemStep": "1",
+				"ItemCurrentValue":"0"
+			},{
+				"ItemKeyName":"rotate",
+				"ItemCaptionText":"Drehwinkel",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"360",
+				"ItemInputMinNum":"0",
+				"ItemStep": "1",
+				"ItemCurrentValue":"0"
+			},
+			{
+				"ItemKeyName":"opacity",
+				"ItemCaptionText":"Deckkraft",
+				"ItemInputType":"range",
+				"ItemInputMaxNum":"1",
+				"ItemInputMinNum":"0",
+				"ItemStep": "0.01",
+				"ItemCurrentValue":"1"
+			}
+		]
+}

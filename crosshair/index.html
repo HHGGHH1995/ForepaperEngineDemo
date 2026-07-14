@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioned Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        #positioned-image {
+            position: absolute;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img id="positioned-image" src="" alt="Positioned Image">
+
+    <script src="ForepaperEngine.js"></script>
+    <script src="DeclareResourceRequirements.js"></script>
+    <script src="ConfigManager.js"></script>
+    <script src="ConfigManagerInit.js"></script>
+    <script>
+        function LoadImage() {
+            // Configuration
+            const defImageUrl = 'styles/dynamic/eye.apng';
+
+            // Get the image element
+            const imageElement = document.getElementById('positioned-image');
+            
+            // Set the image source and size
+            let configImageUrl = ConfigManager.get('imgPath');
+            let usedImageUrl = defImageUrl;
+            if(configImageUrl){
+                usedImageUrl = `https://forepaperenginelocalfile/${configImageUrl}`;
+            }
+
+            if(imageElement.src!== usedImageUrl){
+                imageElement.src = usedImageUrl;
+            }
+            
+            imageElement.width = ConfigManager.get('width');
+            imageElement.height = ConfigManager.get('height');
+
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            
+            // Calculate center position
+            const centerX = windowWidth / 2;
+            const centerY = windowHeight / 2;
+            
+            // Position the image (accounting for its size to truly center it)
+            const imageX = (centerX + ConfigManager.get('offsetX')) - (imageElement.width / 2);
+            const imageY = (centerY + ConfigManager.get('offsetY')) - (imageElement.height / 2);
+            
+            // Apply the position
+            imageElement.style.left = `${imageX}px`;
+            imageElement.style.top = `${imageY}px`;
+            imageElement.style.opacity = ConfigManager.get('opacity');
+            const degNum = ConfigManager.get('rotate');
+            imageElement.style.transform = `rotate(${degNum}deg)`;
+        }
+        
+        // Position the image on load and on resize
+        window.addEventListener('load', LoadImage);
+        window.addEventListener('resize', LoadImage);
+    </script>
+</body>
+</html>
