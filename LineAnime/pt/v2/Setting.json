@@ -1,0 +1,40 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "opacity",
+			"ItemCaptionText": "Opacidade",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.8"
+		},
+		{
+			"ItemKeyName": "colorChangeSpeed",
+			"ItemCaptionText": "Velocidade de Transição de Cor",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.1"
+		},
+		{
+			"ItemKeyName": "pointSize",
+			"ItemCaptionText": "Tamanho da Partícula",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "10",
+			"ItemInputMinNum": "1",
+			"ItemStep": "1",
+			"ItemCurrentValue": "3"
+		},
+		{
+			"ItemKeyName": "particleSpeed",
+			"ItemCaptionText": "Velocidade de Movimento de Partículas",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "10",
+			"ItemInputMinNum": "0.1",
+			"ItemStep": "0.1",
+			"ItemCurrentValue": "1"
+		}
+	]
+}

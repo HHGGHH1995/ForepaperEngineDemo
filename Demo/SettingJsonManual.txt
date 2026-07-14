@@ -1,0 +1,76 @@
+number box:
+"ItemInputType":"number",//number box
+"ItemInputMaxNum":"1.5",//max value
+"ItemInputMinNum":"0.1",//min value
+"ItemStep": "0.1",//step value
+"ItemCurrentValue":"0.7"//current value
+
+number slider:
+"ItemInputType":"range",//number slider
+"ItemInputMaxNum":"1.5",//max value
+"ItemInputMinNum":"0.1",//min value
+"ItemStep": "0.1",//step value
+"ItemCurrentValue":"0.7"//current value
+
+color picker:
+"ItemInputType":"text",//text input
+"ItemSubInputType":"color",//text input with color select
+"ItemInputMaxNum":"7",//max length
+"ItemCurrentValue":"#FFFFFF"//current value
+
+text input:
+"ItemInputType":"text",//text input
+"ItemInputMaxNum":"100",//max length
+"ItemCurrentValue":"HelloWorld"//current value
+
+folder select:
+"ItemInputType":"text",//text input
+"ItemSubInputType":"folder",//text input with folder select
+"Title":"please select a folder",//title of the folder select dialog
+"FolderPath":"",//default folder path
+"ItemInputMaxNum":"100",//max length
+"ItemCurrentValue":"HelloWorld"//current value
+
+file select:
+"ItemInputType":"text",//text input
+"ItemSubInputType":"file",//text input with file select
+"Title":"please select a picture",//title of the file select dialog
+"FolderPath":"",//folder path to search for files
+"Filter":"Image Files|*.png;*.webp;*.jpg;*.jpeg;*.gif",//file filter
+"ItemInputMaxNum":"100",//max length
+"ItemCurrentValue":"HelloWorld"//current value
+
+font select:
+"ItemInputType":"text",//text input
+"ItemSubInputType":"font",//text input with font select
+"ItemInputMaxNum":"100",//max length
+"ItemCurrentValue":"HelloWorld"//current value
+
+checkbox:
+"ItemInputType":"checkbox",//checkbox
+"ItemCurrentValue":true//current checked state
+
+radio:
+"ItemInputType":"radio",//radio
+"ItemOptions":[
+    {
+        "OptionValue":"option1",
+        "OptionText":"option text 1",
+        "ItemHoverTipText":"tip text"
+    },
+    {
+        "OptionValue":"option2",
+        "OptionText":"option text 2",
+        "ItemHoverTipText":"tip text"
+    },
+    {
+        "OptionValue":"option3",
+        "OptionText":"option text 3",
+        "ItemHoverTipText":"tip text"
+    }
+],//options
+"ItemCurrentValue":"option1"//current checked option value
+
+label:
+"ItemInputType":"label",//label
+"ItemCurrentValue":""//not used, can be empty

@@ -1,0 +1,22 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "opacity",
+			"ItemCaptionText": "不透明度",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.1"
+		},
+		{
+			"ItemKeyName": "BeatThreshold",
+			"ItemCaptionText": "节奏感应(越小越灵敏)",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.1",
+			"ItemStep": "0.1",
+			"ItemCurrentValue": "1"
+		}
+	]
+}

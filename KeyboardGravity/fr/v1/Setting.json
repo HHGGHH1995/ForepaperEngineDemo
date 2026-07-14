@@ -1,0 +1,103 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "gravity",
+			"ItemCaptionText": "Gravité",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1.5",
+			"ItemInputMinNum": "0.1",
+			"ItemStep": "0.1",
+			"ItemCurrentValue": "0.7"
+		},
+		{
+			"ItemKeyName": "maxCharNum",
+			"ItemCaptionText": "Caractères Max",
+			"ItemInputType": "number",
+			"ItemInputMaxNum": "50",
+			"ItemInputMinNum": "1",
+			"ItemStep": "1",
+			"ItemCurrentValue": "10"
+		},
+		{
+			"ItemKeyName": "bounceFactor",
+			"ItemCaptionText": "Élasticité",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "0.9",
+			"ItemInputMinNum": "0.1",
+			"ItemStep": "0.1",
+			"ItemCurrentValue": "0.7"
+		},
+		{
+			"ItemKeyName": "friction",
+			"ItemCaptionText": "Vitesse Latérale",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "0.999",
+			"ItemInputMinNum": "0.95",
+			"ItemStep": "0.001",
+			"ItemCurrentValue": "0.99"
+		},
+		{
+			"ItemKeyName": "fontSizeRandomMax",
+			"ItemCaptionText": "Taille Aléatoire Max de Police",
+			"ItemInputType": "number",
+			"ItemInputMaxNum": "500",
+			"ItemInputMinNum": "10",
+			"ItemStep": "1",
+			"ItemCurrentValue": "100"
+		},
+		{
+			"ItemKeyName": "fontSizeRandomMin",
+			"ItemCaptionText": "Taille Aléatoire Min de Police",
+			"ItemInputType": "number",
+			"ItemInputMaxNum": "500",
+			"ItemInputMinNum": "10",
+			"ItemStep": "1",
+			"ItemCurrentValue": "30"
+		},
+		{
+			"ItemKeyName": "opacity",
+			"ItemCaptionText": "Opacité",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "0.99",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.7"
+		},
+		{
+			"ItemKeyName": "randomRotate",
+			"ItemCaptionText": "Rotation Aléatoire",
+			"ItemInputType": "checkbox",
+			"ItemInputMaxNum": "",
+			"ItemInputMinNum": "",
+			"ItemStep": "",
+			"ItemCurrentValue": "1"
+		},
+		{
+			"ItemKeyName": "fontFromTop",
+			"ItemCaptionText": "Hauteur d'Apparition de Police",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "0.99",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.5"
+		},
+		{
+			"ItemKeyName": "randomHorizontalSpeedBase",
+			"ItemCaptionText": "Vitesse Horizontale Aléatoire",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "100",
+			"ItemInputMinNum": "10",
+			"ItemStep": "1",
+			"ItemCurrentValue": "100"
+		},
+		{
+			"ItemKeyName": "randomVerticalSpeedBase",
+			"ItemCaptionText": "Vitesse Verticale Aléatoire",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "100",
+			"ItemInputMinNum": "10",
+			"ItemStep": "1",
+			"ItemCurrentValue": "50"
+		}
+	]
+}

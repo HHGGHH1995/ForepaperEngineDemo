@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Audio Visualizer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: transparent;
+        }
+        canvas {
+            display: block;
+            background: transparent;
+        }
+    /* 确保Matter.js渲染器在底层 */
+    canvas[data-engine] {
+        position: fixed;
+        z-index: 0;
+    }
+    /* 自定义Canvas在上层 */
+    canvas:not([data-engine]) {
+        position: fixed;
+        z-index: 1;
+    }
+    </style>
+</head>
+<body>
+    <script src="ForepaperEngine.js"></script>
+    <script src="DeclareResourceRequirements.js"></script>
+    <script src="ConfigManager.js"></script>
+    <script src="ConfigManagerInit.js"></script>
+    <script src="matter.min.js"></script>
+    <script>
+
+        class AdvancedVisualizer {
+            constructor() {
+                // 初始化Canvas
+                this.initCanvas();
+                
+                // 初始化节拍检测
+                this.energyHistory = [];
+                
+                // 初始化频段范围
+                this.freqRanges = {
+                    subBass: [0, 2],
+                    bass: [3, 6],
+                    mid: [7, 15],
+                    high: [16, 29]
+                };
+                
+                // 初始化物理引擎
+                this.initPhysics();
+                
+                // 启动动画循环
+                this.animate();
+            }
+
+            initCanvas() {
+                // 创建Canvas元素
+                this.canvas = document.createElement('canvas');
+                document.body.appendChild(this.canvas);
+                this.ctx = this.canvas.getContext('2d', { alpha: true });
+                
+                // 设置Canvas尺寸
+                this.resizeCanvas();
+                
+                // 监听窗口大小变化
+                window.addEventListener('resize', () => this.resizeCanvas());
+            }
+
+            resizeCanvas() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+                
+                // 如果使用物理引擎，更新渲染器尺寸
+                if (this.render) {
+                    this.render.canvas.width = window.innerWidth;
+                    this.render.canvas.height = window.innerHeight;
+                    this.render.options.width = window.innerWidth;
+                    this.render.options.height = window.innerHeight;
+                }
+            }
+
+            detectBeat(spectrum) {
+                const instantEnergy = spectrum.reduce((a, b) => a + b, 0);
+                const averageEnergy = this.energyHistory.reduce((a, b) => a + b, 0) / this.energyHistory.length || 1;
+                
+                // 更新历史记录
+                this.energyHistory.push(instantEnergy);
+                if (this.energyHistory.length > 60) this.energyHistory.shift(); // 保留60帧历史
+                
+                return instantEnergy > averageEnergy * ConfigManager.get('BeatThreshold');
+            }
+
+            getBandEnergy(spectrum, range) {
+                const [start, end] = range;
+                const band = spectrum.slice(start, end + 1);
+                return band.reduce((a, b) => a + b, 0) / band.length;
+            }
+
+            initPhysics() {
+                // 创建物理引擎
+                this.engine = Matter.Engine.create();
+                this.world = this.engine.world;
+                
+                // 创建渲染器
+                this.render = Matter.Render.create({
+                    element: document.body,
+                    engine: this.engine,
+                    options: {
+                        width: window.innerWidth,
+                        height: window.innerHeight,
+                        wireframes: false,
+                        background: 'transparent'
+                    }
+                });
+                Matter.Render.run(this.render);
+                
+                // 添加边界
+                Matter.World.add(this.world, [
+                    Matter.Bodies.rectangle(window.innerWidth/2, -10, window.innerWidth, 20, { isStatic: true }),
+                    Matter.Bodies.rectangle(window.innerWidth/2, window.innerHeight+10, window.innerWidth, 20, { isStatic: true }),
+                    Matter.Bodies.rectangle(-10, window.innerHeight/2, 20, window.innerHeight, { isStatic: true }),
+                    Matter.Bodies.rectangle(window.innerWidth+10, window.innerHeight/2, 20, window.innerHeight, { isStatic: true })
+                ]);
+            }
+
+            addPhysicsObject(x, y, size, options = {}) {
+                const body = Matter.Bodies.circle(x, y, size, {
+                    restitution: 0.9,
+                    render: {
+                        fillStyle: `hsla(${Math.random() * 360}, 100%, 50%,${ConfigManager.get('opacity')})`
+                    },
+                    ...options
+                });
+                Matter.World.add(this.world, body);
+                return body;
+            }
+
+            animate() {
+                const spectrum = ForepaperEngineGetRealTimeSpectrum30();
+                const isBeat = this.detectBeat(spectrum);
+                
+                if (isBeat) {
+                    // 节拍触发特效
+                    this.addPhysicsObject(
+                        Math.random() * window.innerWidth,
+                        0,
+                        10 + spectrum[0] * 30
+                    );
+                }
+                
+                // 限制物理对象数量
+                if (this.world.bodies.length > 100) {
+                    Matter.World.remove(this.world, this.world.bodies[4]);
+                }
+                
+                // 更新物理引擎
+                Matter.Engine.update(this.engine, 1000 / 60);
+                
+                // 继续动画循环
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        // 初始化可视化器
+        const visualizer = new AdvancedVisualizer();
+    </script>
+</body>
+</html>

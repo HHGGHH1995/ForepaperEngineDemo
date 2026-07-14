@@ -1,0 +1,76 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "opacity",
+			"ItemCaptionText": "不透明度",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.5"
+		},
+		{
+			"ItemKeyName": "fontSize",
+			"ItemCaptionText": "フォントサイズ",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "100",
+			"ItemInputMinNum": "8",
+			"ItemStep": "1",
+			"ItemCurrentValue": "20"
+		},
+		{
+			"ItemKeyName": "chars",
+			"ItemCaptionText": "テキスト内容",
+			"ItemInputType": "text",
+			"ItemInputMaxNum": "100",
+			"ItemInputMinNum": "0",
+			"ItemStep": "",
+			"ItemCurrentValue": "ForepaperEngine"
+		},
+		{
+			"ItemKeyName": "charUpdateInterval",
+			"ItemCaptionText": "文字切り替え間隔",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1000",
+			"ItemInputMinNum": "10",
+			"ItemStep": "10",
+			"ItemCurrentValue": "30"
+		},
+		{
+			"ItemKeyName": "dynamicRange",
+			"ItemCaptionText": "振幅",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1000",
+			"ItemInputMinNum": "100",
+			"ItemStep": "100",
+			"ItemCurrentValue": "200"
+		},
+		{
+			"ItemKeyName": "colorChangeSpeed",
+			"ItemCaptionText": "色変化速度",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.1"
+		},
+		{
+			"ItemKeyName": "baseDropSpeed",
+			"ItemCaptionText": "基本雨滴速度",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "10",
+			"ItemInputMinNum": "1",
+			"ItemStep": "0.1",
+			"ItemCurrentValue": "1"
+		},
+		{
+			"ItemKeyName": "dyDropSpeed",
+			"ItemCaptionText": "動的雨滴速度",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "100",
+			"ItemInputMinNum": "1",
+			"ItemStep": "1",
+			"ItemCurrentValue": "10"
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "opacity",
+			"ItemCaptionText": "不透明度",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.8"
+		},
+		{
+			"ItemKeyName": "colorChangeSpeed",
+			"ItemCaptionText": "色変化速度",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.1"
+		},
+		{
+			"ItemKeyName": "pointSize",
+			"ItemCaptionText": "粒子サイズ",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "10",
+			"ItemInputMinNum": "1",
+			"ItemStep": "1",
+			"ItemCurrentValue": "3"
+		},
+		{
+			"ItemKeyName": "particleSpeed",
+			"ItemCaptionText": "粒子移動速度",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "10",
+			"ItemInputMinNum": "0.1",
+			"ItemStep": "0.1",
+			"ItemCurrentValue": "1"
+		}
+	]
+}

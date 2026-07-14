@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --text-color: rgba(255,255,255,0.9);
+            --transition-time: 0.6s;
+        }
+
+        body {
+            margin: 0;
+            padding: 10px;
+            background: transparent;
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--text-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 12px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .category {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            overflow: hidden;
+        }
+
+        .category-title {
+            margin: 0 0 12px 0;
+            font-size: 1.2em;
+            color: #00ffdd;
+        }
+
+        .sensor-grid {
+            display: grid;
+            gap: 8px;
+        }
+
+        .sensor-item {
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+
+        .progress-container {
+            position: relative;
+            height: 24px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88, #00b4ff);
+            border-radius: 12px;
+            transition: width var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .value-label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+            font-size: 0.9em;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+        }
+
+        .throughput-value {
+            font-size: 1.2em;
+            color: #00ff88;
+        }
+        .storage-title {
+            color: #00ffdd;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard" id="dashboard"></div>
+
+    <script src="ForepaperEngine.js"></script>
+    <script src="DeclareResourceRequirements.js"></script>
+    <script>
+        const categoryConfig = {
+            'Cpu': {
+                title: 'CPU',
+                process: (sensors) => ({
+                    cores: sensors.filter(s => s.sensorType === 'Load' && s.sensorName.includes('Core')),
+                    temp: sensors.find(s => s.sensorType === 'Temperature')
+                })
+            },
+            'Memory': {
+                title: 'mem',
+                process: (sensors) => ({
+                    used: sensors.find(s => s.sensorName === 'Memory Used'),
+                    available: sensors.find(s => s.sensorName === 'Memory Available'),
+                    load: sensors.find(s => s.sensorType === 'Load')
+                })
+            },
+            'Storage': {
+                title: 'disk',
+                process: (hw) => ({
+                    name: hw.hardwareName,
+                    usage: hw.sensors.find(s => s.sensorName === 'Used Space'),
+                    read: hw.sensors.find(s => s.sensorName === 'Read Rate'),
+                    write: hw.sensors.find(s => s.sensorName === 'Write Rate')
+                })
+            },
+            'Network': {
+                title: 'net',
+                process: (allSensors) => {
+                    let uploadTotal = 0;
+                    let downloadTotal = 0;
+                    
+                    allSensors.forEach(s => {
+                        if(s.sensorName === 'Upload Speed') uploadTotal += s.sensorValue;
+                        if(s.sensorName === 'Download Speed') downloadTotal += s.sensorValue;
+                    });
+                    
+                    return {
+                        upload: uploadTotal,
+                        download: downloadTotal
+                    };
+                }
+            }
+        };
+
+        function createCategoryElement(category, data) {
+            const div = document.createElement('div');
+            div.className = 'category';
+            
+            let content = `<h3 class="category-title">${category.title}</h3>`;
+            
+            switch(category.title) {
+                case 'CPU':
+                    const { cores, temp } = category.process(data.sensors);
+                    content += `
+                        <div class="sensor-grid">
+                            ${cores.map(core => `
+                                <div class="sensor-item">
+                                    <div>${core.sensorName}</div>
+                                    <div class="progress-container">
+                                        <div class="progress-fill" style="width: ${core.sensorValue}%"></div>
+                                        <div class="value-label">${core.sensorValue.toFixed(1)}%</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                            <div class="sensor-item">
+                                <div>CPU Temperature</div>
+                                <div class="progress-container">
+                                    <div class="progress-fill" style="width: ${temp.sensorValue}%"></div>
+                                    <div class="value-label">${temp.sensorValue}°C</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 'mem':
+                    const { used, available, load } = category.process(data.sensors);
+                    const totalMemory = used.sensorValue + available.sensorValue;
+                    content += `
+                        <div class="sensor-grid">
+                            <div class="sensor-item">
+                                <div class="data-row">
+                                    <span>All mem:</span>
+                                    <span>${totalMemory.toFixed(1)} GB</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>used:</span>
+                                    <span>${used.sensorValue.toFixed(1)} GB</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>available:</span>
+                                    <span>${available.sensorValue.toFixed(1)} GB</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-fill" style="width: ${load.sensorValue}%"></div>
+                                    <div class="value-label">${load.sensorValue.toFixed(1)}%</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 'disk':
+                    const { name, usage, read, write } = category.process(data);
+                    content += `
+                        <div class="category">
+                            <h3 class="category-title">diskDevice</h3>
+                            <div class="sensor-item">
+                                <div class="storage-title">${name}</div>
+                                <div class="data-row">
+                                    <span>used:</span>
+                                    <span>${usage.sensorValue.toFixed(1)}%</span>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-fill" style="width: ${usage.sensorValue}%"></div>
+                                </div>
+                                <div class="data-row">
+                                    <span>read:</span>
+                                    <span class="throughput-value">${formatThroughput(read.sensorValue)}</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>write:</span>
+                                    <span class="throughput-value">${formatThroughput(write.sensorValue)}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 'net':
+                    const { upload, download } = category.process(data.sensors);
+                    content += `
+                        <div class="category">
+                            <h3 class="category-title">network</h3>
+                            <div class="sensor-item">
+                                <div class="data-row">
+                                    <span>Upload:</span>
+                                    <span class="throughput-value">${formatThroughput(upload)}</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>Download:</span>
+                                    <span class="throughput-value">${formatThroughput(download)}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    break;
+            }
+            
+            div.innerHTML = content;
+            return div;
+        }
+
+        function formatThroughput(value) {
+            const units = ['B/s', 'KB/s', 'MB/s', 'GB/s'];
+            let unitIndex = 0;
+            while (value >= 1024 && unitIndex < units.length - 1) {
+                value /= 1024;
+                unitIndex++;
+            }
+            return `${value.toFixed(1)} ${units[unitIndex]}`;
+        }
+
+        async function updateDashboard() {
+            try {
+                let jsonStr = await ForepaperEngineGetRealTimePerformance();
+                const data = JSON.parse(jsonStr);
+                const dashboard = document.getElementById('dashboard');
+                dashboard.innerHTML = '';
+
+                const networkSensors = data.hardware
+                    .filter(hw => hw.hardwareType === 'Network')
+                    .flatMap(hw => hw.sensors);
+
+                data.hardware.forEach(hw => {
+                    const config = categoryConfig[hw.hardwareType];
+                    if(!config) return;
+
+                    if(hw.hardwareType === 'Storage') {
+                        const category = createCategoryElement(categoryConfig.Storage, hw);
+                        dashboard.appendChild(category);
+                    }
+                    else if(hw.hardwareType !== 'Network' && hw.sensors.length) {
+                        dashboard.appendChild(createCategoryElement(config, {
+                            sensors: hw.sensors
+                        }));
+                    }
+                });
+
+                if(networkSensors.length > 0) {
+                    dashboard.appendChild(createCategoryElement(categoryConfig.Network, {
+                        sensors: networkSensors
+                    }));
+                }
+            } catch (error) {
+                console.error('Dashboard update error:', error);
+            }
+        }
+
+        setInterval(updateDashboard, 1000);
+        updateDashboard();
+    </script>
+</body>
+</html>

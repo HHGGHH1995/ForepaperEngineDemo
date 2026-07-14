@@ -1,0 +1,13 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "opacity",
+			"ItemCaptionText": "Nieprzezroczystość",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.8"
+		}
+	]
+}

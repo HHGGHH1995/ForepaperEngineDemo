@@ -1,0 +1,120 @@
+{
+	"SettingItems":
+		[
+			{
+				"ItemKeyName":"numberTest",
+				"ItemCaptionText":"숫자 입력창",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"number",
+				"ItemInputMaxNum":"1.5",
+				"ItemInputMinNum":"0.1",
+				"ItemStep": "0.1",
+				"ItemCurrentValue":"0.7"
+			},
+			{
+				"ItemKeyName":"rangeTest",
+				"ItemCaptionText":"숫자 슬라이더",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"range",
+				"ItemInputMaxNum":"50",
+				"ItemInputMinNum":"1",
+				"ItemStep": "1",
+				"ItemCurrentValue":"10"
+			},
+			{
+				"ItemKeyName":"colorTest",
+				"ItemCaptionText":"색상 선택기",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"text",
+				"ItemSubInputType":"color",
+				"ItemInputMaxNum":"7",
+				"ItemCurrentValue":"#ff0000"
+			},
+			{
+				"ItemKeyName":"passwordInputTest",
+				"ItemCaptionText":"password input",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"password",
+				"ItemInputMaxNum":"255",
+				"ItemCurrentValue":"123"
+			},
+			{
+				"ItemKeyName":"textInputTest",
+				"ItemCaptionText":"텍스트 입력창",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"text",
+				"ItemInputMaxNum":"255",
+				"ItemCurrentValue":"hello world"
+			},
+			{
+				"ItemKeyName":"folderSelectTest",
+				"ItemCaptionText":"폴더 선택",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"text",
+				"ItemSubInputType":"folder",
+				"Title":"please select a folder",
+				"FolderPath":"",
+				"ItemInputMaxNum":"255",
+				"ItemCurrentValue":""
+			},
+			{
+				"ItemKeyName":"fileSelectTest",
+				"ItemCaptionText":"파일 선택",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"text",
+				"ItemSubInputType":"file",
+				"Title":"please select a picture",
+				"FolderPath":"",
+				"Filter":"Image Files|*.png;*.webp;*.jpg;*.jpeg;*.gif",
+				"ItemInputMaxNum":"255",
+				"ItemCurrentValue":""
+			},
+			{
+				"ItemKeyName":"checkboxTest",
+				"ItemCaptionText":"체크박스",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"checkbox",
+				"ItemCurrentValue":true
+			},
+			{
+				"ItemKeyName":"radioTest",
+				"ItemCaptionText":"radio test",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"radio",
+				"ItemOptions":[
+					{
+						"OptionValue":"option1",
+						"OptionText":"option text 1",
+						"ItemHoverTipText":"tip text"
+					},
+					{
+						"OptionValue":"option2",
+						"OptionText":"option text 2",
+						"ItemHoverTipText":"tip text"
+					},
+					{
+						"OptionValue":"option3",
+						"OptionText":"option text 3",
+						"ItemHoverTipText":"tip text"
+					}
+				],
+				"ItemCurrentValue":"option1"
+			},
+			{
+				"ItemKeyName":"note",
+				"ItemCaptionText":"note text",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"label",
+				"ItemCurrentValue":""
+			},
+			{
+				"ItemKeyName":"fontSelectTest",
+				"ItemCaptionText":"font select",
+				"ItemHoverTipText":"tip text",
+				"ItemInputType":"text",
+				"ItemSubInputType":"font",
+				"ItemInputMaxNum":"255",
+				"ItemCurrentValue":""
+			}
+		]
+}

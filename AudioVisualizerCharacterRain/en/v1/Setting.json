@@ -1,0 +1,76 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "opacity",
+			"ItemCaptionText": "opacity",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.5"
+		},
+		{
+			"ItemKeyName": "fontSize",
+			"ItemCaptionText": "fontSize",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "100",
+			"ItemInputMinNum": "8",
+			"ItemStep": "1",
+			"ItemCurrentValue": "20"
+		},
+		{
+			"ItemKeyName": "chars",
+			"ItemCaptionText": "chars",
+			"ItemInputType": "text",
+			"ItemInputMaxNum": "100",
+			"ItemInputMinNum": "0",
+			"ItemStep": "",
+			"ItemCurrentValue": "ForepaperEngine"
+		},
+		{
+			"ItemKeyName": "charUpdateInterval",
+			"ItemCaptionText": "charUpdateInterval",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1000",
+			"ItemInputMinNum": "10",
+			"ItemStep": "10",
+			"ItemCurrentValue": "30"
+		},
+		{
+			"ItemKeyName": "dynamicRange",
+			"ItemCaptionText": "dynamicRange",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1000",
+			"ItemInputMinNum": "100",
+			"ItemStep": "100",
+			"ItemCurrentValue": "200"
+		},
+		{
+			"ItemKeyName": "colorChangeSpeed",
+			"ItemCaptionText": "colorChangeSpeed",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.1"
+		},
+		{
+			"ItemKeyName": "baseDropSpeed",
+			"ItemCaptionText": "baseDropSpeed",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "10",
+			"ItemInputMinNum": "1",
+			"ItemStep": "0.1",
+			"ItemCurrentValue": "1"
+		},
+		{
+			"ItemKeyName": "dyDropSpeed",
+			"ItemCaptionText": "dyDropSpeed",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "100",
+			"ItemInputMinNum": "1",
+			"ItemStep": "1",
+			"ItemCurrentValue": "10"
+		}
+	]
+}

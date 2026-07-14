@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <style>
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="GetRealTimeSpectrum30()">GetRealTimeSpectrum30</button>
+    <button onclick="GetRealTimeSpectrum512()">GetRealTimeSpectrum512</button>
+    <button onclick="GetRealTimePerformanceData()">GetRealTimePerformanceData</button>
+    <button onclick="GetConfigManagerSettingData()">GetConfigManagerSettingData</button>
+    <button onclick="EnableMousePassThrough()">EnableMousePassThrough</button>
+    <button onclick="DisableMousePassThrough()">DisableMousePassThrough</button>
+    <button onclick="GetMousePassThroughStatus()">GetMousePassThroughStatus</button>
+    <button onclick="OpenDirectorySelectWindow()">OpenDirectorySelectWindow</button>
+    <button onclick="OpenFileSelectWindow()">OpenFileSelectWindow</button>
+    <button onclick="GetGameControllerState()">GetGameControllerState</button>
+    <button onclick="SetGameControllerVibration()">SetGameControllerVibration</button>
+    <button onclick="GetFilesByPath()">GetFilesByPath</button>
+    <button onclick="GetDirectoriesByPath()">GetDirectoriesByPath</button>
+    <button onclick="OpenCurrentWorkshopItemInstallPath()">OpenCurrentWorkshopItemInstallPath</button>
+    <button onclick="OpenFile()">OpenFile</button>
+    <button onclick="LockScreen()">LockScreen</button>
+    <button onclick="SendKeyboardInput()">SendKeyboardInput</button>
+    <button onmouseenter="SendTextInput()">SendTextInput</button>
+    <button onclick="CheckFileExists()">CheckFileExists</button>
+    <button onclick="CheckDirectoryExists()">CheckDirectoryExists</button>
+    <button onclick="GetFileSize()">GetFileSize</button>
+    <button onclick="GetFocusWindowTitle()">GetFocusWindowTitle</button>
+    <button onclick="GetFocusProcessName()">GetFocusProcessName</button>
+    <button onclick="OpenFontSelectWindow()">OpenFontSelectWindow</button>
+    <button onclick="OpenColorSelectWindow()">OpenColorSelectWindow</button>
+    <button onmouseenter="GetMainFormActivate()">GetMainFormActivate</button>
+    <button onmouseenter="SetMainFormActivate()">SetMainFormActivate</button>
+    <button onclick="GetTopMostMode()">GetTopMostMode</button>
+    <button onclick="SetTopMostMode()">SetTopMostMode</button>
+    <input id="textInput">
+    <button onclick="GetUnlockScreenType()">GetUnlockScreenType</button>
+    <button onclick="UnlockTheScreen()">UnlockTheScreen</button>
+    <span>Enter password:</span>
+    <input id="passwordInput">
+    <div id="popup">
+        <p>Enter something:</p>
+        <input type="text" id="userInput">
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- 以只读的方式来访问本地文件，格式示例：https://forepaperenginelocalfile/[文件全路径]，注意该方式与ForepaperEngineReadConfigFile函数不同，ForepaperEngineReadConfigFile函数是用来读写壁纸相关的配置文件并且保存的配置文件会同步到云存档中。注意：若想使用本方式访问本地文件，需要在DeclareResourceRequirements.js中声明需要访问本地文件 -->
+    <!-- Access local files in read-only mode using the format: https://forepaperenginelocalfile/[full file path]. Note this differs from the ForepaperEngineReadConfigFile function, which is used to read/write Forepaper configuration files that sync to cloud storage. Important: To use this method, you must declare local file access requirements in DeclareResourceRequirements.js. -->
+    <!-- Доступ к локальным файлам в режиме только для чтения с использованием формата: https://forepaperenginelocalfile/[полный путь к файлу]. Обратите внимание, это отличается от функции ForepaperEngineReadConfigFile, которая используется для чтения/записи конфигурационных файлов обоев с синхронизацией в облачное хранилище. Важно: для использования этого метода необходимо объявить требования доступа к локальным файлам в DeclareResourceRequirements.js. -->
+    <!-- Acesse arquivos locais no modo somente leitura usando o formato: https://forepaperenginelocalfile/[caminho completo do arquivo]. Observe que isso difere da função ForepaperEngineReadConfigFile, usada para ler/escrever arquivos de configuração de papel de parede que sincronizam com armazenamento em nuvem. Importante: para usar este método, você deve declarar os requisitos de acesso a arquivos locais no DeclareResourceRequirements.js. -->
+    <!-- Dostęp do plików lokalnych w trybie tylko do odczytu przy użyciu formatu: https://forepaperenginelocalfile/[pełna ścieżka pliku]. Uwaga: to różni się od funkcji ForepaperEngineReadConfigFile, która służy do odczytu/zapisu plików konfiguracyjnych tapet synchronizowanych z chmurą. Ważne: aby użyć tej metody, należy zadeklarować wymagania dostępu do plików lokalnych w DeclareResourceRequirements.js. -->
+    <!-- 읽기 전용 모드로 로컬 파일에 접근하려면 형식을 사용하십시오: https://forepaperenginelocalfile/[전체 파일 경로]. 이는 ForepaperEngineReadConfigFile 함수와 다르며, 해당 함수는 클라우드 저장소에 동기화되는 벽지 구성 파일을 읽고 쓰는 데 사용됩니다. 참고: 이 방법을 사용하려면 DeclareResourceRequirements.js에서 로컬 파일 접근 요구 사항을 선언해야 합니다. -->
+    <!-- 読み取り専用モードでローカルファイルにアクセスするには、次の形式を使用します: https://forepaperenginelocalfile/[ファイルのフルパス]。これはForepaperEngineReadConfigFile関数とは異なり、この関数はクラウドストレージに同期される壁紙設定ファイルの読み書きに使用されます。注意: この方法を使用するには、DeclareResourceRequirements.jsでローカルファイルへのアクセス要件を宣言する必要があります。 -->
+    <!-- Accede a archivos locales en modo de solo lectura usando el formato: https://forepaperenginelocalfile/[ruta completa del archivo]. Nota: esto difiere de la función ForepaperEngineReadConfigFile, que se usa para leer/escribir archivos de configuración de fondos que se sincronizan con el almacenamiento en la nube. Importante: para usar este método, debes declarar los requisitos de acceso a archivos locales en DeclareResourceRequirements.js. -->
+    <!-- Accédez aux fichiers locaux en lecture seule en utilisant le format : https://forepaperenginelocalfile/[chemin complet du fichier]. À noter que cela diffère de la fonction ForepaperEngineReadConfigFile utilisée pour lire/écrire les fichiers de configuration du fond d'écran qui se synchronisent avec le cloud. Important : pour utiliser cette méthode, vous devez déclarer les besoins d'accès aux fichiers locaux dans DeclareResourceRequirements.js. -->
+    <!-- Greifen Sie auf lokale Dateien im schreibgeschützten Modus mit folgendem Format zu: https://forepaperenginelocalfile/[vollständiger Dateipfad]. Hinweis: Dies unterscheidet sich von der ForepaperEngineReadConfigFile-Funktion, die zum Lesen/Schreiben von synchronisierten Hintergrundkonfigurationsdateien in der Cloud verwendet wird. Wichtig: Um diese Methode zu verwenden, müssen Sie die Anforderungen für den Zugriff auf lokale Dateien in DeclareResourceRequirements.js deklarieren. -->
+    
+    <!-- <img src="https://forepaperenginelocalfile/D:/TestPath/Test.png" style="max-width:100%; height:auto;"> -->
+
+    <!-- 如果要访问与壁纸index.html同路径下的文件，则不需要使用上述的访问本地文件的方式，只需要使用以下url即可，例如：https://forepaperengine/index.html -->
+    <!-- To access files in the same directory as the Forepaper's index.html, you don't need to use the local file access method mentioned above. Simply use the following URL format, e.g.: https://forepaperengine/index.html -->
+    <!-- Для доступа к файлам в той же директории, что и index.html обоев, не требуется использовать упомянутый выше метод доступа к локальным файлам. Достаточно использовать следующий формат URL, например: https://forepaperengine/index.html -->
+    <!-- Para acessar arquivos no mesmo diretório do index.html do papel de parede, não é necessário usar o método de acesso a arquivos locais mencionado acima. Basta usar o seguinte formato de URL, por exemplo: https://forepaperengine/index.html -->
+    <!-- Aby uzyskać dostęp do plików w tym samym katalogu co index.html tapety, nie musisz używać wspomnianej wyżej metody dostępu do plików lokalnych. Wystarczy użyć następującego formatu URL, np.: https://forepaperengine/index.html -->
+    <!-- 벽지의 index.html과 같은 경로에 있는 파일에 접근하려면 위에서 언급한 로컬 파일 접근 방법을 사용할 필요가 없습니다. 다음과 같은 URL 형식을 사용하십시오. 예: https://forepaperengine/index.html -->
+    <!-- 壁紙のindex.htmlと同じパスにあるファイルにアクセスする場合、前述のローカルファイルアクセス方法を使用する必要はありません。次のURL形式を使用してください。例: https://forepaperengine/index.html -->
+    <!-- Para acceder a archivos en el mismo directorio que el index.html del fondo, no necesitas usar el método de acceso a archivos locales mencionado anteriormente. Simplemente usa el siguiente formato de URL, ej.: https://forepaperengine/index.html -->
+    <!-- Pour accéder aux fichiers dans le même répertoire que le index.html du fond d'écran, vous n'avez pas besoin d'utiliser la méthode d'accès aux fichiers locaux mentionnée ci-dessus. Utilisez simplement le format d'URL suivant, par exemple : https://forepaperengine/index.html -->
+    <!-- Um auf Dateien im selben Verzeichnis wie die index.html des Hintergrunds zuzugreifen, müssen Sie nicht die oben erwähnte Methode für den Zugriff auf lokale Dateien verwenden. Verwenden Sie einfach das folgende URL-Format, z.B.: https://forepaperengine/index.html -->
+
+    <!-- <img src="https://forepaperengine/imgs/Test.png" style="max-width:100%; height:auto;"> -->
+
+    <!-- ForepaperEngine.js脚本封装了ForepaperEngine提供的功能，包括获取电脑实时音频频谱数据，获取电脑性能检测数据，读取或保存配置文件等，除非您的作品完全不依赖这些功能，否则请引入该脚本 -->
+    <!-- The ForepaperEngine.js script encapsulates the functionality provided by ForepaperEngine, including acquiring real-time computer audio spectrum data, obtaining computer performance monitoring data, reading or saving configuration files, etc. Unless your work completely doesn't rely on these features, please include this script. -->
+    <!-- Скрипт ForepaperEngine.js инкапсулирует функциональность, предоставляемую ForepaperEngine, включая получение данных аудиоспектра компьютера в реальном времени, мониторинг производительности системы, чтение и сохранение конфигурационных файлов и т.д. Если ваш проект использует эти функции, обязательно подключите этот скрипт. -->
+    <!-- O script ForepaperEngine.js encapsula a funcionalidade fornecida pelo ForepaperEngine, incluindo a aquisição de dados de espectro de áudio em tempo real do computador, obtenção de dados de monitoramento de desempenho, leitura ou salvamento de arquivos de configuração, etc. A menos que seu trabalho não dependa completamente desses recursos, inclua este script. -->
+    <!-- Skrypt ForepaperEngine.js hermetyzuje funkcjonalność dostarczaną przez ForepaperEngine, w tym pozyskiwanie danych widma audio komputera w czasie rzeczywistym, monitorowanie wydajności systemu, odczyt i zapis plików konfiguracyjnych itp. Chyba że Twoja praca w ogóle nie zależy od tych funkcji, należy dołączyć ten skrypt. -->
+    <!-- ForepaperEngine.js 스크립트는 실시간 컴퓨터 오디오 스펙트럼 데이터 획득, 컴퓨터 성능 모니터링 데이터 획득, 설정 파일 읽기/저장 등 ForepaperEngine에서 제공하는 기능을 캡슐화합니다. 여러분의 작품이 이러한 기능에 전혀 의존하지 않는 경우가 아니라면 이 스크립트를 포함시켜야 합니다. -->
+    <!-- ForepaperEngine.jsスクリプトは、コンピュータのリアルタイムオーディオスペクトルデータの取得、パフォーマンス監視データの取得、設定ファイルの読み書きなど、ForepaperEngineが提供する機能をカプセル化しています。これらの機能に一切依存しない場合を除き、このスクリプトを導入してください。 -->
+    <!-- El script ForepaperEngine.js encapsula la funcionalidad proporcionada por ForepaperEngine, incluyendo la adquisición de datos de espectro de audio en tiempo real del ordenador, el monitoreo del rendimiento del sistema, la lectura o guardado de archivos de configuración, etc. A menos que su trabajo no dependa en absoluto de estas funciones, incluya este script. -->
+    <!-- Le script ForepaperEngine.js encapsule les fonctionnalités fournies par ForepaperEngine, y compris l'acquisition de données de spectre audio en temps réel, la surveillance des performances du système, la lecture ou l'enregistrement de fichiers de configuration, etc. À moins que votre projet ne dépende pas du tout de ces fonctionnalités, veuillez inclure ce script. -->
+    <!-- Das ForepaperEngine.js-Skript kapselt die von ForepaperEngine bereitgestellten Funktionen ein, einschließlich der Erfassung von Echtzeit-Audio-Spektraldaten des Computers, der Leistungsüberwachungsdaten, des Lesens oder Speicherns von Konfigurationsdateien usw. Sofern Ihr Projekt nicht vollständig unabhängig von diesen Funktionen ist, sollten Sie dieses Skript einbinden. -->
+    <script src="ForepaperEngine.js"></script>
+
+    <!-- DeclareResourceRequirements.js用于声明对一些敏感资源是否有访问需求，具体请查看该脚本文件中的注释 -->
+    <!-- DeclareResourceRequirements.js is used to declare access requirements for certain sensitive resources. For details, please refer to the comments in the script file. -->
+    <!-- DeclareResourceRequirements.js используется для объявления требований доступа к определенным чувствительным ресурсам. Подробности см. в комментариях в файле скрипта. -->
+    <!-- DeclareResourceRequirements.js é usado para declarar requisitos de acesso a determinados recursos sensíveis. Para detalhes, consulte os comentários no arquivo de script. -->
+    <!-- DeclareResourceRequirements.js służy do deklarowania wymagań dostępu do niektórych wrażliwych zasobów. Szczegóły można znaleźć w komentarzach w pliku skryptu. -->
+    <!-- DeclareResourceRequirements.js는 특정 민감한 리소스에 대한 접근 요구 사항을 선언하는 데 사용됩니다. 자세한 내용은 스크립트 파일의 주석을 참조하십시오. -->
+    <!-- DeclareResourceRequirements.jsは、特定の機密リソースへのアクセス要件を宣言するために使用されます。詳細については、スクリプトファイル内のコメントを参照してください。 -->
+    <!-- DeclareResourceRequirements.js se utiliza para declarar los requisitos de acceso a ciertos recursos sensibles. Para más detalles, consulte los comentarios en el archivo de script. -->
+    <!-- DeclareResourceRequirements.js est utilisé pour déclarer les exigences d'accès à certaines ressources sensibles. Pour plus de détails, veuillez consulter les commentaires dans le fichier de script. -->
+    <!-- DeclareResourceRequirements.js wird verwendet, um Zugriffsanforderungen für bestimmte sensible Ressourcen zu deklarieren. Einzelheiten finden Sie in den Kommentaren der Skriptdatei. -->
+    <script src="DeclareResourceRequirements.js"></script>
+
+    <!-- ConfigManager.js脚本提供了一个配置界面管理器模板，您可以选择使用该脚本结合Setting.json实现模版化的配置管理器，如果你需要更复杂的自定义配置管理器界面，您可以忽略该脚本 -->
+    <!-- The ConfigManager.js script provides a configuration interface manager template. You can choose to use this script together with Setting.json to implement a templated configuration manager. If you need a more complex custom configuration manager interface, you may ignore this script. -->
+    <!-- Скрипт ConfigManager.js предоставляет шаблон менеджера конфигурационного интерфейса. Вы можете использовать этот скрипт вместе с Setting.json для реализации шаблонного менеджера конфигураций. Если вам нужен более сложный пользовательский интерфейс менеджера конфигураций, вы можете проигнорировать этот скрипт. -->
+    <!-- O script ConfigManager.js fornece um modelo de gerenciador de interface de configuração. Você pode optar por usar este script em conjunto com Setting.json para implementar um gerenciador de configuração modelado. Se você precisar de uma interface de gerenciador de configuração personalizada mais complexa, pode ignorar este script. -->
+    <!-- Skrypt ConfigManager.js dostarcza szablon menedżera interfejsu konfiguracyjnego. Możesz użyć tego skryptu razem z Setting.json, aby zaimplementować ustandaryzowany menedżer konfiguracji. Jeśli potrzebujesz bardziej złożonego, niestandardowego interfejsu menedżera konfiguracji, możesz pominąć ten skrypt. -->
+    <!-- ConfigManager.js 스크립트는 구성 인터페이스 관리자 템플릿을 제공합니다. Setting.json과 함께 이 스크립트를 사용하여 템플릿화된 구성 관리자를 구현할 수 있습니다. 더 복잡한 사용자 정의 구성 관리자 인터페이스가 필요한 경우 이 스크립트를 무시해도 됩니다. -->
+    <!-- ConfigManager.jsスクリプトは、設定インターフェース管理テンプレートを提供します。このスクリプトをSetting.jsonと組み合わせて使用することで、テンプレート化された設定管理を実装できます。より複雑なカスタム設定管理インターフェースが必要な場合、このスクリプトは無視しても構いません。 -->
+    <!-- El script ConfigManager.js proporciona una plantilla de gestor de interfaz de configuración. Puedes optar por usar este script junto con Setting.json para implementar un gestor de configuración basado en plantillas. Si necesitas una interfaz de gestor de configuración personalizada más compleja, puedes ignorar este script. -->
+    <!-- Le script ConfigManager.js fournit un modèle de gestionnaire d'interface de configuration. Vous pouvez choisir d'utiliser ce script avec Setting.json pour implémenter un gestionnaire de configuration basé sur des modèles. Si vous avez besoin d'une interface de gestionnaire de configuration personnalisée plus complexe, vous pouvez ignorer ce script. -->
+    <!-- Das ConfigManager.js-Skript stellt eine Vorlage für einen Konfigurationsinterface-Manager bereit. Sie können dieses Skript zusammen mit Setting.json verwenden, um einen templategesteuerten Konfigurationsmanager zu implementieren. Falls Sie eine komplexere, benutzerdefinierte Konfigurationsmanager-Oberfläche benötigen, können Sie dieses Skript ignorieren. -->
+    <script src="ConfigManager.js"></script>
+
+    <!-- ConfigManagerInit.js脚本负责初始化配置管理器模板，与ConfigManager.js脚本配合使用，如果您使用了自定义的配置管理器界面，而非上述的ConfigManager.js模板，则可以忽略该脚本 -->
+    <!-- The ConfigManagerInit.js script is responsible for initializing the configuration manager template and works in conjunction with the ConfigManager.js script. If you are using a custom configuration manager interface instead of the aforementioned ConfigManager.js template, you may ignore this script. -->
+    <!-- Скрипт ConfigManagerInit.js отвечает за инициализацию шаблона менеджера конфигураций и работает совместно со скриптом ConfigManager.js. Если вы используете пользовательский интерфейс менеджера конфигураций вместо упомянутого шаблона ConfigManager.js, вы можете проигнорировать этот скрипт. -->
+    <!-- O script ConfigManagerInit.js é responsável por inicializar o modelo do gerenciador de configuração e funciona em conjunto com o script ConfigManager.js. Se você estiver usando uma interface personalizada de gerenciador de configuração em vez do modelo ConfigManager.js mencionado, você pode ignorar este script. -->
+    <!-- Skrypt ConfigManagerInit.js odpowiada za inicjalizację szablonu menedżera konfiguracji i współpracuje ze skryptem ConfigManager.js. Jeśli używasz niestandardowego interfejsu menedżera konfiguracji zamiast wspomnianego szablonu ConfigManager.js, możesz pominąć ten skrypt. -->
+    <!-- ConfigManagerInit.js 스크립트는 구성 관리자 템플릿을 초기화하는 역할을 하며 ConfigManager.js 스크립트와 함께 사용됩니다. 만약 앞서 언급된 ConfigManager.js 템플릿 대신 사용자 정의 구성 관리자 인터페이스를 사용하는 경우, 이 스크립트를 무시해도 됩니다. -->
+    <!-- ConfigManagerInit.jsスクリプトは設定管理テンプレートの初期化を担当し、ConfigManager.jsスクリプトと連携して動作します。前述のConfigManager.jsテンプレートではなく、カスタム設定管理インターフェースを使用する場合、このスクリプトは無視しても構いません。 -->
+    <!-- El script ConfigManagerInit.js se encarga de inicializar la plantilla del gestor de configuración y funciona junto con el script ConfigManager.js. Si estás utilizando una interfaz personalizada de gestor de configuración en lugar de la plantilla ConfigManager.js mencionada anteriormente, puedes ignorar este script. -->
+    <!-- Le script ConfigManagerInit.js est responsable de l'initialisation du modèle de gestionnaire de configuration et fonctionne conjointement avec le script ConfigManager.js. Si vous utilisez une interface personnalisée de gestionnaire de configuration au lieu du modèle ConfigManager.js mentionné ci-dessus, vous pouvez ignorer ce script. -->
+    <!-- Das ConfigManagerInit.js-Skript ist für die Initialisierung der Konfigurationsmanager-Vorlage verantwortlich und wird in Verbindung mit dem ConfigManager.js-Skript verwendet. Falls Sie eine benutzerdefinierte Konfigurationsmanager-Oberfläche anstelle der oben genannten ConfigManager.js-Vorlage verwenden, können Sie dieses Skript ignorieren. -->
+    <script src="ConfigManagerInit.js"></script>
+
+    <script>
+        // ForepaperEngine在加载Forepaper作品时会从url中传入一个名叫current_mode的参数，表示当前的模式：1 操作模式，2 屏保模式，3 锁屏模式
+        // ForepaperEngine will pass a parameter called current_mode to the url when loading a Forepaper work, indicating the current mode: 1 operation mode, 2 screen saver mode, 3 lock screen mode
+        let currentForepaperEngineMode = new URLSearchParams(window.location.search).get('current_mode');
+        switch (currentForepaperEngineMode) {
+            case '1':
+                console.log('operation mode');
+                break;
+            case '2':
+                console.log('screen saver mode');
+                break;
+            case '3':
+                console.log('lock screen mode');
+                break;
+        }
+
+        // 如果您的Forepaper作品同时支持多种模式，并且您的作品被应用在了多种模式中，那么很显然你的作品可能需要在运行时监听ForepaperEngine的模式变化，你需要在全局作用域中公开声明以下函数，以便ForepaperEngine可以在模式发生变化时调用，传入的参数：1 操作模式，2 屏保模式，3 锁屏模式
+        // If your Forepaper work supports multiple modes and is used in multiple modes, it is obviously your work needs to listen for mode changes in real time, and you need to expose the following function in the global scope so that ForepaperEngine can call it when the mode changes, passing in the parameters: 1 operation mode, 2 screen saver mode, 3 lock screen mode
+        function ForepaperEngineChangeMode(mode) {
+            currentForepaperEngineMode = mode;
+            switch (currentForepaperEngineMode) {
+                case '1':
+                    console.log('operation mode');
+                    break;
+                case '2':
+                    console.log('screen saver mode');
+                    break;
+                case '3':
+                    console.log('lock screen mode');
+                    break;
+            }
+        }
+
+        // 如果您的Forepaper作品支持锁屏状态并支持录入解锁密码，那么你需要在全局作用域中公开声明以下函数并且返回True，否则一定要返回False或者不声明该函数
+        // If your Forepaper work supports lock screen status and supports password entry, you need to expose the following function in the global scope and return True, otherwise you must return False or not declare the function
+        function CheckIfCurrentForepaperSupportEnteringUnlockPassword(){
+            return true;
+        }
+        
+        function GetRealTimeSpectrum30() {
+            // ForepaperEngine.js脚本封装的ForepaperEngineGetRealTimeSpectrum30函数会获取当前系统的音频频谱的优化版，即一个fload[30]的频谱数据数组，已经进行过了防抖平滑处理，您可以直接用来作为音频可视化的数据来源，按照您理想的帧率不断调用该函数从而进行实时音频数据的获取。
+            // The ForepaperEngineGetRealTimeSpectrum30 function, encapsulated in the ForepaperEngine.js script, obtains an optimized version of the current system's audio spectrum—a float[30] spectral data array that has undergone debounce smoothing processing. You can directly use this data as a source for audio visualization, continuously calling the function at your desired frame rate to acquire real-time audio data.
+            // Функция ForepaperEngineGetRealTimeSpectrum30, инкапсулированная в сценарии ForepaperEngine.js, получает оптимизированную версию текущего аудиоспектра системы — массив спектральных данных float[30], который уже прошел обработку для устранения дрожания и сглаживания. Вы можете использовать его напрямую в качестве источника данных для визуализации аудио, вызывая эту функцию с желаемой частотой кадров для получения данных в реальном времени.
+            // A função ForepaperEngineGetRealTimeSpectrum30, encapsulada no script ForepaperEngine.js, obtém uma versão otimizada do espectro de áudio do sistema atual—um array de dados espectrais float[30] que passou por um processamento de suavização para reduzir oscilações. Você pode usá-lo diretamente como fonte de dados para visualização de áudio, chamando a função continuamente na taxa de quadros desejada para obter dados de áudio em tempo real.
+            // Funkcja ForepaperEngineGetRealTimeSpectrum30, zawarta w skrypcie ForepaperEngine.js, pobiera zoptymalizowaną wersję bieżącego spektrum dźwięku systemu—tablicę danych spektralnych float[30], która została poddana wygładzeniu w celu redukcji zakłóceń. Możesz bezpośrednio używać jej jako źródła danych do wizualizacji dźwięku, wywołując funkcję w pożądanej liczbie klatek na sekundę w celu uzyskania danych audio w czasie rzeczywistym.
+            // ForepaperEngine.js 스크립트에 캡슐화된 ForepaperEngineGetRealTimeSpectrum30 함수는 현재 시스템의 오디오 스펙트럼의 최적화 버전인 float[30] 형태의 스펙트럼 데이터 배열을 가져옵니다. 이 데이터는 디바운스 및 부드럽게 처리되었으며, 오디오 시각화를 위한 데이터 소스로 직접 사용할 수 있습니다. 원하는 프레임 속도로 해당 함수를 지속적으로 호출하면 실시간 오디오 데이터를 획득할 수 있습니다.
+            // ForepaperEngine.jsスクリプトにカプセル化されたForepaperEngineGetRealTimeSpectrum30関数は、現在のシステムの音声スペクトルの最適化版を取得します。それは、防抖平滑処理（デバウンスとスムージング処理）が施されたfloat[30]のスペクトルデータ配列であり、オーディオの視覚化に直接使用できます。理想のフレームレートに応じてこの関数を継続的に呼び出し、リアルタイムの音声データを取得できます。
+            // La función ForepaperEngineGetRealTimeSpectrum30, encapsulada en el script ForepaperEngine.js, obtiene una versión optimizada del espectro de audio del sistema actual: un arreglo de datos espectrales float[30], que ha sido procesado para suavizar y reducir el ruido. Puedes usarlo directamente como fuente de datos para la visualización de audio, llamando a la función repetidamente a la tasa de fotogramas deseada para obtener datos de audio en tiempo real.
+            // La fonction ForepaperEngineGetRealTimeSpectrum30, encapsulée dans le script ForepaperEngine.js, récupère une version optimisée du spectre audio du système actuel—un tableau de données spectrales float[30] qui a été traité pour éliminer les interférences et lisser les variations. Vous pouvez l'utiliser directement comme source de données pour la visualisation audio, en appelant cette fonction de manière répétée à la fréquence d’images souhaitée afin d’obtenir des données audio en temps réel.
+            // Die Funktion ForepaperEngineGetRealTimeSpectrum30, gekapselt im Skript ForepaperEngine.js, ruft eine optimierte Version des aktuellen Audiospektrums des Systems ab—ein Spektraldatenarray float[30], das einer Entprell- und Glättungsbehandlung unterzogen wurde. Sie können es direkt als Datenquelle für die Audio-Visualisierung verwenden, indem Sie die Funktion mit der gewünschten Bildrate kontinuierlich aufrufen, um Echtzeit-Audiodaten zu erhalten.
+            let RealTimeSpectrum30Array = ForepaperEngineGetRealTimeSpectrum30();
+
+            // 您可以使用ForepaperEngine右键菜单中的打开控制台按钮去打开控制台来查看输出
+            // You can use the "Open Console" button in the right-click menu of ForepaperEngine to open the console and view the output.
+            // Вы можете использовать кнопку «Открыть консоль» в контекстном меню ForepaperEngine, чтобы открыть консоль и просмотреть вывод.
+            // Você pode usar o botão "Abrir Console" no menu de clique direito do ForepaperEngine para abrir o console e visualizar a saída.
+            // Możesz użyć przycisku „Otwórz konsolę” w menu kontekstowym ForepaperEngine, aby otworzyć konsolę i zobaczyć wynik.
+            // ForepaperEngine의 우클릭 메뉴에서 "콘솔 열기" 버튼을 사용하여 콘솔을 열고 출력을 확인할 수 있습니다.
+            // ForepaperEngineの右クリックメニューにある「コンソールを開く」ボタンを使用して、コンソールを開き、出力を確認できます。
+            // Puedes usar el botón "Abrir Consola" en el menú contextual de ForepaperEngine para abrir la consola y ver la salida.
+            // Vous pouvez utiliser le bouton « Ouvrir la console » dans le menu contextuel de ForepaperEngine pour ouvrir la console et afficher la sortie.
+            // Sie können die Schaltfläche „Konsole öffnen“ im Rechtsklick-Menü von ForepaperEngine verwenden, um die Konsole zu öffnen und die Ausgabe anzuzeigen.
+            console.log(RealTimeSpectrum30Array);
+        }
+
+        function GetRealTimeSpectrum512() {
+            // ForepaperEngine.js脚本封装的ForepaperEngineGetRealTimeSpectrum512函数会获取当前系统的音频频谱的原始版，即一个float[512]的频谱数据数组，您可以按照您自己的理想算法进行防抖与平滑处理，或者按照您理想的方式进行高频、中频、低频着重处理，按照您理想的帧率不断调用该函数从而进行实时音频数据的获取。
+            // The ForepaperEngineGetRealTimeSpectrum512 function, encapsulated in the ForepaperEngine.js script, retrieves the raw version of the current system's audio spectrum—a float[512] spectral data array. You can apply your preferred algorithm for debounce and smoothing processing or emphasize high, mid, and low frequencies according to your needs. Continuously calling this function at your ideal frame rate will allow real-time audio data acquisition.
+            // Функция ForepaperEngineGetRealTimeSpectrum512, инкапсулированная в сценарии ForepaperEngine.js, получает исходную версию текущего аудиоспектра системы — массив спектральных данных float[512]. Вы можете применить свой собственный алгоритм для устранения дрожания и сглаживания или акцентировать внимание на высоких, средних и низких частотах по вашему усмотрению. Постоянный вызов этой функции с желаемой частотой кадров обеспечит получение аудиоданных в реальном времени.
+            // A função ForepaperEngineGetRealTimeSpectrum512, encapsulada no script ForepaperEngine.js, obtém a versão bruta do espectro de áudio do sistema atual—um array de dados espectrais float[512]. Você pode aplicar seu próprio algoritmo para suavização e redução de ruído ou destacar frequências altas, médias e baixas conforme sua necessidade. Chamando continuamente essa função na taxa de quadros ideal, você conseguirá adquirir dados de áudio em tempo real.
+            // Funkcja ForepaperEngineGetRealTimeSpectrum512, zawarta w skrypcie ForepaperEngine.js, pobiera surową wersję bieżącego spektrum dźwięku systemu—tablicę danych spektralnych float[512]. Możesz zastosować własny algorytm do redukcji zakłóceń i wygładzania lub wzmocnić wysokie, średnie i niskie częstotliwości według swoich potrzeb. Ciągłe wywoływanie tej funkcji przy optymalnej liczbie klatek na sekundę pozwoli na uzyskanie danych audio w czasie rzeczywistym.
+            // ForepaperEngine.js 스크립트에 캡슐화된 ForepaperEngineGetRealTimeSpectrum512 함수는 현재 시스템의 오디오 스펙트럼의 원본 버전인 float[512] 형태의 스펙트럼 데이터 배열을 가져옵니다. 사용자 지정 알고리즘을 적용하여 디바운스 및 부드러운 처리를 하거나, 고주파, 중주파, 저주파를 강조할 수 있습니다. 원하는 프레임 속도로 해당 함수를 지속적으로 호출하면 실시간 오디오 데이터를 획득할 수 있습니다.
+            // ForepaperEngine.jsスクリプトにカプセル化されたForepaperEngineGetRealTimeSpectrum512関数は、現在のシステムの音声スペクトルの生データを取得します。それはfloat[512]のスペクトルデータ配列であり、ユーザー独自のアルゴリズムによる防抖や平滑処理を施したり、高・中・低周波の強調処理を行うことができます。理想のフレームレートに応じてこの関数を継続的に呼び出せば、リアルタイムの音声データを取得できます。
+            // La función ForepaperEngineGetRealTimeSpectrum512, encapsulada en el script ForepaperEngine.js, obtiene la versión sin procesar del espectro de audio del sistema actual: un arreglo de datos espectrales float[512]. Puedes aplicar tu propio algoritmo para suavizar y reducir el ruido, o enfatizar frecuencias altas, medias y bajas según tus necesidades. Llamando continuamente esta función a la tasa de fotogramas ideal, podrás adquirir datos de audio en tiempo real.
+            // La fonction ForepaperEngineGetRealTimeSpectrum512, encapsulée dans le script ForepaperEngine.js, récupère la version brute du spectre audio du système actuel—un tableau de données spectrales float[512]. Vous pouvez appliquer votre propre algorithme pour la réduction des interférences et le lissage ou accentuer les fréquences hautes, moyennes et basses selon vos préférences. En appelant continuellement cette fonction à votre fréquence d’images idéale, vous pourrez obtenir des données audio en temps réel.
+            // Die Funktion ForepaperEngineGetRealTimeSpectrum512, gekapselt im Skript ForepaperEngine.js, ruft die rohe Version des aktuellen Audiospektrums des Systems ab—ein Spektraldatenarray float[512]. Sie können Ihren eigenen Algorithmus für die Glättung und Störungsreduzierung anwenden oder hohe, mittlere und niedrige Frequenzen nach Ihren Anforderungen betonen. Durch kontinuierliches Aufrufen dieser Funktion mit der gewünschten Bildrate können Sie Echtzeit-Audiodaten erfassen.
+            let RealTimeSpectrum512Array = ForepaperEngineGetRealTimeSpectrum512();
+
+            console.log(RealTimeSpectrum512Array);
+        }
+
+        async function GetRealTimePerformanceData() {
+            // ForepaperEngine.js脚本封装的ForepaperEngineGetRealTimePerformance函数会获取当前系统的性能检测数据，结果为一段JSON字符串，包括CPU占用率、内存占用率、硬盘读写速率、网络上传下载速率等，具体请查看下方的实际log输出，您可以按照您理想的间隔时间去不断的调用该函数，从而实时的获取当前系统的性能检测数据，并按照您的创意去绘制到界面上。
+            // The ForepaperEngineGetRealTimePerformance function, encapsulated in the ForepaperEngine.js script, retrieves the current system's performance monitoring data as a JSON string. The result includes CPU usage, memory usage, disk read/write speed, and network upload/download speed. Please refer to the actual log output below for details. You can call this function continuously at your desired interval to acquire real-time system performance data and creatively visualize it on your interface.
+            // Функция ForepaperEngineGetRealTimePerformance, инкапсулированная в сценарии ForepaperEngine.js, получает данные мониторинга производительности текущей системы в виде JSON-строки. Результат включает загрузку процессора, использование памяти, скорость чтения/записи диска и скорость загрузки/скачивания сети. Подробности можно увидеть в фактическом выводе лога ниже. Вы можете вызывать эту функцию с нужным интервалом, чтобы получать данные о производительности системы в реальном времени и визуализировать их по своему усмотрению.
+            // A função ForepaperEngineGetRealTimePerformance, encapsulada no script ForepaperEngine.js, obtém os dados de monitoramento de desempenho do sistema atual como uma string JSON. O resultado inclui uso da CPU, uso de memória, velocidade de leitura/escrita do disco e velocidade de upload/download da rede. Consulte o log de saída abaixo para detalhes. Você pode chamar essa função continuamente no intervalo desejado para obter dados de desempenho do sistema em tempo real e visualizá-los de maneira criativa na interface.
+            // Funkcja ForepaperEngineGetRealTimePerformance, zawarta w skrypcie ForepaperEngine.js, pobiera dane monitorowania wydajności bieżącego systemu w formie JSON. Wynik obejmuje wykorzystanie procesora, pamięci, prędkość odczytu/zapisu dysku oraz prędkość przesyłania/pobierania danych w sieci. Szczegóły można sprawdzić w rzeczywistym dzienniku logów poniżej. Możesz cyklicznie wywoływać tę funkcję w wybranych odstępach czasu, aby uzyskać dane o wydajności systemu w czasie rzeczywistym i kreatywnie je wizualizować w interfejsie.
+            // ForepaperEngine.js 스크립트에 캡슐화된 ForepaperEngineGetRealTimePerformance 함수는 현재 시스템의 성능 모니터링 데이터를 JSON 문자열로 가져옵니다. 결과에는 CPU 사용률, 메모리 사용률, 디스크 읽기/쓰기 속도 및 네트워크 업로드/다운로드 속도가 포함됩니다. 자세한 내용은 아래 실제 로그 출력을 참조하세요. 원하는 간격으로 이 함수를 지속적으로 호출하여 실시간 시스템 성능 데이터를 가져오고 창의적으로 인터페이스에 시각화할 수 있습니다.
+            // ForepaperEngine.jsスクリプトにカプセル化されたForepaperEngineGetRealTimePerformance関数は、現在のシステムの性能監視データをJSON文字列として取得します。結果には、CPU使用率、メモリ使用率、ディスクの読み書き速度、ネットワークのアップロード/ダウンロード速度が含まれます。詳しくは、以下の実際のログ出力をご確認ください。この関数を理想的な間隔で継続的に呼び出すことで、リアルタイムのシステム性能データを取得し、それを創造的にインターフェースへ描画できます。
+            // La función ForepaperEngineGetRealTimePerformance, encapsulada en el script ForepaperEngine.js, obtiene los datos de monitoreo de rendimiento del sistema actual en formato JSON. El resultado incluye uso de la CPU, uso de memoria, velocidad de lectura/escritura del disco y velocidad de carga/descarga de la red. Consulte el log de salida a continuación para más detalles. Puedes llamar a esta función continuamente en el intervalo deseado para adquirir datos de rendimiento del sistema en tiempo real y visualizarlos de manera creativa en la interfaz.
+            // La fonction ForepaperEngineGetRealTimePerformance, encapsulée dans le script ForepaperEngine.js, récupère les données de surveillance des performances du système actuel sous forme de chaîne JSON. Le résultat comprend l'utilisation du CPU, l'utilisation de la mémoire, la vitesse de lecture/écriture du disque et la vitesse d'envoi/téléchargement du réseau. Veuillez consulter le journal de sortie ci-dessous pour plus de détails. Vous pouvez appeler cette fonction en continu à l'intervalle souhaité afin d'obtenir des données de performances système en temps réel et les visualiser de manière créative sur votre interface.
+            // Die Funktion ForepaperEngineGetRealTimePerformance, gekapselt im Skript ForepaperEngine.js, ruft die Leistungsüberwachungsdaten des aktuellen Systems als JSON-Zeichenfolge ab. Das Ergebnis enthält die CPU-Auslastung, den Speicherverbrauch, die Lese-/Schreibgeschwindigkeit der Festplatte und die Upload-/Download-Geschwindigkeit des Netzwerks. Weitere Details finden Sie unten im tatsächlichen Log-Ausgang. Sie können diese Funktion kontinuierlich in dem von Ihnen gewünschten Intervall aufrufen, um Leistungsdaten in Echtzeit zu erhalten und sie kreativ in der Benutzeroberfläche zu visualisieren.
+            let RealTimePerformanceDataJson = await ForepaperEngineGetRealTimePerformance();
+
+            console.log(RealTimePerformanceDataJson);
+        }
+
+        function GetConfigManagerSettingData() {
+            // 如果您使用了ConfigManager.js模板生成的配置管理器，可以使用以下函数来获取配置数据，传入的参数为Setting.json中的ItemKeyName，获取到的结果为Setting.json中的ItemCurrentValue，关于Setting.json的详细说明，请查看SettingJsonManual.txt文件。
+            // If you have used the ConfigManager.js template to generate a configuration manager, you can use the following function to retrieve configuration data. The parameter you pass in should be ItemKeyName from Setting.json, and the result you get will be ItemCurrentValue from Setting.json. For a detailed explanation of Setting.json, please refer to the SettingJsonManual.txt file.
+            // Если вы использовали шаблон ConfigManager.js для создания менеджера конфигурации, вы можете использовать следующую функцию для получения данных конфигурации. Переданный параметр должен быть ItemKeyName из Setting.json, а полученный результат — ItemCurrentValue из Setting.json. Подробное описание Setting.json можно найти в файле SettingJsonManual.txt.
+            // Se você usou o modelo ConfigManager.js para gerar um gerenciador de configuração, pode usar a seguinte função para obter os dados de configuração. O parâmetro que você deve passar é ItemKeyName do Setting.json, e o resultado que você obtém será ItemCurrentValue do Setting.json. Para obter uma explicação detalhada sobre Setting.json, consulte o arquivo SettingJsonManual.txt.
+            // Jeśli użyłeś szablonu ConfigManager.js do wygenerowania menedżera konfiguracji, możesz użyć następującej funkcji do pobrania danych konfiguracyjnych. Przekazany parametr powinien być ItemKeyName z Setting.json, a uzyskany wynik to ItemCurrentValue z Setting.json. Szczegółowe informacje o Setting.json można znaleźć w pliku SettingJsonManual.txt.
+            // ConfigManager.js 템플릿을 사용하여 구성 관리자를 생성했다면, 다음 함수를 사용하여 구성 데이터를 가져올 수 있습니다. 전달하는 매개변수는 Setting.json의 ItemKeyName이며, 반환되는 결과는 Setting.json의 ItemCurrentValue입니다. Setting.json에 대한 자세한 설명은 SettingJsonManual.txt 파일을 참고하세요.
+            // ConfigManager.jsテンプレートを使用して設定マネージャーを生成した場合、以下の関数を使用して設定データを取得できます。渡すパラメータはSetting.jsonのItemKeyNameで、取得される結果はSetting.jsonのItemCurrentValueです。Setting.jsonの詳細な説明については、SettingJsonManual.txtファイルを参照してください。
+            // Si has utilizado la plantilla ConfigManager.js para generar un gestor de configuración, puedes usar la siguiente función para obtener los datos de configuración. El parámetro que debes pasar es ItemKeyName de Setting.json, y el resultado que recibirás será ItemCurrentValue de Setting.json. Para una descripción detallada de Setting.json, consulta el archivo SettingJsonManual.txt.
+            // Si vous avez utilisé le modèle ConfigManager.js pour générer un gestionnaire de configuration, vous pouvez utiliser la fonction suivante pour récupérer les données de configuration. Le paramètre que vous devez passer est ItemKeyName de Setting.json, et le résultat obtenu sera ItemCurrentValue de Setting.json. Pour une explication détaillée de Setting.json, consultez le fichier SettingJsonManual.txt.
+            // Wenn Sie das ConfigManager.js-Template zur Erstellung eines Konfigurationsmanagers verwendet haben, können Sie die folgende Funktion nutzen, um Konfigurationsdaten abzurufen. Der übergebene Parameter sollte ItemKeyName aus Setting.json sein, und das erhaltene Ergebnis wird ItemCurrentValue aus Setting.json sein. Eine detaillierte Beschreibung von Setting.json finden Sie in der Datei SettingJsonManual.txt.
+            let setting = ConfigManager.get('numberTest');
+
+            console.log(setting);
+        }
+
+        function EnableMousePassThrough() {
+            ForepaperEngineChangeMousePierce(true);
+        }
+
+        function DisableMousePassThrough() {
+            ForepaperEngineChangeMousePierce(false);
+        }
+
+        function GetMousePassThroughStatus() {
+            console.log(ForepaperEngineGetMousePassThroughStatus());
+        }
+
+        // 如果您的作品支持显示设置界面，并且并非使用ConfigManager.js模板生成的配置界面，那么您需要定义该函数并且在全局作用域中公开，以便在用户点击ForepaperEngine右键菜单中的“当前壁纸设置”时由ForepaperEngine调用。如果你使用了ConfigManager.js模板生成的配置界面，请注释掉该函数，因为ConfigManagerInit.js脚本中已经定义了该函数。如果您的作品不支持显示设置界面，那么则可以不定义该函数，并且也不需要引用ConfigManager.js、ConfigManagerInit.js脚本。
+        // If your project supports a settings interface and is not generated using the ConfigManager.js template, you need to define this function and expose it in the global scope so that ForepaperEngine can call it when the user clicks “Current Forepaper Settings” in the right-click menu. If you have used the ConfigManager.js template to generate the settings interface, please comment out this function because it is already defined in the ConfigManagerInit.js script. If your project does not support a settings interface, then you do not need to define this function or reference the ConfigManager.js and ConfigManagerInit.js scripts.
+        // Если ваш проект поддерживает интерфейс настроек и не был создан с использованием шаблона ConfigManager.js, вам нужно определить эту функцию и сделать её доступной в глобальной области, чтобы ForepaperEngine мог вызывать её при нажатии пользователем на «Текущие настройки обоев» в контекстном меню. Если вы использовали шаблон ConfigManager.js для создания интерфейса настроек, закомментируйте эту функцию, так как она уже определена в скрипте ConfigManagerInit.js.. Если ваш проект не поддерживает интерфейс настроек, то вам не нужно определять эту функцию или подключать скрипты ConfigManager.js и ConfigManagerInit.js..
+        // Se o seu projeto suporta uma interface de configurações e não foi gerado usando o modelo ConfigManager.js, você precisa definir essa função e expô-la no escopo global para que o ForepaperEngine possa chamá-la quando o usuário clicar em “Configurações do Papel de Parede Atual” no menu de clique direito. Se você usou o modelo ConfigManager.js para gerar a interface de configurações, comente essa função, pois ela já está definida no script ConfigManagerInit.js.. Se o seu projeto não suporta uma interface de configurações, então não é necessário definir essa função nem referenciar os scripts ConfigManager.js e ConfigManagerInit.js..
+        // Jeśli twój projekt obsługuje interfejs ustawień i nie został wygenerowany za pomocą szablonu ConfigManager.js, musisz zdefiniować tę funkcję i udostępnić ją w zakresie globalnym, aby ForepaperEngine mógł ją wywołać po kliknięciu przez użytkownika opcji „Ustawienia aktualnej tapety” w menu kontekstowym. Jeśli użyłeś szablonu ConfigManager.js do wygenerowania interfejsu ustawień, zakomentuj tę funkcję, ponieważ została już zdefiniowana w skrypcie ConfigManagerInit.js.. Jeśli twój projekt nie obsługuje interfejsu ustawień, nie musisz definiować tej funkcji ani odnosić się do skryptów ConfigManager.js i ConfigManagerInit.js..
+        // 프로젝트가 설정 인터페이스를 지원하지만 ConfigManager.js 템플릿을 사용하여 생성되지 않았다면, 이 함수를 정의하고 글로벌 범위에서 공개해야 합니다. 그래야 ForepaperEngine이 사용자 클릭 시 오른쪽 메뉴의 "현재 배경화면 설정" 옵션을 호출할 수 있습니다. ConfigManager.js 템플릿을 사용해 설정 인터페이스를 생성했다면 이 함수를 주석 처리하세요. ConfigManagerInit.js 스크립트에서 이미 정의되어 있기 때문입니다. 프로젝트가 설정 인터페이스를 지원하지 않는다면 이 함수를 정의할 필요가 없으며 ConfigManager.js 및 ConfigManagerInit.js 스크립트를 참조할 필요도 없습니다.
+        // プロジェクトが設定インターフェースをサポートしており、ConfigManager.jsテンプレートを使用して生成されていない場合は、この関数を定義し、グローバルスコープで公開する必要があります。そうすることで、ユーザーがForepaperEngineの右クリックメニューで「現在の壁紙設定」をクリックした際にForepaperEngineが関数を呼び出すことができます。ConfigManager.jsテンプレートを使用して設定インターフェースを生成した場合は、この関数をコメントアウトしてください。ConfigManagerInit.jsスクリプトにすでに定義されているためです。プロジェクトが設定インターフェースをサポートしていない場合、この関数を定義する必要はなく、ConfigManager.jsやConfigManagerInit.jsスクリプトを参照する必要もありません。
+        // Si tu proyecto admite una interfaz de configuración y no se generó utilizando la plantilla ConfigManager.js, necesitas definir esta función y hacerla pública en el ámbito global para que ForepaperEngine pueda llamarla cuando el usuario haga clic en “Configuración del Fondo de Pantalla Actual” en el menú contextual. Si has usado la plantilla ConfigManager.js para generar la interfaz de configuración, comenta esta función, ya que ya está definida en el script ConfigManagerInit.js.. Si tu proyecto no admite una interfaz de configuración, entonces no necesitas definir esta función ni referenciar los scripts ConfigManager.js y ConfigManagerInit.js..
+        // Si votre projet prend en charge une interface de configuration et n’a pas été généré à l’aide du modèle ConfigManager.js, vous devez définir cette fonction et l’exposer dans la portée globale afin que ForepaperEngine puisse l’appeler lorsque l’utilisateur clique sur « Paramètres du Fond d’écran Actuel » dans le menu contextuel. Si vous avez utilisé le modèle ConfigManager.js pour générer l’interface de configuration, commentez cette fonction, car elle est déjà définie dans le script ConfigManagerInit.js.. Si votre projet ne prend pas en charge une interface de configuration, alors vous n’avez pas besoin de définir cette fonction ni de référencer les scripts ConfigManager.js et ConfigManagerInit.js..
+        // Falls Ihr Projekt eine Einstellungsoberfläche unterstützt und nicht mit der ConfigManager.js-Vorlage erstellt wurde, müssen Sie diese Funktion definieren und im globalen Bereich veröffentlichen, damit ForepaperEngine sie aufrufen kann, wenn der Benutzer im Rechtsklick-Menü „Aktuelle Hintergrundbild-Einstellungen“ auswählt. Wenn Sie die ConfigManager.js-Vorlage zur Erstellung der Einstellungsoberfläche verwendet haben, kommentieren Sie diese Funktion, da sie bereits im Skript ConfigManagerInit.js definiert wurde. Falls Ihr Projekt keine Einstellungsoberfläche unterstützt, müssen Sie diese Funktion nicht definieren und auch die Skripte ConfigManager.js und ConfigManagerInit.js nicht referenzieren.
+        // function ForepaperEngineShowSetting() {
+        //     // 在显示您的作品的设置界面之前，一定要先调用这个函数并传入false参数，这是用来通知ForepaperEngine取消“鼠标点击穿透特性”，因为既然要显示设置界面，那么肯定是希望用户能够点击的，所以需要取消这个特性。但是一定要注意，您在执行关闭设置界面的代码时，一定要再次调用这个函数并传入true参数，以便恢复“鼠标点击穿透特性”。
+        //     // Before displaying the settings interface for your project, you must call this function and pass false as a parameter. This notifies ForepaperEngine to disable the "mouse click-through feature" since a settings interface should be interactive. However, when closing the settings interface, be sure to call this function again and pass true as a parameter to restore the "mouse click-through feature."
+        //     // Перед отображением интерфейса настроек вашего проекта необходимо вызвать эту функцию и передать параметр false. Это уведомляет ForepaperEngine о необходимости отключения функции «прозрачности кликов мыши», поскольку интерфейс настроек должен быть интерактивным. Однако при закрытии интерфейса настроек обязательно снова вызовите эту функцию и передайте true, чтобы восстановить «прозрачность кликов мыши».
+        //     // Antes de exibir a interface de configurações do seu projeto, você deve chamar esta função e passar false como parâmetro. Isso notifica o ForepaperEngine para desativar a "função de clique transparente do mouse", já que a interface de configurações deve ser interativa. No entanto, ao fechar a interface de configurações, certifique-se de chamar esta função novamente e passar true para restaurar a "função de clique transparente do mouse."
+        //     // Przed wyświetleniem interfejsu ustawień swojego projektu należy wywołać tę funkcję i przekazać parametr false. Powiadamia to ForepaperEngine o konieczności wyłączenia funkcji „przenikalności kliknięć myszy”, ponieważ interfejs ustawień powinien być interaktywny. Jednak przy zamykaniu interfejsu ustawień pamiętaj, aby ponownie wywołać tę funkcję i przekazać true, aby przywrócić „przenikalność kliknięć myszy”.
+        //     // 프로젝트의 설정 인터페이스를 표시하기 전에 이 함수를 호출하고 false 값을 전달해야 합니다. 이는 ForepaperEngine에게 "마우스 클릭-스루 기능"을 비활성화하도록 알리는 역할을 합니다. 설정 인터페이스는 상호작용해야 하므로 클릭이 가능해야 합니다. 그러나 설정 인터페이스를 닫을 때 반드시 다시 이 함수를 호출하고 true 값을 전달하여 "마우스 클릭-스루 기능"을 복원해야 합니다.
+        //     // 作品の設定インターフェースを表示する前に、この関数を呼び出して false を渡す必要があります。これは、ForepaperEngineに「マウスクリック透過機能」を無効化するよう通知するためです。設定インターフェースを表示する以上、ユーザーがクリックできるようにする必要があります。しかし、設定インターフェースを閉じる際には、必ずもう一度この関数を呼び出し、true を渡して「マウスクリック透過機能」を復元してください。
+        //     // Antes de mostrar la interfaz de configuración de tu proyecto, debes llamar a esta función y pasar false como parámetro. Esto notifica a ForepaperEngine que debe desactivar la "característica de clic transparente del ratón", ya que una interfaz de configuración debe ser interactiva. Sin embargo, cuando cierres la interfaz de configuración, asegúrate de llamar a esta función nuevamente y pasar true para restaurar la "característica de clic transparente del ratón."
+        //     // Avant d'afficher l'interface des paramètres de votre projet, vous devez appeler cette fonction et passer false en paramètre. Cela informe ForepaperEngine qu'il doit désactiver la "fonction de transparence des clics de souris", car une interface de paramètres doit être interactive. Cependant, lors de la fermeture de l'interface des paramètres, assurez-vous d'appeler à nouveau cette fonction et de passer true pour restaurer la "fonction de transparence des clics de souris."
+        //     // Bevor Sie die Einstellungen-Oberfläche Ihres Projekts anzeigen, müssen Sie diese Funktion aufrufen und false als Parameter übergeben. Dadurch wird ForepaperEngine darüber informiert, dass die „Mausklick-Durchdringungsfunktion“ deaktiviert werden soll, da eine Einstellungen-Oberfläche interaktiv sein muss. Beim Schließen der Einstellungen-Oberfläche sollten Sie jedoch unbedingt diese Funktion erneut aufrufen und true als Parameter übergeben, um die „Mausklick-Durchdringungsfunktion“ wiederherzustellen.
+        //     ForepaperEngineChangeMousePierce(false);
+
+        //     // 使用该ForepaperEngine.js脚本封装的函数读取配置文件，传入相对路径，如果您并未调用过保存函数，那么相对路径为相对于index.html的路径，如果您调用过保存函数，那么相对路径为相对于以下文件夹的路径：“C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig”；若您仅仅想要访问与index.html同路径下的其他资源文件，如图片或者非配置文件类的json文件，您可以使用以下http路径去访问，以下示例为访问index.html自身，您可以替换为您想要访问的任何资源文件：https://forepaperengine/index.html
+        //     // Use the function encapsulated in the ForepaperEngine.js script to read configuration files by passing a relative path. If you have not called the save function, the relative path is based on index.html. If you have called the save function, the relative path is based on the following folder: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig. If you simply want to access other resource files located in the same path as index.html, such as images or non-configuration JSON files, you can use the following HTTP path. The example below accesses index.html itself, but you can replace it with any resource file you want to access: https://forepaperengine/index.html.
+        //     // Используйте функцию, инкапсулированную в скрипте ForepaperEngine.js, для чтения файлов конфигурации, передав относительный путь. Если вы не вызывали функцию сохранения, относительный путь основан на index.html. Если вы вызвали функцию сохранения, относительный путь основан на следующей папке: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig. Если вам просто нужно получить доступ к другим ресурсам, расположенным в той же папке, что и index.html, таким как изображения или JSON-файлы (не относящиеся к конфигурации), используйте следующий HTTP-путь. Пример ниже позволяет получить доступ к index.html, но вы можете заменить его любым нужным файлом: https://forepaperengine/index.html.
+        //     // Use a função encapsulada no script ForepaperEngine.js para ler arquivos de configuração passando um caminho relativo. Se você não chamou a função de salvamento, o caminho relativo será baseado em index.html. Se você chamou a função de salvamento, o caminho relativo será baseado na seguinte pasta: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig. Se você deseja apenas acessar outros arquivos de recurso localizados no mesmo caminho de index.html, como imagens ou arquivos JSON não relacionados à configuração, pode usar o seguinte caminho HTTP. O exemplo abaixo acessa index.html, mas você pode substituí-lo por qualquer arquivo de recurso que deseja acessar: https://forepaperengine/index.html.
+        //     // Użyj funkcji zawartej w skrypcie ForepaperEngine.js do odczytu plików konfiguracyjnych, podając ścieżkę względną. Jeśli nie wywołałeś funkcji zapisu, ścieżka względna jest oparta na index.html. Jeśli wywołałeś funkcję zapisu, ścieżka względna jest oparta na następującym folderze: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig. Jeśli chcesz uzyskać dostęp do innych plików zasobów znajdujących się w tej samej lokalizacji co index.html, takich jak obrazy lub pliki JSON niezwiązane z konfiguracją, możesz użyć poniższego ścieżki HTTP. Przykład poniżej pozwala na dostęp do index.html, ale możesz go zastąpić dowolnym plikiem zasobów: https://forepaperengine/index.html.
+        //     // ForepaperEngine.js 스크립트에 캡슐화된 함수를 사용하여 구성 파일을 읽으려면 상대 경로를 전달하세요. 저장 함수를 호출하지 않은 경우 상대 경로는 index.html을 기준으로 합니다. 저장 함수를 호출한 경우 상대 경로는 다음 폴더를 기준으로 합니다: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig. index.html과 같은 경로에 있는 다른 리소스 파일(이미지 또는 구성 파일이 아닌 JSON 파일)에만 액세스하려면 다음 HTTP 경로를 사용할 수 있습니다. 아래 예제는 index.html 자체를 액세스하지만, 원하는 리소스 파일로 교체할 수 있습니다: https://forepaperengine/index.html.
+        //     // ForepaperEngine.jsスクリプトでカプセル化された関数を使用して、設定ファイルを読み込むには相対パスを渡してください。保存関数を呼び出していない場合、相対パスはindex.htmlを基準にしています。保存関数を呼び出した場合、相対パスは以下のフォルダを基準にします: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig。index.htmlと同じパスにある画像や設定ファイル以外のJSONファイルなどの他のリソースファイルにアクセスしたい場合は、以下のHTTPパスを使用できます。以下の例はindex.html自体をアクセスするものですが、任意のリソースファイルに置き換えて使用できます: https://forepaperengine/index.html。
+        //     // Usa la función encapsulada en el script ForepaperEngine.js para leer archivos de configuración pasando una ruta relativa. Si no has llamado la función de guardar, la ruta relativa será con base en index.html. Si has llamado la función de guardar, la ruta relativa será con base en la siguiente carpeta: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig. Si solo quieres acceder a otros archivos de recursos ubicados en la misma ruta que index.html, como imágenes o archivos JSON que no sean de configuración, puedes usar la siguiente ruta HTTP. El ejemplo a continuación accede a index.html, pero puedes reemplazarlo con cualquier archivo de recursos que desees acceder: https://forepaperengine/index.html.
+        //     // Utilisez la fonction encapsulée dans le script ForepaperEngine.js pour lire les fichiers de configuration en passant un chemin relatif. Si vous n'avez pas appelé la fonction d'enregistrement, le chemin relatif est basé sur index.html. Si vous avez appelé la fonction d'enregistrement, le chemin relatif sera basé sur le dossier suivant : C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig. Si vous souhaitez simplement accéder à d'autres fichiers de ressources situés au même emplacement que index.html, tels que des images ou des fichiers JSON non liés à la configuration, vous pouvez utiliser l'URL HTTP suivante. L'exemple ci-dessous accède à index.html, mais vous pouvez le remplacer par n'importe quel fichier de ressources que vous souhaitez : https://forepaperengine/index.html.
+        //     // Verwenden Sie die in das Skript ForepaperEngine.js gekapselte Funktion, um Konfigurationsdateien zu lesen, indem Sie einen relativen Pfad übergeben. Falls Sie die Speicherfunktion nicht aufgerufen haben, bezieht sich der relative Pfad auf index.html. Falls Sie die Speicherfunktion aufgerufen haben, bezieht sich der relative Pfad auf folgenden Ordner: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig. Falls Sie lediglich auf andere Ressourcen zugreifen möchten, die sich im gleichen Pfad wie index.html befinden, z. B. Bilder oder nicht-Konfigurationsbezogene JSON-Dateien, können Sie die folgende HTTP-URL verwenden. Das Beispiel unten greift auf index.html zu, aber Sie können es durch jede gewünschte Datei ersetzen: https://forepaperengine/index.html.
+        //     let configJsonStr = ForepaperEngineReadConfigFile('TestDIYConfgPath/en/TestConfig.json');
+        //     // ps: If a new version of the work is uploaded and the new version is incompatible with the old configuration files, then the parameters you pass in this function should not be the same as the old version, as doing so would mistakenly load the old configuration files saved by users, causing your work to malfunction.
+
+        //     document.getElementById("userInput").value = configJsonStr;
+        //     document.getElementById("popup").style.display = "block";
+
+        //     // 在成功显示您的设置界面之后，您一定要返回true，若您不返回，ForepaperEngine会认为您的作品不支持弹出设置界面。
+        //     // After successfully displaying your settings interface, you must return true. If you do not return it, ForepaperEngine will assume that your project does not support a pop-up settings interface.
+        //     // После успешного отображения интерфейса настроек необходимо вернуть true. Если этого не сделать, ForepaperEngine предположит, что ваш проект не поддерживает всплывающий интерфейс настроек.
+        //     // Após exibir com sucesso a interface de configurações, você deve retornar true. Se não fizer isso, o ForepaperEngine assumirá que seu projeto não suporta uma interface de configurações em pop-up.
+        //     // Po pomyślnym wyświetleniu interfejsu ustawień konieczne jest zwrócenie wartości true. Jeśli tego nie zrobisz, ForepaperEngine uzna, że ​​twój projekt nie obsługuje wyskakującego interfejsu ustawień.
+        //     // 설정 인터페이스를 성공적으로 표시한 후 반드시 true를 반환해야 합니다. 그렇지 않으면 ForepaperEngine이 프로젝트가 팝업 설정 인터페이스를 지원하지 않는 것으로 판단합니다.
+        //     // 設定インターフェースを正常に表示した後、必ず true を返してください。返さない場合、ForepaperEngineはあなたの作品がポップアップ設定インターフェースをサポートしていないと判断します。
+        //     // Después de mostrar exitosamente la interfaz de configuración, debes retornar true. Si no lo haces, ForepaperEngine asumirá que tu proyecto no admite una interfaz de configuración emergente.
+        //     // Après avoir affiché avec succès l’interface des paramètres, vous devez retourner true. Si vous ne le faites pas, ForepaperEngine considérera que votre projet ne prend pas en charge une interface de paramètres pop-up.
+        //     // Nachdem die Einstellungen-Oberfläche erfolgreich angezeigt wurde, müssen Sie true zurückgeben. Andernfalls nimmt ForepaperEngine an, dass Ihr Projekt keine Popup-Einstellungsoberfläche unterstützt.
+        //     return true;
+        // }
+
+        function closePopup() {
+            let newConfigJsonStr = document.getElementById("userInput").value;
+            // 使用该ForepaperEngine.js脚本封装的函数保存配置文件，传入与您读取文件时相同的相对路径和要保存的字符串，相对路径中涉及到的文件夹与文件会被保存到以下文件夹中，下次再次调用读取文件的函数时，也会改从该文件夹读取，而非原始的index.html所在的文件夹：“C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig”
+            // Use the function encapsulated in the ForepaperEngine.js script to save configuration files. Pass the same relative path used when reading the file along with the string to be saved. The folders and files involved in the relative path will be stored in the following directory. The next time you call the read function, it will retrieve the file from this directory instead of the original folder where index.html is located: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            // Используйте функцию, инкапсулированную в скрипте ForepaperEngine.js, для сохранения файлов конфигурации. Передайте тот же относительный путь, который использовался при чтении файла, а также строку для сохранения. Папки и файлы, относящиеся к этому пути, будут сохранены в следующем каталоге. При следующем вызове функции чтения файла он будет загружен из этого каталога, а не из оригинальной папки, где находится index.html: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            // Use a função encapsulada no script ForepaperEngine.js para salvar arquivos de configuração. Passe o mesmo caminho relativo usado na leitura do arquivo junto com a string que será salva. As pastas e arquivos envolvidas nesse caminho relativo serão armazenadas no seguinte diretório. Na próxima vez que chamar a função de leitura, o arquivo será recuperado desse diretório em vez da pasta original onde index.html está localizado: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            // Użyj funkcji zawartej w skrypcie ForepaperEngine.js do zapisu plików konfiguracyjnych. Podaj ten sam względny adres ścieżki użyty do odczytu pliku wraz z zapisywanym ciągiem znaków. Foldery i pliki związane z tą ścieżką zostaną zapisane w poniższym katalogu. Przy kolejnym wywołaniu funkcji odczytu plik będzie pobierany z tego katalogu zamiast z pierwotnej lokalizacji index.html: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            // ForepaperEngine.js 스크립트에 캡슐화된 함수를 사용하여 구성 파일을 저장하세요. 파일을 읽을 때 사용한 것과 동일한 상대 경로와 저장할 문자열을 전달해야 합니다. 상대 경로에 관련된 폴더와 파일은 다음 디렉터리에 저장됩니다. 이후 파일을 읽는 함수를 호출하면 원래 index.html이 있던 폴더가 아닌 이 디렉터리에서 파일을 가져오게 됩니다: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            // ForepaperEngine.jsスクリプトにカプセル化された関数を使用して、設定ファイルを保存してください。ファイルを読み込む際に使用したのと同じ相対パスと、保存する文字列を渡します。相対パスに関連するフォルダとファイルは、以下のディレクトリに保存されます。次回、ファイルの読み込み関数を呼び出す際は、元のindex.htmlがあるフォルダではなく、このディレクトリからファイルを取得するようになります: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            // Utiliza la función encapsulada en el script ForepaperEngine.js para guardar archivos de configuración. Pasa la misma ruta relativa utilizada en la lectura del archivo junto con la cadena que se va a guardar. Las carpetas y archivos involucrados en la ruta relativa serán almacenados en el siguiente directorio. La próxima vez que llames la función de lectura, el archivo se recuperará de este directorio en lugar de la carpeta original donde está index.html: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            // Utilisez la fonction encapsulée dans le script ForepaperEngine.js pour enregistrer les fichiers de configuration. Passez le même chemin relatif utilisé lors de la lecture du fichier ainsi que la chaîne à enregistrer. Les dossiers et fichiers impliqués dans ce chemin relatif seront enregistrés dans le répertoire suivant. La prochaine fois que vous appellerez la fonction de lecture, le fichier sera récupéré à partir de ce répertoire plutôt que du dossier original où se trouve index.html: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            // Verwenden Sie die in das Skript ForepaperEngine.js gekapselte Funktion, um Konfigurationsdateien zu speichern. Geben Sie denselben relativen Pfad an, der beim Lesen der Datei verwendet wurde, sowie die Zeichenfolge, die gespeichert werden soll. Die mit diesem relativen Pfad verbundenen Ordner und Dateien werden im folgenden Verzeichnis gespeichert. Beim nächsten Aufruf der Lese-Funktion wird die Datei aus diesem Verzeichnis geladen, anstatt aus dem ursprünglichen Verzeichnis von index.html: C:\Users\{LoginUserName}\AppData\Roaming\ForepaperEngine\PaperConfig.
+            ForepaperEngineSaveConfigFile('TestDIYConfgPath/en/TestConfig.json', newConfigJsonStr);
+            // ps: Files saved using this function will be automatically uploaded to Steam Cloud. Please note that the file size should not be too large.
+
+            document.getElementById("popup").style.display = "none";
+            
+            //After closing the settings interface, the following two functions must be called
+            ForepaperEngineChangeMousePierce(true);
+            ForepaperEngineCloseForepaperSettings();
+        }
+
+        function OpenDirectorySelectWindow() {
+            // 使用该函数打开文件夹选择窗口，入参可设置窗口标题、默认打开的路径，函数返回所选文件夹的全路径
+            // This function opens a folder selection dialog. Parameters allow setting window title and default path. Returns the full path of selected folder.
+            // Эта функция открывает диалог выбора папки. Параметры позволяют задать заголовок окна и путь по умолчанию. Возвращает полный путь к выбранной папке.
+            // Esta função abre uma janela de seleção de pasta. Os parâmetros permitem definir o título da janela e o caminho padrão. Retorna o caminho completo da pasta selecionada.
+            // Ta funkcja otwiera okno wyboru folderu. Parametry umożliwiają ustawienie tytułu okna i domyślnej ścieżki. Zwraca pełną ścieżkę wybranego folderu.
+            // 이 함수는 폴더 선택 창을 엽니다. 매개변수로 창 제목과 기본 경로를 설정할 수 있습니다. 선택한 폴더의 전체 경로를 반환합니다.
+            // この関数はフォルダ選択ダイアログを開きます。パラメータでウィンドウタイトルとデフォルトパスを設定できます。選択したフォルダの絶対パスを返します。
+            // Esta función abre un diálogo de selección de carpeta. Los parámetros permiten configurar el título de la ventana y la ruta predeterminada. Devuelve la ruta completa de la carpeta seleccionada.
+            // Cette fonction ouvre une boîte de dialogue de sélection de dossier. Les paramètres permettent de définir le titre de la fenêtre et le chemin par défaut. Retourne le chemin complet du dossier sélectionné.
+            // Diese Funktion öffnet einen Ordnerauswahldialog. Parameter ermöglichen die Festlegung des Fenstertitels und des Standardpfads. Gibt den vollständigen Pfad des ausgewählten Ordners zurück.
+            let option = {
+                Title: 'Title text',
+                FolderPath: ''
+            };
+            let selectedPath = ForepaperEngineOpenDirectorySelectWindow(option);
+            console.log(selectedPath);
+        }
+
+        function OpenFileSelectWindow() {
+            // 使用该函数打开文件选择窗口，入参相关选项，可以设置默认打开的文件夹、文件格式过滤规则、窗口标题等，函数返回所选文件的全路径
+            // This function opens a file selection dialog. The input parameters include various options such as default folder, file format filters, window title, etc. The function returns the full path of the selected file.
+            // Эта функция открывает диалог выбора файла. Входные параметры включают различные настройки: папку по умолчанию, фильтры форматов файлов, заголовок окна и т.д. Функция возвращает полный путь к выбранному файлу.
+            // Esta função abre uma janela de seleção de arquivos. Os parâmetros de entrada incluem diversas opções como pasta padrão, filtros de formato de arquivo, título da janela, etc. A função retorna o caminho completo do arquivo selecionado.
+            // Ta funkcja otwiera okno wyboru pliku. Parametry wejściowe obejmują różne opcje, takie jak domyślny folder, filtry formatów plików, tytuł okna itp. Funkcja zwraca pełną ścieżkę wybranego pliku.
+            // 이 함수는 파일 선택 창을 엽니다. 입력 매개변수에는 기본 폴더, 파일 형식 필터, 창 제목 등의 다양한 옵션이 포함됩니다. 함수는 선택한 파일의 전체 경로를 반환합니다.
+            // この関数はファイル選択ウィンドウを開きます。入力パラメータには、デフォルトフォルダ、ファイル形式フィルタ、ウィンドウタイトルなどのオプションが含まれます。関数は選択したファイルの完全なパスを返します。
+            // Esta función abre un diálogo de selección de archivos. Los parámetros de entrada incluyen varias opciones como carpeta predeterminada, filtros de formato de archivo, título de ventana, etc. La función devuelve la ruta completa del archivo seleccionado.
+            // Cette fonction ouvre une boîte de dialogue de sélection de fichiers. Les paramètres d'entrée incluent diverses options telles que le dossier par défaut, les filtres de format de fichier, le titre de la fenêtre, etc. La fonction retourne le chemin complet du fichier sélectionné.
+            // Diese Funktion öffnet einen Dateiauswahldialog. Die Eingabeparameter umfassen verschiedene Optionen wie Standardordner, Dateiformatfilter, Fenstertitel usw. Die Funktion gibt den vollständigen Pfad der ausgewählten Datei zurück.
+            let option = {
+                Title: 'Title text',
+                FolderPath: '',
+                Filter: 'Image Files|*.jpg;*.jpeg;*.png;*.gif'
+            };
+            let selectedPath = ForepaperEngineOpenFileSelectWindow(option);
+            console.log(selectedPath);
+        }
+
+        function GetGameControllerState() {
+            let playerIndex = '0';
+            let stateArr = ForepaperEngineGetGameControllerState(playerIndex);
+            if(stateArr){
+                if(stateArr[0]){
+                    console.log('A button is pressed');
+                }
+                if(stateArr[1]){
+                    console.log('B button is pressed');
+                }
+                if(stateArr[2]){
+                    console.log('X button is pressed');
+                }
+                if(stateArr[3]){
+                    console.log('Y button is pressed');
+                }
+                if(stateArr[4]){
+                    console.log('Back button is pressed');
+                }
+                if(stateArr[5]){
+                    console.log('DPadDown button is pressed');
+                }
+                if(stateArr[6]){
+                    console.log('DPadLeft button is pressed');
+                }
+                if(stateArr[7]){
+                    console.log('DPadRight button is pressed');
+                }
+                if(stateArr[8]){
+                    console.log('DPadUp button is pressed');
+                }
+                if(stateArr[9]){
+                    console.log('LeftShoulder button is pressed');
+                }
+                if(stateArr[10]){
+                    console.log('LeftThumb button is pressed');
+                }
+                if(stateArr[11]){
+                    console.log('RightShoulder button is pressed');
+                }
+                if(stateArr[12]){
+                    console.log('RightThumb button is pressed');
+                }
+                if(stateArr[13]){
+                    console.log('Start button is pressed');
+                }
+
+                //Trigger values range from 0 to 255
+                console.log(`Left Trigger: ${stateArr[14]}`);
+                console.log(`Right Trigger: ${stateArr[15]}`);
+
+                //thumbstick values range from -32768 to 32767
+                console.log(`Left Thumbstick X: ${stateArr[16]}`);
+                console.log(`Left Thumbstick Y: ${stateArr[17]}`);
+                console.log(`Right Thumbstick X: ${stateArr[18]}`);
+                console.log(`Right Thumbstick Y: ${stateArr[19]}`);
+            }
+            else{
+                console.log('No game controller found');
+            }
+        }
+
+        function SetGameControllerVibration() {
+            let playerIndex = '0';
+            let leftMotorSpeed = '35000';//0-65535
+            let rightMotorSpeed = '35000';//0-65535
+            ForepaperEngineSetGameControllerVibration(playerIndex, leftMotorSpeed, rightMotorSpeed);
+
+            //after 1 second, stop vibration
+            setTimeout(function() {
+                leftMotorSpeed = '0';
+                rightMotorSpeed = '0';
+                ForepaperEngineSetGameControllerVibration(playerIndex, leftMotorSpeed, rightMotorSpeed);
+            }, 1000);
+        }
+
+        function GetFilesByPath() {
+            let option = {
+                FolderPath: 'c:\\',
+                SearchPattern: '*', //use * or ? to match any character, example: *.txt, *.jpg, ?.png
+                OnlyTopDirectory: true //set to true to only return files in the top directory
+            }
+            let filesArr = ForepaperEngineGetFilesByPath(option);
+            if(filesArr){
+                console.log(filesArr);
+            }
+            else{
+                console.log('FolderPath not found');
+            }
+        }
+
+        function GetDirectoriesByPath() {
+            let option = {
+                FolderPath: 'c:\\',
+                SearchPattern: '*', //use * or ? to match any character, example: a*c or *temp*
+                OnlyTopDirectory: true //set to true to only return directories in the top directory
+            }
+            let dirsArr = ForepaperEngineGetDirectoriesByPath(option);
+            if(dirsArr){
+                console.log(dirsArr);
+            }
+            else{
+                console.log('FolderPath not found');
+            }
+        }
+
+        function OpenCurrentWorkshopItemInstallPath() {
+            let currentWorkshopItemInstallPath = ForepaperEngineGetCurrentWorkshopItemInstallPath();
+            let result = ForepaperEngineOpenPathInExplorer(currentWorkshopItemInstallPath);
+            if(!result) {
+                console.log('FolderPath not found');
+            }
+        }
+
+        function OpenFile() {
+            let currentWorkshopItemInstallPath = ForepaperEngineGetCurrentWorkshopItemInstallPath();
+            let filePath = currentWorkshopItemInstallPath + '\\preview.jpg';
+            let option = {
+                FilePath: filePath,
+                Arguments: []//optional arguments to be passed to the application, if file is an executable
+            }
+            let result = ForepaperEngineOpenFile(option);
+            if(!result) {
+                console.log('File not found');
+            }
+            else if(result === '0') {
+                console.log('Request denied by user');
+            }
+        }
+
+        function LockScreen() {
+            ForepaperEngineLockScreen();
+        }
+
+        function SendKeyboardInput() {
+            // example usage: send WIN+S
+
+            // Keyboard scancode see KeyboardScanCode.txt
+            const keyInfoArr = [
+                {
+                    scanCode: 0x5B,//Scancode of [win]
+                    flag: 9//ExtendedKey down
+                },
+                {
+                    scanCode: 0x1F,//Scancode of [S]
+                    flag: 8//StandardKey down
+                },
+                {
+                    scanCode: 0x1F,//Scancode of [S]
+                    flag: 10//StandardKey up
+                },
+                {
+                    scanCode: 0x5B,//Scancode of [win]
+                    flag: 11//ExtendedKey up
+                }
+            ]
+
+            let keyInfoArrStr = "";
+            for(let i = 0; i < keyInfoArr.length; i++) {
+                keyInfoArrStr += keyInfoArr[i].scanCode + "," + keyInfoArr[i].flag + "|";
+            }
+            keyInfoArrStr = keyInfoArrStr.slice(0, -1); //remove last '|' character
+            ForepaperEngineSendKeyboardInput(keyInfoArrStr);
+        }
+
+        function SendTextInput() {
+            // example usage: Quickly send custom text to the in-game chat box.
+            // Try to make a text box get the input focus, then hover the mouse over the button
+            ForepaperEngineSendTextInput('你好 Hello Здравствуйте Olá Cześć 안녕하세요 こんにちは Hola Bonjour Hallo');
+        }
+
+        function CheckFileExists() {
+            let filePath = 'c:\\test.txt';
+            let result = ForepaperEngineCheckFileExists(filePath);
+            if(result) {
+                console.log('File exists');
+            }
+            else {
+                console.log('File does not exist');
+            }
+        }
+
+        function CheckDirectoryExists() {
+            let dirPath = 'c:\\testdir';
+            let result = ForepaperEngineCheckDirectoryExists(dirPath);
+            if(result) {
+                console.log('Directory exists');
+            }
+            else {
+                console.log('Directory does not exist');
+            }
+        }
+        
+        function GetFileSize() {
+            let filePath = 'c:\\test.txt';
+            let fileSize = ForepaperEngineGetFileSize(filePath);
+            if(fileSize){
+                console.log(`File size: ${fileSize} bytes`);
+            }
+            else{
+                console.log('File not found');
+            }
+        }
+
+        function GetFocusWindowTitle() {
+            console.log(ForepaperEngineGetFocusWindowTitle());
+        }
+
+        function GetFocusProcessName() {
+            console.log(ForepaperEngineGetFocusProcessName());
+        }
+
+        function OpenFontSelectWindow() {
+            console.log(ForepaperEngineOpenFontSelectWindow());
+        }
+
+        function OpenColorSelectWindow() {
+            // Because the native color selection window built into HTML has compatibility issues in super top mode, this color selection window implementation is adopted.
+            console.log(ForepaperEngineOpenColorSelectWindow('#FF0000'));//declare default color as red, or ''
+        }
+
+        function GetMainFormActivate(){
+            // Check whether the root container window of the current web page has focus
+            console.log(ForepaperEngineGetMainFormActivate());
+        }
+
+        function SetMainFormActivate(){
+            // Let the root container window of the current web page get the input focus (if you want to further let the elements in the web page get the focus, this step is a prerequisite)
+            ForepaperEngineSetMainFormActivate();
+            document.getElementById('textInput').focus();
+        }
+
+        function GetTopMostMode(){
+            // Check whether the Forepaper is in top-most mode
+            console.log(ForepaperEngineGetTopMostMode());
+        }
+
+        function SetTopMostMode(){
+            // Check whether the Forepaper is in top-most mode
+            let topMost = ForepaperEngineGetTopMostMode();
+            ForepaperEngineSetTopMostMode(!topMost);
+        }
+
+        function GetUnlockScreenType(){
+            // Get the current ForepaperEngine setting for the lock screen unlocking method, 0 means to call the system login interface, 1 means to enter the system password, 2 means to enter a custom password
+            let unlockScreenType = ForepaperEngineGetUnlockScreenType();
+            console.log(unlockScreenType);
+        }
+
+        function UnlockTheScreen(){
+            if(currentForepaperEngineMode === '3'){
+                let password = document.getElementById('passwordInput').value;
+                let result = ForepaperEngineTryUnlockScreen(password);
+                if(result){
+                    console.log('Unlock succeeded');
+                }
+                else{
+                    console.log('Unlock failed');
+                }
+            }
+            else{
+                console.log('Forepaper is not in lock screen mode');
+            }
+        }
+    </script>
+</body>
+</html>
