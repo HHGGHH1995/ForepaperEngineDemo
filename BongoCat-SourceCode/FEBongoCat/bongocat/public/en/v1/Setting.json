@@ -1,0 +1,34 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "scale",
+			"ItemCaptionText": "Size",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "3",
+			"ItemInputMinNum": "0.1",
+			"ItemStep": "0.02",
+			"ItemCurrentValue": "1"
+		},
+		{
+			"ItemKeyName": "alpha",
+			"ItemCaptionText": "Opacity",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.5"
+		},
+        {
+            "ItemKeyName":"modelPath",
+            "ItemCaptionText":"Custom Model Path",
+            "ItemInputType":"text",
+            "ItemSubInputType":"folder",
+            "Title":"Select Model Folder",
+			"FolderPath":"model\\standard",
+            "ItemInputMaxNum":"255",
+            "ItemInputMinNum":"",
+            "ItemStep": "",
+            "ItemCurrentValue":""
+        }
+	]
+}
