@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "화면 보호기 모드 시계 투명도",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 투명도를 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "화면 보호기 모드 시계 시간 부분 글꼴",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 시간 부분 글꼴을 설정합니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "화면 보호기 모드 시계 시간 부분 글꼴 크기",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 시간 부분 글꼴 크기를 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "화면 보호기 모드 시계 시간 부분 글꼴 두께",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 시간 부분 글꼴 두께를 설정합니다",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "화면 보호기 모드 시계 시간 부분 글꼴 색상",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 시간 부분 글꼴 색상을 설정합니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "화면 보호기 모드 시계 날짜 부분 글꼴",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 날짜 부분 글꼴을 설정합니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "화면 보호기 모드 시계 날짜 부분 글꼴 크기",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 날짜 부분 글꼴 크기를 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "화면 보호기 모드 시계 날짜 부분 글꼴 두께",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 날짜 부분 글꼴 두께를 설정합니다",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "화면 보호기 모드 시계 날짜 부분 글꼴 색상",
+      "ItemHoverTipText": "화면 보호기 모드일 때 시계의 날짜 부분 글꼴 색상을 설정합니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "잠금 화면 모드 시계 투명도",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 투명도를 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "잠금 화면 모드 시계 시간 부분 글꼴",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 시간 부분 글꼴을 설정합니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "잠금 화면 모드 시계 시간 부분 글꼴 크기",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 시간 부분 글꼴 크기를 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "잠금 화면 모드 시계 시간 부분 글꼴 두께",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 시간 부분 글꼴 두께를 설정합니다",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "잠금 화면 모드 시계 시간 부분 글꼴 색상",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 시간 부분 글꼴 색상을 설정합니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "잠금 화면 모드 시계 날짜 부분 글꼴",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 날짜 부분 글꼴을 설정합니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "잠금 화면 모드 시계 날짜 부분 글꼴 크기",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 날짜 부분 글꼴 크기를 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "잠금 화면 모드 시계 날짜 부분 글꼴 두께",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 날짜 부분 글꼴 두께를 설정합니다",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "잠금 화면 모드 시계 날짜 부분 글꼴 색상",
+      "ItemHoverTipText": "잠금 화면 모드일 때 시계의 날짜 부분 글꼴 색상을 설정합니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "잠금 화면 모드 비밀번호 입력창과 버튼 투명도",
+      "ItemHoverTipText": "잠금 화면 모드일 때 비밀번호 입력창과 버튼의 투명도를 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "잠금 화면 모드에서 기본적으로 모든 UI 숨기기",
+      "ItemHoverTipText": "잠금 화면 모드로 들어갈 때 기본적으로 시계와 로그인 버튼 등의 UI 요소를 숨깁니다. 빈 영역을 클릭하면 표시할 수 있습니다",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "잠금 화면 모드에서 마우스 클릭으로 UI 표시 상태 전환",
+      "ItemHoverTipText": "잠금 화면 모드일 때 마우스로 빈 영역을 클릭하면 UI 요소의 표시/숨김 상태를 전환합니다",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12시간제 시간 형식",
+      "ItemHoverTipText": "이 옵션을 선택하지 않으면 24시간제 시간 형식을 사용합니다",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "비밀번호 입력창 힌트 텍스트",
+      "ItemHoverTipText": "비밀번호 입력창에 표시되는 힌트 텍스트입니다",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "잠금 해제 비밀번호를 입력하세요"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "비밀번호 입력창 너비",
+      "ItemHoverTipText": "사용자 정의 로그인 비밀번호 입력창의 너비를 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "비밀번호 입력창 높이",
+      "ItemHoverTipText": "사용자 정의 로그인 비밀번호 입력창의 높이를 설정합니다 (참고: 로그인 버튼의 높이에도 영향을 미칩니다)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "로그인 버튼 아이콘",
+      "ItemHoverTipText": "사용자 정의 로그인 버튼의 아이콘 파일을 선택합니다. 비어 있으면 기본 아이콘이 사용됩니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "파일 선택",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "로그인 버튼 아이콘(마우스 오버 상태)",
+      "ItemHoverTipText": "마우스 오버 상태에서의 사용자 정의 로그인 버튼 아이콘 파일을 선택합니다. 비어 있으면 기본 아이콘이 사용됩니다",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "파일 선택",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "시계와 입력창 간격",
+      "ItemHoverTipText": "시계와 비밀번호 입력창 사이의 간격을 설정합니다",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}

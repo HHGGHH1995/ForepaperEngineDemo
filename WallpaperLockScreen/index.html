@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Saver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        #ui-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            flex-flow: column;
+            z-index: 1;
+            position: relative;
+            gap: 100px;
+        }
+
+        #clock-time {
+            margin: auto;
+            cursor: default;
+        }
+
+        #clock-date {
+            margin: auto;
+            cursor: default;
+        }
+
+        #clock-container {
+            display: flex;
+            flex-flow: column;
+        }
+
+        #login-container {
+            display: flex;
+        }
+
+        #password-input {
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+        }
+        
+        #password-input:focus {
+            border-color: #667eea;
+        }
+        
+        #password-input:hover {
+            border-color: #a5b4fc;
+        }
+        
+        #password-input::placeholder {
+            color: rgb(255, 255, 255);
+            /* font-style: italic;
+            font-size: 14px;
+            font-family: Arial, sans-serif; */
+            opacity: 1;
+        }
+
+        #login-btn {
+            background-size: contain;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script src="ForepaperEngine.js"></script>
+    <script src="DeclareResourceRequirements.js"></script>
+    <script src="ConfigManager.js"></script>
+    <script src="ConfigManagerInit.js"></script>
+
+    <div id="ui-container">
+        <div id="clock-container">
+            <div id="clock-time">
+            </div>
+            <div id="clock-date">
+            </div>
+        </div>
+        <div id="login-container">
+            <input type="password" id="password-input" placeholder="Enter your password">
+            <img id="login-btn" src="loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.png" alt="login" />
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentForepaperEngineMode = new URLSearchParams(window.location.search).get('current_mode');
+
+            const uiContainer = document.getElementById('ui-container');
+            const clockContainerElement = document.getElementById('clock-container');
+            const clockTimeElement = document.getElementById('clock-time');
+            const clockDateElement = document.getElementById('clock-date');
+            const loginContainerElement = document.getElementById('login-container');
+            const passwordInput = document.getElementById('password-input');
+            const loginBtn = document.getElementById('login-btn');
+
+            passwordInput.style.width = `${ConfigManager.get('passwordInputBoxWidth')}px`;
+            passwordInput.style.height = `${ConfigManager.get('passwordInputBoxHeight')}px`;
+            passwordInput.style.marginLeft = passwordInput.style.height;
+            passwordInput.placeholder = ConfigManager.get('customLockScreenPasswordTip');
+            loginBtn.style.width = `${ConfigManager.get('passwordInputBoxHeight')}px`;
+            loginBtn.style.height = `${ConfigManager.get('passwordInputBoxHeight')}px`;
+            if(ConfigManager.get('loginBtnImagePath')){
+                loginBtn.src = `https://forepaperenginelocalfile/${ConfigManager.get('loginBtnImagePath')}`;
+            }
+            else{
+                loginBtn.src = 'loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.png';
+            }
+
+            clockTimeElement.innerText = new Date().toLocaleTimeString(undefined, { hour12: ConfigManager.get('clockTimeUse12HourFormat') });
+            clockDateElement.innerText = new Date().toLocaleDateString();
+
+            uiContainer.style.gap = `${ConfigManager.get('gapOfClockAndInputBox')}px`;
+
+            function enterScreenSaverMode(){
+                uiContainer.style.display = '';
+                if(ConfigManager.get('screenSaverModeClockOpacity') > 0){
+                    clockContainerElement.style.display = '';
+                    clockContainerElement.style.opacity = ConfigManager.get('screenSaverModeClockOpacity');
+
+                    if(ConfigManager.get('screenSaverModeClockTimeFont')){
+                        let font = JSON.parse(ConfigManager.get('screenSaverModeClockTimeFont'));
+                        clockTimeElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                    }
+                    else{
+                        clockTimeElement.style.fontFamily = 'Arial, sans-serif';
+                    }
+                    clockTimeElement.style.fontSize = `${ConfigManager.get('screenSaverModeClockTimeFontSize')}px`;
+                    clockTimeElement.style.fontWeight = ConfigManager.get('screenSaverModeClockTimeFontBold');
+                    clockTimeElement.style.color = ConfigManager.get('screenSaverModeClockTimeFontColor');
+
+                    if(ConfigManager.get('screenSaverModeClockDateFont')){
+                        let font = JSON.parse(ConfigManager.get('screenSaverModeClockDateFont'));
+                        clockDateElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                    }
+                    else{
+                        clockDateElement.style.fontFamily = 'Arial, sans-serif';
+                    }
+                    clockDateElement.style.fontSize = `${ConfigManager.get('screenSaverModeClockDateFontSize')}px`;
+                    clockDateElement.style.fontWeight = ConfigManager.get('screenSaverModeClockDateFontBold');
+                    clockDateElement.style.color = ConfigManager.get('screenSaverModeClockDateFontColor');
+                }
+                else{
+                    clockContainerElement.style.display = 'none';
+                }
+                loginContainerElement.style.display = 'none';
+            }
+
+            function enterLockScreenMode(){
+                if(ConfigManager.get('lockScreenModeHideAllUI')){
+                    uiContainer.style.display = 'none';
+                }
+                else{
+                    uiContainer.style.display = '';
+                }
+                
+                if(ConfigManager.get('lockScreenModeClockOpacity') > 0){
+                    clockContainerElement.style.display = '';
+                    clockContainerElement.style.opacity = ConfigManager.get('lockScreenModeClockOpacity');
+
+                    if(ConfigManager.get('lockScreenModeClockTimeFont')){
+                        let font = JSON.parse(ConfigManager.get('lockScreenModeClockTimeFont'));
+                        clockTimeElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                    }
+                    else{
+                        clockTimeElement.style.fontFamily = 'Arial, sans-serif';
+                    }
+                    clockTimeElement.style.fontSize = `${ConfigManager.get('lockScreenModeClockTimeFontSize')}px`;
+                    clockTimeElement.style.fontWeight = ConfigManager.get('lockScreenModeClockTimeFontBold');
+                    clockTimeElement.style.color = ConfigManager.get('lockScreenModeClockTimeFontColor');
+
+                    if(ConfigManager.get('lockScreenModeClockDateFont')){
+                        let font = JSON.parse(ConfigManager.get('lockScreenModeClockDateFont'));
+                        clockDateElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                    }
+                    else{
+                        clockDateElement.style.fontFamily = 'Arial, sans-serif';
+                    }
+                    clockDateElement.style.fontSize = `${ConfigManager.get('lockScreenModeClockDateFontSize')}px`;
+                    clockDateElement.style.fontWeight = ConfigManager.get('lockScreenModeClockDateFontBold');
+                    clockDateElement.style.color = ConfigManager.get('lockScreenModeClockDateFontColor');
+                }
+                else{
+                    clockContainerElement.style.display = 'none';
+                }
+
+                if(ForepaperEngineGetUnlockScreenType() == 0){
+                    loginContainerElement.style.display = 'none';
+                }
+                else{
+                    loginContainerElement.style.display = '';
+                    loginContainerElement.style.opacity = ConfigManager.get('lockScreenModeUIOpacity');
+                    passwordInput.style.display = '';
+                        setTimeout(() => {
+                            passwordInput.focus();
+                        }, 100);
+                }
+            }
+
+            function ChangeMode(){
+                if(currentForepaperEngineMode === '1') {
+                    uiContainer.style.display = 'none';
+                }
+                else if(currentForepaperEngineMode === '2'){
+                    enterScreenSaverMode();
+                }
+                else if(currentForepaperEngineMode === '3'){
+                    enterLockScreenMode();
+                }
+            }
+
+            ChangeMode();
+
+            window.addEventListener('mousedown', () => {
+                if(currentForepaperEngineMode === '3'){
+                    if(uiContainer.style.display === 'none'){
+                        uiContainer.style.display = '';
+                        setTimeout(() => {
+                            passwordInput.focus();
+                        }, 100);
+                    }
+                    else{
+                        if(ConfigManager.get('lockScreenModeHideAllUIWhenMouseClick')) {
+                            uiContainer.style.display = 'none';
+                        }
+                    }
+                }
+            });
+
+            window.addEventListener('keydown', (e) => {
+                if(currentForepaperEngineMode === '3'){
+                    if(uiContainer.style.display === 'none'){
+                        uiContainer.style.display = '';
+                    }
+
+                    // check passwordInput has focus
+                    if(document.activeElement !== passwordInput
+                        && !ConfigManager.IsSettingPanelVisible()
+                    ){
+                        setTimeout(() => {
+                            passwordInput.focus();
+                        }, 100);
+                    }
+                }
+            });
+
+            passwordInput.addEventListener('mousedown', (e) => {
+                e.stopPropagation();
+            });
+
+            passwordInput.addEventListener('keydown', (e) => {
+                if(e.keyCode === 13){
+                    login();
+                }
+            });
+
+            passwordInput.addEventListener('blur', (e) => {
+                e.stopPropagation();
+                if(!ConfigManager.IsSettingPanelVisible())
+                    passwordInput.focus();
+            });
+
+            loginBtn.addEventListener('mousedown', (e) => {
+                e.stopPropagation();
+                login();
+            });
+
+            loginBtn.addEventListener('mouseenter', (e) => {
+                e.stopPropagation();
+                if(ConfigManager.get('loginBtnHoverImagePath')){
+                    loginBtn.src = `https://forepaperenginelocalfile/${ConfigManager.get('loginBtnHoverImagePath')}`;
+                }
+                else{
+                    loginBtn.src = 'loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.apng';
+                }
+            });
+
+            loginBtn.addEventListener('mouseleave', (e) => {
+                e.stopPropagation();
+                if(ConfigManager.get('loginBtnImagePath')){
+                    loginBtn.src = `https://forepaperenginelocalfile/${ConfigManager.get('loginBtnImagePath')}`;
+                }
+                else{
+                    loginBtn.src = 'loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.png';
+                }
+            });
+
+            function login(){
+                if(ForepaperEngineGetUnlockScreenType() != 0){
+                    let result = ForepaperEngineTryUnlockScreen(passwordInput.value);
+                    if(!result){
+                        passwordInput.style.borderColor = '#ff0000';
+                        setTimeout(() => {
+                            passwordInput.focus();
+                        }, 100);
+                        setTimeout(() => {
+                            passwordInput.style.borderColor = '';
+                        }, 1000);
+                    }
+                    else{
+                        uiContainer.style.display = 'none';
+                    }
+                    passwordInput.value = '';
+                }
+            }
+            
+            setInterval(() => {
+                clockTimeElement.innerText = new Date().toLocaleTimeString(undefined, { hour12: ConfigManager.get('clockTimeUse12HourFormat') });
+                clockDateElement.innerText = new Date().toLocaleDateString();
+                if(currentForepaperEngineMode === '3') {
+                    if(!ConfigManager.IsSettingPanelVisible){
+                        passwordInput.focus();
+                    }
+                }
+            }, 1000);
+
+            function changeScreenSaverConfig(key, value){
+                switch(key){
+                    case 'screenSaverModeClockOpacity':
+                        if(currentForepaperEngineMode === '2') {
+                            clockContainerElement.style.opacity = value;
+                            if(value > 0){
+                                clockContainerElement.style.display = '';
+                            }
+                            else{
+                                clockContainerElement.style.display = 'none';
+                            }
+                        }
+                        break;
+                    case 'screenSaverModeClockTimeFont':
+                        if(currentForepaperEngineMode === '2') {
+                            if(value){
+                                let font = JSON.parse(value);
+                                clockTimeElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                            }
+                            else{
+                                clockTimeElement.style.fontFamily = 'Arial, sans-serif';
+                            }
+                        }
+                        break;
+                    case 'screenSaverModeClockTimeFontSize':
+                        if(currentForepaperEngineMode === '2') {
+                            clockTimeElement.style.fontSize = `${value}px`;
+                        }
+                        break;
+                    case 'screenSaverModeClockTimeFontBold':
+                        if(currentForepaperEngineMode === '2') {
+                            clockTimeElement.style.fontWeight = value;
+                        }
+                        break;
+                    case 'screenSaverModeClockTimeFontColor':
+                        if(currentForepaperEngineMode === '2') {
+                            clockTimeElement.style.color = value;
+                        }
+                        break;
+                    case 'screenSaverModeClockDateFont':
+                        if(currentForepaperEngineMode === '2') {
+                            if(value){
+                                let font = JSON.parse(value);
+                                clockDateElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                            }
+                            else{
+                                clockDateElement.style.fontFamily = 'Arial, sans-serif';
+                            }
+                        }
+                        break;
+                    case 'screenSaverModeClockDateFontSize':
+                        if(currentForepaperEngineMode === '2') {
+                            clockDateElement.style.fontSize = `${value}px`;
+                        }
+                        break;
+                    case 'screenSaverModeClockDateFontBold':
+                        if(currentForepaperEngineMode === '2') {
+                            clockDateElement.style.fontWeight = value;
+                        }
+                        break;
+                    case 'screenSaverModeClockDateFontColor':
+                        if(currentForepaperEngineMode === '2') {
+                            clockDateElement.style.color = value;
+                        }
+                        break;
+                    case 'lockScreenModeClockOpacity':
+                        if(currentForepaperEngineMode === '3') {
+                            clockContainerElement.style.opacity = value;
+                            if(value > 0){
+                                clockContainerElement.style.display = '';
+                            }
+                            else{
+                                clockContainerElement.style.display = 'none';
+                            }
+                        }
+                        break;
+                    case 'lockScreenModeClockTimeFont':
+                        if(currentForepaperEngineMode === '3') {
+                            if(value){
+                                let font = JSON.parse(value);
+                                clockTimeElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                            }
+                            else{
+                                clockTimeElement.style.fontFamily = 'Arial, sans-serif';
+                            }
+                        }
+                        break;
+                    case 'lockScreenModeClockTimeFontSize':
+                        if(currentForepaperEngineMode === '3') {
+                            clockTimeElement.style.fontSize = `${value}px`;
+                        }
+                        break;
+                    case 'lockScreenModeClockTimeFontBold':
+                        if(currentForepaperEngineMode === '3') {
+                            clockTimeElement.style.fontWeight = value;
+                        }
+                        break;
+                    case 'lockScreenModeClockTimeFontColor':
+                        if(currentForepaperEngineMode === '3') {
+                            clockTimeElement.style.color = value;
+                        }
+                        break;
+                    case 'lockScreenModeClockDateFont':
+                        if(currentForepaperEngineMode === '3') {
+                            if(value){
+                                let font = JSON.parse(value);
+                                clockDateElement.style.fontFamily = `${font.Name}, Arial, sans-serif`;
+                            }
+                            else{
+                                clockDateElement.style.fontFamily = 'Arial, sans-serif';
+                            }
+                        }
+                        break;
+                    case 'lockScreenModeClockDateFontSize':
+                        if(currentForepaperEngineMode === '3') {
+                            clockDateElement.style.fontSize = `${value}px`;
+                        }
+                        break;
+                    case 'lockScreenModeClockDateFontBold':
+                        if(currentForepaperEngineMode === '3') {
+                            clockDateElement.style.fontWeight = value;
+                        }
+                        break;
+                    case 'lockScreenModeClockDateFontColor':
+                        if(currentForepaperEngineMode === '3') {
+                            clockDateElement.style.color = value;
+                        }
+                        break;
+                    case 'lockScreenModeUIOpacity':
+                        if(currentForepaperEngineMode === '3') {
+                            loginContainerElement.style.opacity = value;
+                        }
+                        break;
+                    case 'customLockScreenPasswordTip':
+                        passwordInput.placeholder = value;
+                        break;
+                    case 'passwordInputBoxWidth':
+                        passwordInput.style.width = `${value}px`;
+                        break;
+                    case 'passwordInputBoxHeight':
+                        passwordInput.style.height = `${value}px`;
+                        passwordInput.style.marginLeft = passwordInput.style.height;
+                        break;
+                    case 'loginBtnImagePath':
+                        if(ConfigManager.get('loginBtnImagePath')){
+                            loginBtn.src = `https://forepaperenginelocalfile/${ConfigManager.get('loginBtnImagePath')}`;
+                        }
+                        else{
+                            loginBtn.src = 'loginIcon/wired-outline-1872-small-cute-monster-hover-pinch.png';
+                        }
+                        break;
+                    case 'gapOfClockAndInputBox':
+                        if(currentForepaperEngineMode === '3') {
+                            uiContainer.style.gap = `${value}px`;
+                        }
+                        break;
+                }
+            }
+
+            window.changeScreenSaverConfig = changeScreenSaverConfig;
+
+            function ForepaperEngineChangeMode(mode) {
+                if(currentForepaperEngineMode !== mode){
+                    currentForepaperEngineMode = mode;
+                    ChangeMode();
+                }
+            }
+
+            window.ForepaperEngineChangeMode = ForepaperEngineChangeMode;
+
+            function CheckIfCurrentForepaperSupportEnteringUnlockPassword(){
+                return true;
+            }
+
+            window.CheckIfCurrentForepaperSupportEnteringUnlockPassword = CheckIfCurrentForepaperSupportEnteringUnlockPassword;
+        });
+    </script>
+</body>
+</html>

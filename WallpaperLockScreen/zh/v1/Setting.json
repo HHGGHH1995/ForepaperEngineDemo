@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "屏保状态时钟透明度",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "屏保状态时钟时间部分字体",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的时间部分字体",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "屏保状态时钟时间部分字体大小",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的时间部分字体大小",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "屏保状态时钟时间部分字体粗细",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的时间部分字体粗细",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "屏保状态时钟时间部分字体颜色",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的时间部分字体颜色",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "屏保状态时钟日期部分字体",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的日期部分字体",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "屏保状态时钟日期部分字体大小",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的日期部分字体大小",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "屏保状态时钟日期部分字体粗细",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的日期部分字体粗细",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "屏保状态时钟日期部分字体颜色",
+      "ItemHoverTipText": "设置处于屏保状态时时钟的日期部分字体颜色",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "锁屏状态时钟透明度",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "锁屏状态时钟时间部分字体",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的时间部分字体",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "锁屏状态时钟时间部分字体大小",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的时间部分字体大小",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "锁屏状态时钟时间部分字体粗细",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的时间部分字体粗细",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "锁屏状态时钟时间部分字体颜色",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的时间部分字体颜色",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "锁屏状态时钟日期部分字体",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的日期部分字体",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "锁屏状态时钟日期部分字体大小",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的日期部分字体大小",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "锁屏状态时钟日期部分字体粗细",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的日期部分字体粗细",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "锁屏状态时钟日期部分字体颜色",
+      "ItemHoverTipText": "设置处于锁屏状态时时钟的日期部分字体颜色",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "锁屏状态口令输入框与按钮透明度",
+      "ItemHoverTipText": "设置处于锁屏状态时口令输入框与按钮的透明度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "锁屏状态时默认隐藏所有UI",
+      "ItemHoverTipText": "进入锁屏状态时默认隐藏时钟与登录按钮或文本框等UI，你可以通过点击空白区触发显示",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "锁屏状态时点击鼠标切换UI显示状态",
+      "ItemHoverTipText": "处于锁屏状态时鼠标点击空白区可切换UI的显示与隐藏",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12小时制时间格式",
+      "ItemHoverTipText": "不勾选此选项则使用24小时制时间格式",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "口令输入框提示文本",
+      "ItemHoverTipText": "口令输入框中的提示文本",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "请输入解锁口令"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "口令输入框宽度",
+      "ItemHoverTipText": "设置自定义登录口令的输入框的宽度",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "口令输入框高度",
+      "ItemHoverTipText": "设置自定义登录口令的输入框的高度（注意，同时会影响登录按钮的高度）",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "登录按钮图标",
+      "ItemHoverTipText": "选取自定义登录按钮的图标文件，若为空则使用默认图标",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "请选择文件",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "登录按钮图标(鼠标悬浮状态)",
+      "ItemHoverTipText": "选取自定义登录按钮在鼠标悬浮状态下的图标文件，若为空则使用默认图标",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "请选择文件",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "时钟与输入框间隔",
+      "ItemHoverTipText": "设置时钟与口令输入框之间的间隔",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}

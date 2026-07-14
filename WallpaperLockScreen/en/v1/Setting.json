@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Clock Opacity in Screensaver Mode",
+      "ItemHoverTipText": "Set the opacity of the clock when in screensaver mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Clock Time Font in Screensaver Mode",
+      "ItemHoverTipText": "Set the font for the time portion of the clock when in screensaver mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Clock Time Font Size in Screensaver Mode",
+      "ItemHoverTipText": "Set the font size for the time portion of the clock when in screensaver mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Clock Time Font Weight in Screensaver Mode",
+      "ItemHoverTipText": "Set the font weight for the time portion of the clock when in screensaver mode",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Clock Time Font Color in Screensaver Mode",
+      "ItemHoverTipText": "Set the font color for the time portion of the clock when in screensaver mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Clock Date Font in Screensaver Mode",
+      "ItemHoverTipText": "Set the font for the date portion of the clock when in screensaver mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Clock Date Font Size in Screensaver Mode",
+      "ItemHoverTipText": "Set the font size for the date portion of the clock when in screensaver mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Clock Date Font Weight in Screensaver Mode",
+      "ItemHoverTipText": "Set the font weight for the date portion of the clock when in screensaver mode",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Clock Date Font Color in Screensaver Mode",
+      "ItemHoverTipText": "Set the font color for the date portion of the clock when in screensaver mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Clock Opacity in Lock Screen Mode",
+      "ItemHoverTipText": "Set the opacity of the clock when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Clock Time Font in Lock Screen Mode",
+      "ItemHoverTipText": "Set the font for the time portion of the clock when in lock screen mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Clock Time Font Size in Lock Screen Mode",
+      "ItemHoverTipText": "Set the font size for the time portion of the clock when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Clock Time Font Weight in Lock Screen Mode",
+      "ItemHoverTipText": "Set the font weight for the time portion of the clock when in lock screen mode",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Clock Time Font Color in Lock Screen Mode",
+      "ItemHoverTipText": "Set the font color for the time portion of the clock when in lock screen mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Clock Date Font in Lock Screen Mode",
+      "ItemHoverTipText": "Set the font for the date portion of the clock when in lock screen mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Clock Date Font Size in Lock Screen Mode",
+      "ItemHoverTipText": "Set the font size for the date portion of the clock when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Clock Date Font Weight in Lock Screen Mode",
+      "ItemHoverTipText": "Set the font weight for the date portion of the clock when in lock screen mode",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Clock Date Font Color in Lock Screen Mode",
+      "ItemHoverTipText": "Set the font color for the date portion of the clock when in lock screen mode",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Password Input Box and Button Opacity in Lock Screen Mode",
+      "ItemHoverTipText": "Set the opacity of the password input box and buttons when in lock screen mode",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Hide All UI by Default in Lock Screen Mode",
+      "ItemHoverTipText": "Hide the clock, login button, and other UI elements by default when entering lock screen mode. You can click on a blank area to show them",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Toggle UI Display with Mouse Click in Lock Screen Mode",
+      "ItemHoverTipText": "When in lock screen mode, clicking on a blank area toggles the visibility of UI elements",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12-Hour Time Format",
+      "ItemHoverTipText": "Uncheck this option to use 24-hour time format",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Password Input Box Hint Text",
+      "ItemHoverTipText": "The hint text displayed in the password input box",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Please enter the unlock password"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Password Input Box Width",
+      "ItemHoverTipText": "Set the width of the custom login password input box",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Password Input Box Height",
+      "ItemHoverTipText": "Set the height of the custom login password input box (Note: this also affects the height of the login button)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Login Button Icon",
+      "ItemHoverTipText": "Select an icon file for the custom login button. If empty, the default icon will be used",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Please select a file",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Login Button Icon (Hover State)",
+      "ItemHoverTipText": "Select an icon file for the custom login button in hover state. If empty, the default icon will be used",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Please select a file",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Spacing Between Clock and Input Box",
+      "ItemHoverTipText": "Set the spacing between the clock and the password input box",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}

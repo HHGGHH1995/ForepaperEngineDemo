@@ -1,0 +1,19 @@
+该Forepaper作品适用于屏保与锁屏阶段，为保证最佳体验，请在ForepaperEngine中设置解锁方式为[录入系统密码解锁]或[录入自定义密码解锁]；如果您电脑上安装了WallpaperEngine，请在其设置中开启[使用最大化应用时保持运行]与[使用全屏应用时保持运行]。
+
+This Forepaper is designed for screensaver and lock screen stages. For optimal experience, please set the unlock method in ForepaperEngine to [Enter system password to unlock] or [Enter custom password to unlock]. If you have WallpaperEngine installed, please enable [Keep running when maximized apps are used] and [Keep running when full-screen apps are used] in its settings.
+
+Данная работа Forepaper предназначена для этапов заставки и блокировки экрана. Для оптимальной работы установите в ForepaperEngine способ разблокировки [Ввод системного пароля для разблокировки] или [Ввод пользовательского пароля для разблокировки]. Если у вас установлен WallpaperEngine, включите в его настройках [Продолжать работу при maximized приложениях] и [Продолжать работу при полноэкранных приложениях].
+
+Este Forepaper é projetado para fases de proteção de tela e tela bloqueada. Para a melhor experiência, defina o método de desbloqueio no ForepaperEngine como [Inserir senha do sistema para desbloquear] ou [Inserir senha personalizada para desbloquear]. Se você tem o WallpaperEngine instalado, ative [Manter execução ao usar aplicativos maximizados] e [Manter execução ao usar aplicativos em tela cheia] em suas configurações.
+
+To dzieło Forepaper jest przeznaczone do faz wygaszacza ekranu i blokady ekranu. Aby uzyskać optymalne wrażenia, ustaw w ForepaperEngine metodę odblokowania [Wprowadź hasło systemowe, aby odblokować] lub [Wprowadź niestandardowe hasło, aby odblokować]. Jeśli masz zainstalowany WallpaperEngine, włącz w jego ustawieniach [Utrzymuj działanie przy maksymalizowanych aplikacjach] i [Utrzymuj działanie przy pełnoekranowych aplikacjach].
+
+이 Forepaper 작품은 화면 보호기 및 잠금 화면 단계를 위해 설계되었습니다. 최적의 경험을 위해 ForepaperEngine에서 잠금 해제 방법을 [시스템 비밀번호 입력으로 잠금 해제] 또는 [사용자 지정 비밀번호 입력으로 잠금 해제]로 설정하십시오. WallpaperEngine이 설치된 경우 해당 설정에서 [최대화된 앱 사용 시 계속 실행]과 [전체 화면 앱 사용 시 계속 실행]을 활성화하십시오.
+
+このForepaper作品はスクリーンセーバーとロック画面段階用に設計されています。最適な体験のために、ForepaperEngineでロック解除方法を[システムパスワード入力でロック解除]または[カスタムパスワード入力でロック解除]に設定してください。WallpaperEngineがインストールされている場合は、その設定で[最大化されたアプリ使用時に実行を継続]と[フルスクリーンアプリ使用時に実行を継続]を有効にしてください。
+
+Este Forepaper está diseñado para las fases de salvapantallas y pantalla bloqueada. Para una experiencia óptima, establezca el método de desbloqueo en ForepaperEngine como [Ingresar contraseña del sistema para desbloquear] o [Ingresar contraseña personalizada para desbloquear]. Si tiene WallpaperEngine instalado, active [Mantener ejecución al usar aplicaciones maximizadas] y [Mantener ejecución al usar aplicaciones a pantalla completa] en su configuración.
+
+Cette œuvre Forepaper est conçue pour les phases d'économiseur d'écran et de verrouillage d'écran. Pour une expérience optimale, définissez la méthode de déverrouillage dans ForepaperEngine sur [Saisir le mot de passe système pour déverrouiller] ou [Saisir un mot de passe personnalisé pour déverrouiller]. Si vous avez installé WallpaperEngine, activez [Continuer à fonctionner lorsque des applications maximisées sont utilisées] et [Continuer à fonctionner lorsque des applications plein écran sont utilisées] dans ses paramètres.
+
+Dieses Forepaper-Werk ist für Bildschirmschoner- und Bildschirmsperrenphasen konzipiert. Für ein optimales Erlebnis setzen Sie die Entsperrmethode in ForepaperEngine auf [Systempasswort eingeben zum Entsperren] oder [Benutzerdefiniertes Passwort eingeben zum Entsperren]. Wenn Sie WallpaperEngine installiert haben, aktivieren Sie in dessen Einstellungen [Weiterlaufen bei maximierten Apps] und [Weiterlaufen bei Vollbild-Apps].

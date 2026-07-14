@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Opacité de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir l'opacité de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Police de la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir la police pour la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Taille de police de la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir la taille de police pour la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Épaisseur de police de la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir l'épaisseur de police pour la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Couleur de police de la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir la couleur de police pour la partie heure de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Police de la partie date de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir la police pour la partie date de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Taille de police de la partie date de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir la taille de police pour la partie date de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Épaisseur de police de la partie date de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir l'épaisseur de police pour la partie date de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Couleur de police de la partie date de l'horloge en mode économiseur d'écran",
+      "ItemHoverTipText": "Définir la couleur de police pour la partie date de l'horloge en mode économiseur d'écran",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Opacité de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir l'opacité de l'horloge en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Police de la partie heure de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir la police pour la partie heure de l'horloge en mode écran verrouillé",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Taille de police de la partie heure de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir la taille de police pour la partie heure de l'horloge en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Épaisseur de police de la partie heure de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir l'épaisseur de police pour la partie heure de l'horloge en mode écran verrouillé",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Couleur de police de la partie heure de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir la couleur de police pour la partie heure de l'horloge en mode écran verrouillé",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Police de la partie date de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir la police pour la partie date de l'horloge en mode écran verrouillé",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Taille de police de la partie date de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir la taille de police pour la partie date de l'horloge en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Épaisseur de police de la partie date de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir l'épaisseur de police pour la partie date de l'horloge en mode écran verrouillé",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Couleur de police de la partie date de l'horloge en mode écran verrouillé",
+      "ItemHoverTipText": "Définir la couleur de police pour la partie date de l'horloge en mode écran verrouillé",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Opacité de la zone de saisie du mot de passe et des boutons en mode écran verrouillé",
+      "ItemHoverTipText": "Définir l'opacité de la zone de saisie du mot de passe et des boutons en mode écran verrouillé",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Masquer toute l'UI par défaut en mode écran verrouillé",
+      "ItemHoverTipText": "Masquer l'horloge, le bouton de connexion et autres éléments d'UI par défaut lors de l'entrée en mode écran verrouillé. Vous pouvez cliquer sur une zone vide pour les afficher",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Basculer l'affichage de l'UI par clic de souris en mode écran verrouillé",
+      "ItemHoverTipText": "En mode écran verrouillé, cliquer sur une zone vide bascule la visibilité des éléments d'UI",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "Format horaire 12 heures",
+      "ItemHoverTipText": "Décocher cette option pour utiliser le format 24 heures",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Texte d'indication de la zone de saisie du mot de passe",
+      "ItemHoverTipText": "Le texte d'indication affiché dans la zone de saisie du mot de passe",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Veuillez saisir le mot de passe de déverrouillage"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Largeur de la zone de saisie du mot de passe",
+      "ItemHoverTipText": "Définir la largeur de la zone de saisie du mot de passe de connexion personnalisée",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Hauteur de la zone de saisie du mot de passe",
+      "ItemHoverTipText": "Définir la hauteur de la zone de saisie du mot de passe de connexion personnalisée (Note : cela affecte également la hauteur du bouton de connexion)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Icône du bouton de connexion",
+      "ItemHoverTipText": "Sélectionner un fichier d'icône pour le bouton de connexion personnalisé. Si vide, l'icône par défaut sera utilisée",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Veuillez sélectionner un fichier",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Icône du bouton de connexion (état de survol)",
+      "ItemHoverTipText": "Sélectionner un fichier d'icône pour le bouton de connexion personnalisé en état de survol. Si vide, l'icône par défaut sera utilisée",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Veuillez sélectionner un fichier",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Espacement entre l'horloge et la zone de saisie",
+      "ItemHoverTipText": "Définir l'espacement entre l'horloge et la zone de saisie du mot de passe",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}

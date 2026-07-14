@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Opacidad del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece la opacidad del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Fuente de la parte horaria del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece la fuente para la parte horaria del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Tamaño de fuente de la parte horaria del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece el tamaño de fuente para la parte horaria del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Grosor de fuente de la parte horaria del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece el grosor de fuente para la parte horaria del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Color de fuente de la parte horaria del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece el color de fuente para la parte horaria del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Fuente de la parte fecha del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece la fuente para la parte fecha del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Tamaño de fuente de la parte fecha del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece el tamaño de fuente para la parte fecha del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Grosor de fuente de la parte fecha del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece el grosor de fuente para la parte fecha del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Color de fuente de la parte fecha del reloj en modo salvapantallas",
+      "ItemHoverTipText": "Establece el color de fuente para la parte fecha del reloj cuando está en modo salvapantallas",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Opacidad del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece la opacidad del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Fuente de la parte horaria del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece la fuente para la parte horaria del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Tamaño de fuente de la parte horaria del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece el tamaño de fuente para la parte horaria del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Grosor de fuente de la parte horaria del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece el grosor de fuente para la parte horaria del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Color de fuente de la parte horaria del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece el color de fuente para la parte horaria del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Fuente de la parte fecha del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece la fuente para la parte fecha del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Tamaño de fuente de la parte fecha del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece el tamaño de fuente para la parte fecha del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Grosor de fuente de la parte fecha del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece el grosor de fuente para la parte fecha del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Color de fuente de la parte fecha del reloj en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece el color de fuente para la parte fecha del reloj cuando está en modo pantalla bloqueada",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Opacidad de la caja de entrada de contraseña y botones en modo pantalla bloqueada",
+      "ItemHoverTipText": "Establece la opacidad de la caja de entrada de contraseña y botones cuando está en modo pantalla bloqueada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Ocultar toda la UI por defecto en modo pantalla bloqueada",
+      "ItemHoverTipText": "Oculta el reloj, botón de inicio de sesión y otros elementos de la UI por defecto al entrar en modo pantalla bloqueada. Puedes hacer clic en un área en blanco para mostrarlos",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Alternar visualización de UI con clic del ratón en modo pantalla bloqueada",
+      "ItemHoverTipText": "Cuando está en modo pantalla bloqueada, hacer clic en un área en blanco alterna la visibilidad de los elementos de la UI",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "Formato de hora de 12 horas",
+      "ItemHoverTipText": "Desmarca esta opción para usar el formato de 24 horas",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Texto de sugerencia de la caja de entrada de contraseña",
+      "ItemHoverTipText": "El texto de sugerencia mostrado en la caja de entrada de contraseña",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Ingrese la contraseña de desbloqueo"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Ancho de la caja de entrada de contraseña",
+      "ItemHoverTipText": "Establece el ancho de la caja de entrada de contraseña de inicio de sesión personalizada",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Altura de la caja de entrada de contraseña",
+      "ItemHoverTipText": "Establece la altura de la caja de entrada de contraseña de inicio de sesión personalizada (Nota: esto también afecta la altura del botón de inicio de sesión)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Icono del botón de inicio de sesión",
+      "ItemHoverTipText": "Selecciona un archivo de icono para el botón de inicio de sesión personalizado. Si está vacío, se usará el icono predeterminado",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Seleccione un archivo",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Icono del botón de inicio de sesión (estado hover)",
+      "ItemHoverTipText": "Selecciona un archivo de icono para el botón de inicio de sesión personalizado en estado hover. Si está vacío, se usará el icono predeterminado",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Seleccione un archivo",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Espaciado entre el reloj y la caja de entrada",
+      "ItemHoverTipText": "Establece el espaciado entre el reloj y la caja de entrada de contraseña",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}

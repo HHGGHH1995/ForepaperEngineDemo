@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Прозрачность часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте прозрачность часов в режиме хранителя экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Шрифт времени часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте шрифт для части времени часов в режиме хранителя экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Размер шрифта времени часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте размер шрифта для части времени часов в режиме хранителя экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Насыщенность шрифта времени часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте насыщенность шрифта для части времени часов в режиме хранителя экрана",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Цвет шрифта времени часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте цвет шрифта для части времени часов в режиме хранителя экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Шрифт даты часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте шрифт для части даты часов в режиме хранителя экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Размер шрифта даты часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте размер шрифта для части даты часов в режиме хранителя экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Насыщенность шрифта даты часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте насыщенность шрифта для части даты часов в режиме хранителя экрана",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Цвет шрифта даты часов в режиме хранителя экрана",
+      "ItemHoverTipText": "Настройте цвет шрифта для части даты часов в режиме хранителя экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Прозрачность часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте прозрачность часов в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Шрифт времени часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте шрифт для части времени часов в режиме блокировки экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Размер шрифта времени часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте размер шрифта для части времени часов в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Насыщенность шрифта времени часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте насыщенность шрифта для части времени часов в режиме блокировки экрана",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Цвет шрифта времени часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте цвет шрифта для части времени часов в режиме блокировки экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Шрифт даты часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте шрифт для части даты часов в режиме блокировки экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Размер шрифта даты часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте размер шрифта для части даты часов в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Насыщенность шрифта даты часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте насыщенность шрифта для части даты часов в режиме блокировки экрана",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Цвет шрифта даты часов в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте цвет шрифта для части даты часов в режиме блокировки экрана",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Прозрачность поля ввода пароля и кнопок в режиме блокировки экрана",
+      "ItemHoverTipText": "Настройте прозрачность поля ввода пароля и кнопок в режиме блокировки экрана",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Скрывать все элементы интерфейса по умолчанию в режиме блокировки экрана",
+      "ItemHoverTipText": "Скрывать часы, кнопку входа и другие элементы интерфейса по умолчанию при входе в режим блокировки экрана. Вы можете нажать на пустую область, чтобы показать их",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Переключать отображение интерфейса щелчком мыши в режиме блокировки экрана",
+      "ItemHoverTipText": "В режиме блокировки экрана щелчок по пустой области переключает видимость элементов интерфейса",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12-часовой формат времени",
+      "ItemHoverTipText": "Снимите этот флажок, чтобы использовать 24-часовой формат времени",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Текст подсказки в поле ввода пароля",
+      "ItemHoverTipText": "Текст подсказки, отображаемый в поле ввода пароля",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Введите пароль разблокировки"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Ширина поля ввода пароля",
+      "ItemHoverTipText": "Настройте ширину поля ввода пользовательского пароля для входа",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Высота поля ввода пароля",
+      "ItemHoverTipText": "Настройте высоту поля ввода пользовательского пароля для входа (Примечание: это также влияет на высоту кнопки входа)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Иконка кнопки входа",
+      "ItemHoverTipText": "Выберите файл иконки для пользовательской кнопки входа. Если оставить пустым, будет использоваться иконка по умолчанию",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Выберите файл",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Иконка кнопки входа (состояние наведения)",
+      "ItemHoverTipText": "Выберите файл иконки для пользовательской кнопки входа в состоянии наведения. Если оставить пустым, будет использоваться иконка по умолчанию",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Выберите файл",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Расстояние между часами и полем ввода",
+      "ItemHoverTipText": "Настройте расстояние между часами и полем ввода пароля",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "スクリーンセーバーモード時計の透明度",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "スクリーンセーバーモード時計の時間部分フォント",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の時間部分のフォントを設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "スクリーンセーバーモード時計の時間部分フォントサイズ",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の時間部分のフォントサイズを設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "スクリーンセーバーモード時計の時間部分フォントの太さ",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の時間部分のフォントの太さを設定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "スクリーンセーバーモード時計の時間部分フォント色",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の時間部分のフォント色を設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "スクリーンセーバーモード時計の日付部分フォント",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の日付部分のフォントを設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "スクリーンセーバーモード時計の日付部分フォントサイズ",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の日付部分のフォントサイズを設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "スクリーンセーバーモード時計の日付部分フォントの太さ",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の日付部分のフォントの太さを設定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "スクリーンセーバーモード時計の日付部分フォント色",
+      "ItemHoverTipText": "スクリーンセーバーモード時の時計の日付部分のフォント色を設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "ロックスクリーンモード時計の透明度",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "ロックスクリーンモード時計の時間部分フォント",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の時間部分のフォントを設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "ロックスクリーンモード時計の時間部分フォントサイズ",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の時間部分のフォントサイズを設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "ロックスクリーンモード時計の時間部分フォントの太さ",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の時間部分のフォントの太さを設定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "ロックスクリーンモード時計の時間部分フォント色",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の時間部分のフォント色を設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "ロックスクリーンモード時計の日付部分フォント",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の日付部分のフォントを設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "ロックスクリーンモード時計の日付部分フォントサイズ",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の日付部分のフォントサイズを設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "ロックスクリーンモード時計の日付部分フォントの太さ",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の日付部分のフォントの太さを設定します",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "ロックスクリーンモード時計の日付部分フォント色",
+      "ItemHoverTipText": "ロックスクリーンモード時の時計の日付部分のフォント色を設定します",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "ロックスクリーンモードパスワード入力欄とボタンの透明度",
+      "ItemHoverTipText": "ロックスクリーンモード時のパスワード入力欄とボタンの透明度を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "ロックスクリーンモードでデフォルトで全てのUIを非表示",
+      "ItemHoverTipText": "ロックスクリーンモードに入るとき、デフォルトで時計とログインボタンなどのUI要素を非表示にします。空白エリアをクリックすると表示できます",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "ロックスクリーンモードでマウスクリックでUI表示状態を切り替え",
+      "ItemHoverTipText": "ロックスクリーンモード時、空白エリアをマウスクリックするとUI要素の表示/非表示を切り替えます",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12時間制時間形式",
+      "ItemHoverTipText": "このオプションをチェックしない場合、24時間制時間形式を使用します",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "パスワード入力欄ヒントテキスト",
+      "ItemHoverTipText": "パスワード入力欄に表示されるヒントテキストです",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "ロック解除パスワードを入力してください"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "パスワード入力欄の幅",
+      "ItemHoverTipText": "カスタムログインパスワード入力欄の幅を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "パスワード入力欄の高さ",
+      "ItemHoverTipText": "カスタムログインパスワード入力欄の高さを設定します（注：ログインボタンの高さにも影響します）",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "ログインボタンアイコン",
+      "ItemHoverTipText": "カスタムログインボタンのアイコンファイルを選択します。空の場合、デフォルトアイコンが使用されます",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "ファイルを選択",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "ログインボタンアイコン（ホバー状態）",
+      "ItemHoverTipText": "ホバー状態でのカスタムログインボタンのアイコンファイルを選択します。空の場合、デフォルトアイコンが使用されます",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "ファイルを選択",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "時計と入力欄の間隔",
+      "ItemHoverTipText": "時計とパスワード入力欄の間隔を設定します",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}

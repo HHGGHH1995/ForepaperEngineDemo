@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Uhr-Deckkraft im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Deckkraft der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Uhrzeit-Schriftart im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftart für den Uhrzeit-Teil der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Uhrzeit-Schriftgröße im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftgröße für den Uhrzeit-Teil der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Uhrzeit-Schriftstärke im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftstärke für den Uhrzeit-Teil der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Uhrzeit-Schriftfarbe im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftfarbe für den Uhrzeit-Teil der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Uhrdatum-Schriftart im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftart für den Datums-Teil der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Uhrdatum-Schriftgröße im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftgröße für den Datums-Teil der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Uhrdatum-Schriftstärke im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftstärke für den Datums-Teil der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Uhrdatum-Schriftfarbe im Bildschirmschoner-Modus",
+      "ItemHoverTipText": "Legt die Schriftfarbe für den Datums-Teil der Uhr im Bildschirmschoner-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Uhr-Deckkraft im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Deckkraft der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Uhrzeit-Schriftart im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftart für den Uhrzeit-Teil der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Uhrzeit-Schriftgröße im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftgröße für den Uhrzeit-Teil der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Uhrzeit-Schriftstärke im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftstärke für den Uhrzeit-Teil der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Uhrzeit-Schriftfarbe im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftfarbe für den Uhrzeit-Teil der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Uhrdatum-Schriftart im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftart für den Datums-Teil der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Uhrdatum-Schriftgröße im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftgröße für den Datums-Teil der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Uhrdatum-Schriftstärke im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftstärke für den Datums-Teil der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Uhrdatum-Schriftfarbe im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Schriftfarbe für den Datums-Teil der Uhr im Sperrbildschirm-Modus fest",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Deckkraft des Passworteingabefelds und der Schaltflächen im Sperrbildschirm-Modus",
+      "ItemHoverTipText": "Legt die Deckkraft des Passworteingabefelds und der Schaltflächen im Sperrbildschirm-Modus fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Standardmäßig alle UI-Elemente im Sperrbildschirm-Modus ausblenden",
+      "ItemHoverTipText": "Blende Uhr, Login-Schaltfläche und andere UI-Elemente standardmäßig aus, wenn der Sperrbildschirm-Modus aktiviert wird. Sie können auf einen leeren Bereich klicken, um sie anzuzeigen",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "UI-Anzeige mit Mausklick im Sperrbildschirm-Modus umschalten",
+      "ItemHoverTipText": "Im Sperrbildschirm-Modus schaltet ein Klick auf einen leeren Bereich die Sichtbarkeit der UI-Elemente um",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12-Stunden-Zeitformat",
+      "ItemHoverTipText": "Deaktivieren Sie diese Option, um das 24-Stunden-Format zu verwenden",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Hinweistext des Passworteingabefelds",
+      "ItemHoverTipText": "Der im Passworteingabefeld angezeigte Hinweistext",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Bitte geben Sie das Entsperrpasswort ein"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Breite des Passworteingabefelds",
+      "ItemHoverTipText": "Legt die Breite des benutzerdefinierten Login-Passworteingabefelds fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Höhe des Passworteingabefelds",
+      "ItemHoverTipText": "Legt die Höhe des benutzerdefinierten Login-Passworteingabefelds fest (Hinweis: Dies beeinflusst auch die Höhe der Login-Schaltfläche)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Login-Schaltflächensymbol",
+      "ItemHoverTipText": "Wählen Sie eine Symboldatei für die benutzerdefinierte Login-Schaltfläche. Wenn leer, wird das Standardsymbol verwendet",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Bitte wählen Sie eine Datei",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Login-Schaltflächensymbol (Hover-Zustand)",
+      "ItemHoverTipText": "Wählen Sie eine Symboldatei für die benutzerdefinierte Login-Schaltfläche im Hover-Zustand. Wenn leer, wird das Standardsymbol verwendet",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Bitte wählen Sie eine Datei",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Abstand zwischen Uhr und Eingabefeld",
+      "ItemHoverTipText": "Legt den Abstand zwischen der Uhr und dem Passworteingabefeld fest",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}

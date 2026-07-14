@@ -1,0 +1,269 @@
+{
+  "SettingItems": [
+    {
+      "ItemKeyName": "screenSaverModeClockOpacity",
+      "ItemCaptionText": "Przezroczystość zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw przezroczystość zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFont",
+      "ItemCaptionText": "Czcionka części czasowej zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw czcionkę dla części czasowej zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontSize",
+      "ItemCaptionText": "Rozmiar czcionki części czasowej zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw rozmiar czcionki dla części czasowej zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontBold",
+      "ItemCaptionText": "Grubość czcionki części czasowej zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw grubość czcionki dla części czasowej zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockTimeFontColor",
+      "ItemCaptionText": "Kolor czcionki części czasowej zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw kolor czcionki dla części czasowej zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFont",
+      "ItemCaptionText": "Czcionka części datowej zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw czcionkę dla części datowej zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontSize",
+      "ItemCaptionText": "Rozmiar czcionki części datowej zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw rozmiar czcionki dla części datowej zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontBold",
+      "ItemCaptionText": "Grubość czcionki części datowej zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw grubość czcionki dla części datowej zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "screenSaverModeClockDateFontColor",
+      "ItemCaptionText": "Kolor czcionki części datowej zegara w trybie wygaszacza ekranu",
+      "ItemHoverTipText": "Ustaw kolor czcionki dla części datowej zegara w trybie wygaszacza ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockOpacity",
+      "ItemCaptionText": "Przezroczystość zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw przezroczystość zegara w trybie blokady ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFont",
+      "ItemCaptionText": "Czcionka części czasowej zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw czcionkę dla części czasowej zegara w trybie blokady ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontSize",
+      "ItemCaptionText": "Rozmiar czcionki części czasowej zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw rozmiar czcionki dla części czasowej zegara w trybie blokady ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "64"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontBold",
+      "ItemCaptionText": "Grubość czcionki części czasowej zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw grubość czcionki dla części czasowej zegara w trybie blokady ekranu",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockTimeFontColor",
+      "ItemCaptionText": "Kolor czcionki części czasowej zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw kolor czcionki dla części czasowej zegara w trybie blokady ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFont",
+      "ItemCaptionText": "Czcionka części datowej zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw czcionkę dla części datowej zegara w trybie blokady ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "font",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontSize",
+      "ItemCaptionText": "Rozmiar czcionki części datowej zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw rozmiar czcionki dla części datowej zegara w trybie blokady ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "512",
+      "ItemInputMinNum": "12",
+      "ItemStep": "1",
+      "ItemCurrentValue": "32"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontBold",
+      "ItemCaptionText": "Grubość czcionki części datowej zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw grubość czcionki dla części datowej zegara w trybie blokady ekranu",
+      "ItemInputType": "number",
+      "ItemInputMaxNum": "900",
+      "ItemInputMinNum": "100",
+      "ItemStep": "1",
+      "ItemCurrentValue": "400"
+    },
+    {
+      "ItemKeyName": "lockScreenModeClockDateFontColor",
+      "ItemCaptionText": "Kolor czcionki części datowej zegara w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw kolor czcionki dla części datowej zegara w trybie blokady ekranu",
+      "ItemInputType": "text",
+      "ItemSubInputType": "color",
+      "ItemInputMaxNum": "7",
+      "ItemCurrentValue": "#ff0000"
+    },
+    {
+      "ItemKeyName": "lockScreenModeUIOpacity",
+      "ItemCaptionText": "Przezroczystość pola wprowadzania hasła i przycisków w trybie blokady ekranu",
+      "ItemHoverTipText": "Ustaw przezroczystość pola wprowadzania hasła i przycisków w trybie blokady ekranu",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1",
+      "ItemInputMinNum": "0.1",
+      "ItemStep": "0.01",
+      "ItemCurrentValue": "0.5"
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUI",
+      "ItemCaptionText": "Domyślnie ukryj cały interfejs w trybie blokady ekranu",
+      "ItemHoverTipText": "Domyślnie ukrywa zegar, przycisk logowania i inne elementy interfejsu podczas przechodzenia w tryb blokady ekranu. Możesz kliknąć pusty obszar, aby je wyświetlić",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "lockScreenModeHideAllUIWhenMouseClick",
+      "ItemCaptionText": "Przełączanie widoczności interfejsu kliknięciem myszy w trybie blokady ekranu",
+      "ItemHoverTipText": "W trybie blokady ekranu kliknięcie pustego obszaru przełącza widoczność elementów interfejsu",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "clockTimeUse12HourFormat",
+      "ItemCaptionText": "12-godzinny format czasu",
+      "ItemHoverTipText": "Odznacz tę opcję, aby używać 24-godzinnego formatu czasu",
+      "ItemInputType": "checkbox",
+      "ItemCurrentValue": false
+    },
+    {
+      "ItemKeyName": "customLockScreenPasswordTip",
+      "ItemCaptionText": "Tekst podpowiedzi w polu wprowadzania hasła",
+      "ItemHoverTipText": "Tekst podpowiedzi wyświetlany w polu wprowadzania hasła",
+      "ItemInputType": "text",
+      "ItemInputMaxNum": "100",
+      "ItemCurrentValue": "Wprowadź hasło odblokowania"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxWidth",
+      "ItemCaptionText": "Szerokość pola wprowadzania hasła",
+      "ItemHoverTipText": "Ustaw szerokość niestandardowego pola wprowadzania hasła logowania",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "100",
+      "ItemStep": "10",
+      "ItemCurrentValue": "300"
+    },
+    {
+      "ItemKeyName": "passwordInputBoxHeight",
+      "ItemCaptionText": "Wysokość pola wprowadzania hasła",
+      "ItemHoverTipText": "Ustaw wysokość niestandardowego pola wprowadzania hasła logowania (Uwaga: wpływa to również na wysokość przycisku logowania)",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "200",
+      "ItemInputMinNum": "20",
+      "ItemStep": "10",
+      "ItemCurrentValue": "50"
+    },
+    {
+      "ItemKeyName": "loginBtnImagePath",
+      "ItemCaptionText": "Ikona przycisku logowania",
+      "ItemHoverTipText": "Wybierz plik ikony dla niestandardowego przycisku logowania. Jeśli pusty, zostanie użyta ikona domyślna",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Wybierz plik",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "loginBtnHoverImagePath",
+      "ItemCaptionText": "Ikona przycisku logowania (stan najechania)",
+      "ItemHoverTipText": "Wybierz plik ikony dla niestandardowego przycisku logowania w stanie najechania. Jeśli pusty, zostanie użyta ikona domyślna",
+      "ItemInputType": "text",
+      "ItemSubInputType": "file",
+      "Title": "Wybierz plik",
+      "FolderPath": "loginIcon",
+      "Filter": "Image Files|*.png;*.apng;*.webp;*.jpg;*.jpeg;*.gif",
+      "ItemInputMaxNum": "255",
+      "ItemCurrentValue": ""
+    },
+    {
+      "ItemKeyName": "gapOfClockAndInputBox",
+      "ItemCaptionText": "Odstęp między zegarem a polem wprowadzania",
+      "ItemHoverTipText": "Ustaw odstęp między zegarem a polem wprowadzania hasła",
+      "ItemInputType": "range",
+      "ItemInputMaxNum": "1000",
+      "ItemInputMinNum": "0",
+      "ItemStep": "10",
+      "ItemCurrentValue": "100"
+    }
+  ]
+}
