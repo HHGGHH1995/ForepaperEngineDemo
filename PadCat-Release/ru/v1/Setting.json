@@ -1,0 +1,70 @@
+{
+	"SettingItems": [
+		{
+			"ItemKeyName": "scale",
+			"ItemCaptionText": "Размер",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.1",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.3"
+		},
+		{
+			"ItemKeyName": "alpha",
+			"ItemCaptionText": "Непрозрачность",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0.01",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.8"
+		},
+        {
+            "ItemKeyName":"modelPath",
+            "ItemCaptionText":"Пользовательский путь к модели",
+            "ItemInputType":"text",
+            "ItemSubInputType":"folder",
+            "Title":"Выберите папку с моделью",
+			"FolderPath":"model\\standard",
+            "ItemInputMaxNum":"255",
+            "ItemInputMinNum":"",
+            "ItemStep": "",
+            "ItemCurrentValue":""
+        },
+		{
+			"ItemKeyName": "leftStickDeadzone",
+			"ItemCaptionText": "Мёртвая зона левого стика",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.1"
+		},
+		{
+			"ItemKeyName": "rightStickDeadzone",
+			"ItemCaptionText": "Мёртвая зона правого стика",
+			"ItemInputType": "range",
+			"ItemInputMaxNum": "1",
+			"ItemInputMinNum": "0",
+			"ItemStep": "0.01",
+			"ItemCurrentValue": "0.1"
+		},
+		{
+			"ItemKeyName": "isLimitFps",
+			"ItemCaptionText": "Ограничение частоты кадров",
+			"ItemInputType": "checkbox",
+			"ItemInputMaxNum": null,
+			"ItemInputMinNum": null,
+			"ItemStep": null,
+			"ItemCurrentValue": "0"
+		},
+		{
+			"ItemKeyName": "limitFps",
+			"ItemCaptionText": "FPS",
+			"ItemInputType": "number",
+			"ItemInputMaxNum": "240",
+			"ItemInputMinNum": "30",
+			"ItemStep": "1",
+			"ItemCurrentValue": "60"
+		}
+	]
+}
